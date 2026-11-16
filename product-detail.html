@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Produk — Trifusion Bionova Medika</title>
+  <meta name="description" content="Informasi detail, fitur, dan spesifikasi peralatan medis dari Trifusion Bionova Medika.">
+  <link rel="icon" type="image/png" href="assets/img/trifusion-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Base Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Custom Styles untuk Desain Baru Product Detail -->
+  <style>
+    body {
+      background-color: #f4f8fc;
+    }
+    
+    /* Layout Detail Utama */
+    .detail-wrapper {
+      padding: 120px 0 80px;
+    }
+    
+    .detail-breadcrumb {
+      margin-bottom: 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      text-decoration: none;
+      background: white;
+      padding: 8px 16px;
+      border-radius: 30px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    .detail-breadcrumb:hover {
+      background: var(--color-primary);
+      color: white;
+      transform: translateX(-5px);
+    }
+    .detail-breadcrumb svg { width: 16px; height: 16px; }
+
+    /* Grid Layout: Kiri (Gambar) & Kanan (Info) */
+    .detail-hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    @media (min-width: 992px) {
+      .detail-hero {
+        grid-template-columns: 1fr 1.1fr;
+        align-items: flex-start;
+      }
+    }
+
+    /* Bagian Gambar (Kiri) */
+    .detail-gallery {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      border: 1px solid var(--color-border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 400px;
+    }
+    .detail-gallery img {
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.5s ease;
+    }
+    .detail-gallery:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Bagian Info (Kanan) */
+    .detail-info {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .detail-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .tag-category {
+      background: #e6f0fa;
+      color: var(--color-primary);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .tag-brand {
+      background: #f1f5f9;
+      color: #475569;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border: 1px solid #e2e8f0;
+    }
+    .tag-akl {
+      background: #ecfdf5;
+      color: #059669;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border: 1px solid #a7f3d0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tag-akl.process {
+      background: #fffbeb;
+      color: #d97706;
+      border-color: #fde68a;
+    }
+    .tag-akl svg { width: 14px; height: 14px; }
+
+    .detail-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: #0f172a;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      font-family: var(--font-display);
+      letter-spacing: -0.03em;
+    }
+    .detail-desc {
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    /* Blok Spesifikasi (Tabel Modern) */
+    .specs-card {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+    .specs-header {
+      background: #f8fafc;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--color-border);
+      font-weight: 700;
+      color: #1e293b;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    /* Menahan ukuran ikon di dalam header spesifikasi agar tidak melebar */
+    .specs-header svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+    .spec-row {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      padding: 16px 24px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-key {
+      font-size: 0.9rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+    .spec-val {
+      font-size: 0.95rem;
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    /* Fitur Unggulan (Grid) */
+    .features-section h3 {
+      font-size: 1.25rem;
+      color: #0f172a;
+      margin-bottom: 20px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    @media (min-width: 600px) {
+      .features-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: white;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+    .feature-item svg {
+      width: 20px;
+      height: 20px;
+      color: var(--color-primary);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .feature-item span {
+      font-size: 0.9rem;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    /* CTA Box */
+    .detail-cta-box {
+      background: linear-gradient(135deg, #002b5e 0%, #0056b3 100%);
+      border-radius: 16px;
+      padding: 30px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      box-shadow: 0 10px 25px rgba(0, 86, 179, 0.2);
+    }
+    @media (min-width: 768px) {
+      .detail-cta-box {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    .detail-cta-box h4 {
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+      color: white;
+    }
+    .detail-cta-box p {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .btn-white {
+      background: white;
+      color: var(--color-primary);
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: all 0.3s;
+    }
+    .btn-white:hover {
+      background: #f1f5f9;
+      transform: translateY(-2px);
+    }
+
+    /* State jika tidak ditemukan */
+    .not-found-state {
+      text-align: center;
+      padding: 100px 20px;
+      background: white;
+      border-radius: 20px;
+      margin-top: 40px;
+    }
+    .not-found-state h2 { font-size: 2rem; color: #0f172a; margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="container">
+      <a class="logo" href="index.html" aria-label="Trifusion Bionova Medika home">
+        <span class="logo__mark"><img src="assets/img/trifusion-icon.png" alt="Trifusion Bionova Medika logo"></span>
+        <span class="logo__text"><span class="logo__name">Trifusion Bionova</span><span class="logo__sub">Medika</span></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Beranda</a></li>
+          <li><a class="nav__link" href="about.html">Tentang Kami</a></li>
+          <li><a class="nav__link active" href="products.html">Produk</a></li>
+          <li><a class="nav__link" href="articles.html">Berita & Artikel</a></li>
+        </ul>
+        <a class="btn btn--primary nav__cta" href="contact.html">Konsultasi Sekarang &rarr;</a>
+      </nav>
+      <button class="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="nav-backdrop"></div>
+
+  <main>
+    <!-- ===== Wadah untuk dirender oleh JS ===== -->
+    <div id="detailApp">
+      <!-- Loading State (akan tertimpa oleh JS) -->
+      <div class="container" style="padding: 150px 0; text-align: center;">
+        <p>Memuat informasi produk...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" style="padding: 70px 0 30px; background: #ffffff; border-top: 1px solid var(--color-border); position: relative; z-index: 10; margin-top: 60px;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1.5fr 1fr 1.2fr 1.5fr; gap: 40px; margin-bottom: 50px;">
+        <!-- Kolom 1 -->
+        <div>
+          <a class="logo" href="index.html" style="margin-bottom: 20px; display: inline-flex;">
+            <span class="logo__mark"><img src="assets/img/trifusion-icon.png" alt="Trifusion Bionova Medika logo"></span>
+            <span class="logo__text" style="justify-content: center; display: flex; flex-direction: column;">
+              <span class="logo__name" style="color: var(--color-primary); font-size: 1.1rem; font-weight: 700; line-height: 1.1;">TRIFUSION</span>
+              <span class="logo__sub" style="color: var(--color-accent-600); font-size: 0.55rem; font-weight: 600; letter-spacing: 2px;">BIONOVA<br>MEDIKA</span>
+            </span>
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text); margin-bottom: 24px; max-width: 95%;">
+            Mitra terpercaya dalam menyediakan solusi teknologi medis inovatif. Berfokus pada pengadaan alat kesehatan dan Kerja Sama Operasional (KSO) untuk fasilitas layanan kesehatan di seluruh Indonesia.
+          </p>
+        </div>
+        <!-- Kolom 2 -->
+        <div>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Perusahaan</h4>
+          <ul style="display: grid; gap: 14px; padding: 0; margin: 0; list-style: none;">
+            <li><a href="index.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none;">Beranda</a></li>
+            <li><a href="about.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none;">Tentang Kami</a></li>
+            <li><a href="products.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none;">Solusi Kami</a></li>
+            <li><a href="contact.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none;">Hubungi Kami</a></li>
+          </ul>
+        </div>
+        <!-- Kolom 3 -->
+        <div>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Layanan Utama</h4>
+          <ul style="display: grid; gap: 14px; padding: 0; margin: 0; list-style: none;">
+            <li><a href="products.html?category=kso" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none;">Kerja Sama Operasional (KSO)</a></li>
+            <li><a href="products.html?category=equipment" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none;">Pengadaan Alat Medis</a></li>
+          </ul>
+        </div>
+        <!-- Kolom 4 -->
+        <div>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Kantor Pusat</h4>
+          <ul style="display: grid; gap: 18px; padding: 0; margin: 0; list-style: none;">
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; margin-top: 2px; flex-shrink: 0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5;">Jl. Tebet Barat Dalam Raya No. 39 L, Tebet, Jakarta Selatan 12810</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top: 1px solid var(--color-border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <span style="font-size: 0.8rem; color: var(--color-text-light);">&copy; 2026 PT Trifusion Bionova Medika. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- File JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+  
+  <!-- Script Khusus untuk Product Detail Baru -->
+  <script>
+    (function () {
+      'use strict';
+
+      const data = window.TF_DATA;
+      const root = document.getElementById("detailApp");
+      
+      if (!data || !root) return;
+
+      const { CATEGORY_LABELS, PRODUCTS } = data;
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+      const product = PRODUCTS.find(p => p.id === id);
+
+      // SVG Icons
+      const backIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>';
+      const checkIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+      const aklIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>';
+      const mailIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>';
+      const listIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>';
+
+      // Halaman Not Found
+      if (!product) {
+        root.innerHTML = `
+          <div class="container detail-wrapper">
+            <div class="not-found-state">
+              <h2>Produk Tidak Ditemukan</h2>
+              <p style="margin-bottom: 24px; color: #64748b;">Produk yang Anda cari mungkin telah dipindahkan atau dihapus.</p>
+              <a href="products.html" class="btn btn--primary">Kembali ke Katalog</a>
+            </div>
+          </div>`;
+        return;
+      }
+
+      document.title = `${product.name} — Trifusion Bionova Medika`;
+
+      // Menyusun Fitur (Grid)
+      let featuresHTML = "";
+      if (product.features && product.features.length > 0) {
+        featuresHTML = `
+          <div class="features-section">
+            <h3>Fitur Unggulan</h3>
+            <div class="features-grid">
+              ${product.features.map(f => `
+                <div class="feature-item">
+                  ${checkIcon}
+                  <span>${f}</span>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        `;
+      }
+
+      // Menyusun Spesifikasi (Tabel)
+      let specsHTML = "";
+      if (product.specs && Object.keys(product.specs).length > 0) {
+        const rows = Object.entries(product.specs).map(([k, v]) => `
+          <div class="spec-row">
+            <div class="spec-key">${k}</div>
+            <div class="spec-val">${v}</div>
+          </div>
+        `).join("");
+        
+        specsHTML = `
+          <div class="specs-card">
+            <div class="specs-header">
+              ${listIcon} Spesifikasi Teknis
+            </div>
+            ${rows}
+          </div>
+        `;
+      }
+
+      // Menyusun Badge AKL
+      let aklHTML = "";
+      if (product.akl) {
+        const isProcess = /process/i.test(product.akl);
+        aklHTML = `
+          <span class="tag-akl ${isProcess ? 'process' : ''}" title="Status Izin Edar">
+            ${aklIcon} 
+            ${isProcess ? "Izin Edar: On Process" : "AKL: " + product.akl}
+          </span>
+        `;
+      }
+
+      // Render Markup Utama
+      root.innerHTML = `
+        <div class="container detail-wrapper">
+          <a href="products.html" class="detail-breadcrumb">
+            ${backIcon} Kembali ke Katalog
+          </a>
+          
+          <div class="detail-hero">
+            <!-- Kolom Gambar -->
+            <div class="detail-gallery">
+              <img src="${product.image}" alt="${product.name}">
+            </div>
+            
+            <!-- Kolom Konten -->
+            <div class="detail-info">
+              
+              <div class="detail-tags">
+                <span class="tag-category">${CATEGORY_LABELS[product.category] || product.category}</span>
+                ${product.brand ? `<span class="tag-brand">${product.brand}</span>` : ""}
+                ${aklHTML}
+              </div>
+              
+              <h1 class="detail-title">${product.name}</h1>
+              <p class="detail-desc">${product.description}</p>
+              
+              ${specsHTML}
+              ${featuresHTML}
+              
+              <div class="detail-cta-box">
+                <div>
+                  <h4>Tertarik dengan ${product.name}?</h4>
+                  <p>Konsultasikan kebutuhan teknis dan penawaran harga dengan tim kami.</p>
+                </div>
+                <a href="contact.html?product=${encodeURIComponent(product.id)}" class="btn-white">
+                  ${mailIcon} Minta Penawaran
+                </a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Animasi masuk ringan
+      const gallery = document.querySelector('.detail-gallery');
+      const info = document.querySelector('.detail-info');
+      gallery.style.opacity = '0';
+      gallery.style.transform = 'translateY(20px)';
+      info.style.opacity = '0';
+      info.style.transform = 'translateY(20px)';
+      
+      setTimeout(() => {
+        gallery.style.transition = 'all 0.6s ease';
+        gallery.style.opacity = '1';
+        gallery.style.transform = 'translateY(0)';
+        
+        setTimeout(() => {
+          info.style.transition = 'all 0.6s ease';
+          info.style.opacity = '1';
+          info.style.transform = 'translateY(0)';
+        }, 150);
+      }, 50);
+
+    })();
+  </script>
+</body>
+</html>
+```eof

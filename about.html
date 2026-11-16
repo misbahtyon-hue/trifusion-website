@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami — Trifusion Bionova Medika</title>
+  <meta name="description" content="Tentang PT Trifusion Bionova Medika — Perusahaan distribusi alat kesehatan dan radiologi. Visi, misi, profil pimpinan, dan nilai perusahaan kami.">
+  <link rel="icon" type="image/png" href="assets/img/trifusion-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <style>
+    
+    /* ===== PAGE HERO DENGAN GAMBAR (Mepet Kiri) ===== */
+    .page-hero--image { 
+      position: relative;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      background: #f4f8fc; 
+      padding-top: var(--header-h);
+      padding-bottom: 0;
+      overflow: hidden;
+      border-bottom: none;
+    }
+    
+    .page-hero__image-side {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%; 
+      height: 100%;
+      z-index: 1;
+    }
+    .page-hero__image-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    .page-hero__wave {
+      position: absolute;
+      top: 0;
+      left: -2px;
+      height: 100%;
+      width: 250px;
+      z-index: 2;
+    }
+
+    .page-hero__container {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding-left: 32px;
+      display: flex;
+      justify-content: flex-start;
+    }
+    
+    .page-hero__content {
+      max-width: 450px; 
+      padding: 60px 0;
+      margin-left: -12px;
+    }
+    
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-primary-600);
+      margin-bottom: 24px;
+      text-transform: capitalize;
+      letter-spacing: 0;
+    }
+    .breadcrumb a { color: var(--color-primary-600); }
+    .breadcrumb .sep { color: var(--color-text-light); font-weight: normal; margin: 0 4px; }
+    .breadcrumb .current { color: var(--color-text-light); }
+    
+    .page-hero__content h1 { 
+      font-size: 3.2rem; 
+      color: var(--color-primary); 
+      margin-bottom: 12px;
+      letter-spacing: -0.03em;
+    }
+    .page-hero__content p { 
+      font-size: 1.4rem; 
+      font-weight: 500; 
+      color: var(--color-primary); 
+      line-height: 1.3;
+      margin-bottom: 24px;
+    }
+    
+    .line-accent {
+      width: 60px;
+      height: 4px;
+      background: var(--color-accent-600);
+      border-radius: 2px;
+    }
+    
+    @media (max-width: 900px) {
+      .page-hero__image-side { width: 100%; opacity: 0.2; }
+      .page-hero__wave { display: none; }
+      .page-hero__content { max-width: 100%; padding: 40px 0; margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+  <header class="header">
+    <div class="container">
+      <a class="logo" href="index.html" aria-label="Trifusion Bionova Medika — beranda">
+        <span class="logo__mark"><img src="assets/img/trifusion-icon.png" alt="Logo Trifusion Bionova Medika"></span>
+        <span class="logo__text">
+          <span class="logo__name">TRIFUSION</span>
+          <span class="logo__sub"><span>BIONOVA</span><span>MEDIKA</span></span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navigasi utama">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Beranda</a></li>
+          <li><a class="nav__link active" href="about.html" aria-current="page">Tentang Kami</a></li>
+          <li><a class="nav__link" href="products.html">Produk</a></li>
+          <li><a class="nav__link" href="articles.html">Berita &amp; Artikel</a></li>
+        </ul>
+        <a class="btn btn--konsultasi" href="contact.html">Konsultasi Sekarang &rarr;</a>
+      </nav>
+
+      <button class="burger" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-backdrop"></div>
+
+  <main>
+    <!-- ===== Page Hero ===== -->
+    <section class="page-hero page-hero--image">
+      <div class="page-hero__image-side">
+        <img src="assets/img/OLA.png" alt="Gedung Trifusion Bionova Medika">
+        <svg class="page-hero__wave" viewBox="0 0 200 1080" preserveAspectRatio="none">
+          <path d="M0,0 C150,300 0,700 100,1080 L0,1080 L0,0 Z" fill="rgba(244, 248, 252, 0.6)" />
+          <path d="M0,0 C100,350 -50,650 50,1080 L0,1080 L0,0 Z" fill="#f4f8fc" />
+        </svg>
+      </div>
+
+      <div class="page-hero__container">
+        <div class="page-hero__content" data-reveal>
+          <div class="breadcrumb">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0" style="width: 14px; margin-right: 4px; margin-top:-2px;">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+            <a href="index.html">Home</a><span class="sep">&gt;</span><span class="current">About Us</span>
+          </div>
+          <h1>About Us</h1>
+          <p>Your Trusted Partner in<br>Healthcare Technology</p>
+          <div class="line-accent"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Company Overview ===== -->
+    <section class="section overview">
+      <div class="container overview__grid">
+        <div class="overview__media" data-reveal="left">
+          <img src="assets/img/Radiologi.jpg" alt="Trifusion Bionova Medika facility">
+        </div>
+        <div class="overview__content" data-reveal="right">
+          <span class="eyebrow" style="color: var(--color-primary); letter-spacing: 0.1em; background: none;">COMPANY PROFILE</span>
+          <h2 style="color: var(--color-primary); font-size: 2.2rem; line-height: 1.1; margin-bottom: 20px;">TRIFUSION<br>BIONOVA MEDIKA</h2>
+          <p>
+            PT Trifusion Bionova Medika hadir sebagai mitra terpercaya bagi fasilitas pelayanan kesehatan dalam menyediakan solusi teknologi medis yang inovatif dan berkelanjutan. 
+            Berfokus pada penyediaan alat kesehatan, kami menghadirkan berbagai produk berkualitas melalui skema pengadaan yang fleksibel, mulai dari pembelian langsung, Kerja Sama Operasional (KSO), hingga pelaksanaan proyek yang disesuaikan dengan kebutuhan setiap institusi kesehatan.
+          </p>
+          <p>
+            Seiring dengan perkembangan transformasi digital di sektor kesehatan, kami juga menghadirkan solusi berbasis teknologi untuk pelatihan, simulasi klinis, serta pengembangan kompetensi tenaga kesehatan guna mendukung clinical dan operational standards.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Vision & Mission ===== -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="vm__grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; border: none;">
+          
+          <!-- Vision -->
+          <div data-reveal="left" style="background: #fff; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+            <div style="margin-bottom: 24px;">
+              <span class="eyebrow" style="color: var(--color-primary); letter-spacing: 0.1em; background: none;">OUR VISION</span>
+              <h2 style="color: var(--color-primary); font-size: 2rem; margin-top: -10px;">Visi Kami</h2>
+            </div>
+            <div style="display: flex; gap: 20px; align-items: flex-start; flex: 1;">
+              <p style="font-size: 1.05rem; line-height: 1.6; margin: 0; color: var(--color-text);">
+                “Menjadi penyedia solusi alat kesehatan terdepan di Indonesia yang menghadirkan inovasi transformatif, guna mendukung layanan kesehatan yang berkualitas, berkelanjutan, dan dapat diakses oleh seluruh masyarakat.”
+              </p>
+            </div>
+            <!-- Ikon dipindahkan ke bawah agar teks Visi memiliki ruang penuh dan tidak memanjang ke bawah -->
+            <div style="margin-top: 30px; width: 64px; height: 64px; background: #eaf3fa; border-radius: 50%; display: grid; place-items: center; color: var(--color-primary);">
+               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 32px;"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+          </div>
+
+          <!-- Mission -->
+          <div data-reveal="right" style="background: #fff; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+            <div style="margin-bottom: 24px;">
+              <span class="eyebrow" style="color: var(--color-primary); letter-spacing: 0.1em; background: none;">OUR MISSION</span>
+              <h2 style="color: var(--color-primary); font-size: 2rem; margin-top: -10px;">Misi Kami</h2>
+            </div>
+            <ol style="list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; flex: 1;">
+              <li style="display: flex; gap: 16px; align-items: flex-start;">
+                <span style="width: 28px; height: 28px; background: var(--color-primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; flex-shrink: 0; margin-top: 2px;">1</span>
+                <span style="font-size: 1rem; color: var(--color-text); line-height: 1.5;">Menyediakan solusi alat kesehatan yang berkualitas dan inovatif.</span>
+              </li>
+              <li style="display: flex; gap: 16px; align-items: flex-start;">
+                <span style="width: 28px; height: 28px; background: var(--color-primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; flex-shrink: 0; margin-top: 2px;">2</span>
+                <span style="font-size: 1rem; color: var(--color-text); line-height: 1.5;">Memberikan layanan yang profesional dan terpercaya.</span>
+              </li>
+              <li style="display: flex; gap: 16px; align-items: flex-start;">
+                <span style="width: 28px; height: 28px; background: var(--color-primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; flex-shrink: 0; margin-top: 2px;">3</span>
+                <span style="font-size: 1rem; color: var(--color-text); line-height: 1.5;">Mendukung peningkatan serta pemerataan layanan kesehatan di Indonesia.</span>
+              </li>
+            </ol>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Core Values / Komitmen ===== -->
+    <section class="section" style="padding: 100px 0;">
+      <div class="container">
+        
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 50px;" data-reveal="up">
+          <span class="eyebrow" style="color: var(--color-primary); letter-spacing: 0.1em; background: none;">OUR COMMITMENT</span>
+          <h2 style="color: var(--color-primary); font-size: 2.4rem; margin: -10px 0 20px;">Komitmen Kami</h2>
+          <p style="font-size: 1.05rem; color: var(--color-text);">Di Trifusion Bionova Medika, kami berkomitmen untuk selalu menghadirkan solusi terbaik melalui nilai-nilai utama yang kami pegang teguh.</p>
+        </div>
+        
+        <!-- Grid Kartu Komitmen (responsif horizontal) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;" data-reveal="up" data-reveal-delay="1">
+          
+          <div style="background: #fff; text-align: center; padding: 40px 24px; border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.02); transition: transform 0.3s ease;">
+            <div style="width: 64px; height: 64px; margin: 0 auto 20px; background: #f4f8fc; border-radius: 50%; display: grid; place-items: center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 32px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            </div>
+            <h3 style="font-size: 1.15rem; color: var(--color-primary); margin-bottom: 12px;">Quality</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5; margin: 0;">Produk dan layanan berstandar tinggi.</p>
+          </div>
+          
+          <div style="background: #fff; text-align: center; padding: 40px 24px; border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.02); transition: transform 0.3s ease;">
+            <div style="width: 64px; height: 64px; margin: 0 auto 20px; background: #f4f8fc; border-radius: 50%; display: grid; place-items: center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 32px;"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+            </div>
+            <h3 style="font-size: 1.15rem; color: var(--color-primary); margin-bottom: 12px;">Customer</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5; margin: 0;">Mitra terpercaya untuk setiap kebutuhan.</p>
+          </div>
+          
+          <div style="background: #fff; text-align: center; padding: 40px 24px; border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.02); transition: transform 0.3s ease;">
+            <div style="width: 64px; height: 64px; margin: 0 auto 20px; background: #f4f8fc; border-radius: 50%; display: grid; place-items: center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 32px; color: var(--color-accent-600);"><path d="M9 18h6M10 22h4M21 11a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+            </div>
+            <h3 style="font-size: 1.15rem; color: var(--color-primary); margin-bottom: 12px;">Innovation</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5; margin: 0;">Solusi inovatif untuk masa depan kesehatan.</p>
+          </div>
+          
+          <div style="background: #fff; text-align: center; padding: 40px 24px; border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.02); transition: transform 0.3s ease;">
+            <div style="width: 64px; height: 64px; margin: 0 auto 20px; background: #f4f8fc; border-radius: 50%; display: grid; place-items: center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 32px; color: var(--color-accent-600);"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <h3 style="font-size: 1.15rem; color: var(--color-primary); margin-bottom: 12px;">Efficiency</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5; margin: 0;">Proses kerja yang efektif dan efisien.</p>
+          </div>
+          
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px;" data-reveal="up" data-reveal-delay="2">
+          <a class="btn btn--konsultasi" href="#clients" style="display: inline-flex;">Mengapa Memilih Kami? &rarr;</a>
+        </div>
+
+      </div>
+      
+      <style>
+        .section .container > div:nth-child(2) > div:hover {
+          transform: translateY(-8px) !important;
+          border-color: var(--color-accent) !important;
+          box-shadow: 0 12px 30px rgba(0,0,0,0.06) !important;
+        }
+      </style>
+    </section>
+
+    <!-- ===== Leadership: Director ===== -->
+    <section class="section section--soft" style="margin-top: 60px;">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow" style="color: var(--color-primary);">KEMEPIMPINAN</span>
+          <h2 class="section-title" style="color: var(--color-primary);">Dipimpin oleh Praktisi Berpengalaman</h2>
+          <p class="section-subtitle">Puluhan tahun pengalaman di berbagai perusahaan teknologi kesehatan terkemuka dunia.</p>
+        </div>
+
+        <div class="leadership__grid" style="grid-template-columns: 1fr; max-width: 700px; margin: 0;">
+          
+          <article class="leader-card" data-reveal="left">
+            <div class="leader-card__head">
+              <div class="leader-card__avatar">
+                <img src="assets/img/Paaryo.png" alt="Albertus Aryo Wicaksono">
+              </div>
+              <div class="leader-card__meta">
+                <h3 class="leader-card__name" style="color: var(--color-primary);">Albertus Aryo Wicaksono</h3>
+                <span class="leader-card__role">Director</span>
+              </div>
+            </div>
+            <div class="leader-card__tags">
+              <span class="leader-tag">20 yrs Healthcare</span>
+              <span class="leader-tag">Former GE Healthcare</span>
+            </div>
+            <p class="leader-card__bio">
+              Profesional berpengalaman dengan rekam jejak 20 tahun di industri kesehatan, termasuk 10 tahun
+              di GE Healthcare sebagai Productivity and Logistics Leader serta Technical Operations Leader. 
+              Berfokus pada optimalisasi efisiensi, performa teknis, dan kolaborasi operasional rumah sakit, 
+              termasuk memimpin operasional proyek dari tahap dasar hingga Grand Opening.
+            </p>
+          </article>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Client / Hospital Partners ===== -->
+    <section id="clients" class="section clients" style="background: #fff; padding-top: 80px;">
+      <div class="container">
+        <div class="section-head" data-reveal style="text-align: center; margin: 0 auto 50px;">
+          <span class="eyebrow" style="color: var(--color-primary); letter-spacing: 0.1em; justify-content: center; display: flex;">KLIEN KAMI</span>
+          <h2 class="section-title" style="color: var(--color-primary);">Dipercaya oleh Rumah Sakit Terkemuka</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">Kami bangga telah menjalin kerja sama operasional dan pengadaan fasilitas dengan berbagai institusi kesehatan di seluruh Indonesia.</p>
+        </div>
+
+        <div class="clients__grid" data-reveal data-reveal-delay="1" style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+          align-items: center;
+        ">
+          <!-- Item RS -->
+          <div class="client-item" style="padding: 20px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); width: calc(25% - 20px); min-width: 200px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; background: #f9fbfd;">
+            <p style="font-weight: 600; font-size: 1rem; margin: 0 0 4px; color: var(--color-primary);">RSCM</p>
+            <span style="font-size: 0.75rem; color: var(--color-text-light);">Pintu Hermatic</span>
+          </div>
+          <div class="client-item" style="padding: 20px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); width: calc(25% - 20px); min-width: 200px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; background: #f9fbfd;">
+            <p style="font-weight: 600; font-size: 1rem; margin: 0 0 4px; color: var(--color-primary);">RS Siloam</p>
+            <span style="font-size: 0.75rem; color: var(--color-text-light);">Pintu Hermatic</span>
+          </div>
+          <div class="client-item" style="padding: 20px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); width: calc(25% - 20px); min-width: 200px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; background: #f9fbfd;">
+            <p style="font-weight: 600; font-size: 1rem; margin: 0 0 4px; color: var(--color-primary);">RSPAL dr Ramelan</p>
+            <span style="font-size: 0.75rem; color: var(--color-text-light);">Surabaya (KSO Cathlab)</span>
+          </div>
+          <div class="client-item" style="padding: 20px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); width: calc(25% - 20px); min-width: 200px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; background: #f9fbfd;">
+            <p style="font-weight: 600; font-size: 1rem; margin: 0 0 4px; color: var(--color-primary);">RSi Fatimah</p>
+            <span style="font-size: 0.75rem; color: var(--color-text-light);">Banyuwangi (CT Scan)</span>
+          </div>
+          <div class="client-item" style="padding: 20px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); width: calc(25% - 20px); min-width: 200px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; background: #f9fbfd;">
+            <p style="font-weight: 600; font-size: 1rem; margin: 0 0 4px; color: var(--color-primary);">RSUD Ternate</p>
+            <span style="font-size: 0.75rem; color: var(--color-text-light);">Maluku Utara</span>
+          </div>
+          <div class="client-item" style="padding: 20px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); width: calc(25% - 20px); min-width: 200px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; background: #f9fbfd;">
+            <p style="font-weight: 600; font-size: 1rem; margin: 0 0 4px; color: var(--color-primary);">RS Bhayangkara</p>
+            <span style="font-size: 0.75rem; color: var(--color-text-light);">Palembang & Kediri</span>
+          </div>
+          <div class="client-item" style="padding: 20px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); width: calc(25% - 20px); min-width: 200px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; background: #f9fbfd;">
+            <p style="font-weight: 600; font-size: 1rem; margin: 0 0 4px; color: var(--color-primary);">RS PKU Muhammadiyah</p>
+            <span style="font-size: 0.75rem; color: var(--color-text-light);">Solo (Cathlab)</span>
+          </div>
+          <div class="client-item" style="padding: 20px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); width: calc(25% - 20px); min-width: 200px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; background: #f9fbfd;">
+            <p style="font-weight: 600; font-size: 1rem; margin: 0 0 4px; color: var(--color-primary);">RS Cicendo</p>
+            <span style="font-size: 0.75rem; color: var(--color-text-light);">Bandung</span>
+          </div>
+        </div>
+      </div>
+      <style>
+        .client-item:hover { transform: translateY(-5px); box-shadow: var(--shadow-sm); border-color: var(--color-accent); }
+      </style>
+    </section>
+  </main>
+
+<!-- ===== Footer ===== -->
+  <footer class="footer" style="padding: 70px 0 30px; background: #ffffff; border-top: 1px solid var(--color-border); position: relative; z-index: 10;">
+    <div class="container">
+      
+      <!-- Grid Utama Footer -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 50px;">
+        
+        <!-- Kolom 1: Logo & Deskripsi -->
+        <div style="grid-column: 1 / -1; max-width: 400px;">
+          <a class="logo" href="index.html" style="margin-bottom: 20px; display: inline-flex;">
+            <span class="logo__mark"><img src="assets/img/trifusion-icon.png" alt="Trifusion Bionova Medika logo"></span>
+            <span class="logo__text" style="justify-content: center; display: flex; flex-direction: column;">
+              <span class="logo__name" style="color: var(--color-primary); font-size: 1.1rem; font-weight: 700; line-height: 1.1;">TRIFUSION</span>
+              <span class="logo__sub" style="color: var(--color-accent-600); font-size: 0.55rem; font-weight: 600; letter-spacing: 2px;">BIONOVA<br>MEDIKA</span>
+            </span>
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text); margin-bottom: 24px;">
+            Mitra terpercaya dalam menyediakan solusi teknologi medis inovatif. Berfokus pada pengadaan alat kesehatan dan Kerja Sama Operasional (KSO) untuk fasilitas layanan kesehatan di seluruh Indonesia.
+          </p>
+          <div style="display: flex; gap: 10px;">
+            <a href="#" aria-label="LinkedIn" style="width: 36px; height: 36px; border-radius: 50%; background: #f4f8fc; display: flex; align-items: center; justify-content: center; color: var(--color-primary); transition: 0.3s;"><svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+            <a href="#" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background: #f4f8fc; display: flex; align-items: center; justify-content: center; color: var(--color-primary); transition: 0.3s;"><svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px;"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.94C18.88 4 12 4 12 4s-6.88 0-8.6.48a2.78 2.78 0 0 0-1.94 1.94C1 8.14 1 12 1 12s0 3.86.48 5.58a2.78 2.78 0 0 0 1.94 1.94C5.12 20 12 20 12 20s6.88 0 8.6-.48a2.78 2.78 0 0 0 1.94-1.94C23 15.86 23 12 23 12s0-3.86-.46-5.58zM9.54 15.54V8.46L15.82 12l-6.28 3.54z"/></svg></a>
+            <a href="#" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: #f4f8fc; display: flex; align-items: center; justify-content: center; color: var(--color-primary); transition: 0.3s;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Kolom 2: Perusahaan -->
+        <div>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Perusahaan</h4>
+          <ul style="display: grid; gap: 14px; padding: 0; margin: 0; list-style: none;">
+            <li><a href="index.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Beranda</a></li>
+            <li><a href="about.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Tentang Kami</a></li>
+            <li><a href="products.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Solusi Kami</a></li>
+            <li><a href="articles.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Berita & Artikel</a></li>
+            <li><a href="contact.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Hubungi Kami</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Kontak Info -->
+        <div>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Kantor Pusat</h4>
+          <ul style="display: grid; gap: 18px; padding: 0; margin: 0; list-style: none;">
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; margin-top: 2px; flex-shrink: 0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5;">Jl. Tebet Barat Dalam Raya No. 39 L, RT.6/RW.4, Tebet, Jakarta Selatan 12810</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span style="font-size: 0.9rem; color: var(--color-text);">+62 812-1090-932</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; flex-shrink: 0;"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:kontak@trifusion.co.id" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none;">kontak@trifusion.co.id</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+
+      <!-- Copyright Bar -->
+      <div style="border-top: 1px solid var(--color-border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <span style="font-size: 0.8rem; color: var(--color-text-light);">&copy; 2026 PT Trifusion Bionova Medika. All rights reserved.</span>
+        <span style="display: flex; gap: 20px; font-size: 0.8rem;">
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Kebijakan Privasi</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Syarat & Ketentuan</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Sitemap</a>
+        </span>
+      </div>
+      
+    </div>
+    
+    <!-- Hover style untuk Tautan Footer -->
+    <style>
+      .footer a:hover { color: var(--color-primary) !important; }
+      .footer .logo:hover .logo__name { color: var(--color-primary) !important; }
+      .footer .footer__social a:hover { background: var(--color-primary) !important; color: #fff !important; }
+      
+      @media (min-width: 900px) {
+        .footer > .container > div:first-child {
+          grid-template-columns: 2fr 1fr 1fr !important;
+        }
+        .footer > .container > div:first-child > div:first-child {
+          grid-column: 1 !important;
+        }
+      }
+    </style>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+/* =============================================================
+   Trifusion Bionova Medika — Responsive Stylesheet
+   Theme: "Clinical Precision" · bordered-grid aware
+   ============================================================= */
+
+/* ---------- Large desktop down (≤ 1100px) ---------- */
+@media (max-width: 1100px) {
+  .solutions__grid { grid-template-columns: repeat(2, 1fr); }
+  .values__grid { grid-template-columns: repeat(2, 1fr); }
+  .footer__grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+
+/* ---------- Tablet (≤ 900px) ---------- */
+@media (max-width: 900px) {
+  .section { padding: 76px 0; }
+  .section-head { margin-bottom: 48px; }
+
+  /* Mobile nav */
+  .burger { display: flex; }
+  .nav {
+    position: fixed;
+    top: 0; right: 0;
+    height: 100vh;
+    width: min(330px, 84vw);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+    background: #fff;
+    border-left: 1px solid var(--color-border);
+    box-shadow: -20px 0 60px rgba(14, 23, 38, 0.12);
+    padding: calc(var(--header-h) + 24px) 30px 32px;
+    transform: translateX(100%);
+    transition: transform var(--transition);
+    z-index: 1050;
+  }
+  .nav.open { transform: translateX(0); }
+  .nav__list { flex-direction: column; align-items: flex-start; gap: 0; width: 100%; }
+  .nav__list li { width: 100%; }
+  .nav__link { display: block; width: 100%; padding: 16px 0; border-bottom: 1px solid var(--color-border); font-size: 0.92rem; }
+  .nav__link::before { display: none; }
+  .nav__cta { margin-top: 24px; width: 100%; justify-content: center; }
+
+  /* Mega menu inline inside mobile panel */
+  .nav__item--mega > .nav__link { display: flex; align-items: center; justify-content: space-between; }
+  .nav__caret { width: 16px; height: 16px; padding: 0; }
+  .mega {
+    position: static;
+    transform: none;
+    width: 100%;
+    grid-template-columns: 1fr;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: var(--color-bg-soft);
+    max-height: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    overflow: hidden;
+    transition: max-height var(--transition);
+  }
+  .mega::before { display: none; }
+  .nav__item--mega.open .mega { transform: none; max-height: 1200px; }
+  .mega__cats { border-right: none; border-bottom: 1px solid var(--color-border); background: transparent; padding: 8px 0; }
+  .mega__panel { padding: 14px 0 4px; }
+  /* On mobile show all products for tapped category; panel updates on cat tap */
+  .mega__products { grid-template-columns: 1fr; }
+
+  .nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(14, 23, 38, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition), visibility var(--transition);
+    /* Harus di bawah .header (z-index 1000): nav berada di dalam header, jadi z-index nav
+       tidak bisa mengalahkan backdrop yang lebih tinggi dari header. */
+    z-index: 999;
+  }
+  .nav-backdrop.show { opacity: 1; visibility: visible; }
+
+  /* Hero */
+  .hero { padding: calc(var(--header-h) + 56px) 0 80px; }
+  .hero__grid { grid-template-columns: 1fr; gap: 64px; }
+  .hero__media { max-width: 480px; margin: 0 auto; width: 100%; }
+  .hero__media::before { right: -16px; bottom: -16px; }
+  .hero__float--1 { left: 8px; }
+  .hero__float--2 { right: 8px; }
+
+  /* Two-column sections collapse */
+  .about-preview__grid,
+  .overview__grid,
+  .detail__grid,
+  .contact__grid { grid-template-columns: 1fr; gap: 48px; }
+
+  .about-preview__media,
+  .overview__media { max-width: 540px; }
+
+  /* Vision & Mission: stack, swap side border for top border */
+  .vm__grid { grid-template-columns: 1fr; }
+  .vm-card + .vm-card { border-left: none; border-top: 1px solid var(--color-border); }
+
+  /* Leadership: stack */
+  .leadership__grid { grid-template-columns: 1fr; }
+  .leader-card + .leader-card { border-left: none; border-top: 1px solid var(--color-border); }
+
+  /* Projects: single column */
+  .projects__grid { grid-template-columns: 1fr; }
+
+  /* Portfolio */
+  .portfolio__stats { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-stat:nth-child(2) { border-right: none; }
+  .portfolio-stat:nth-child(1), .portfolio-stat:nth-child(2) { border-bottom: 1px solid var(--color-border); }
+  .portfolio__grid { grid-template-columns: repeat(2, 1fr); }
+
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .detail__media { position: relative; top: 0; max-width: 560px; }
+
+  /* CTA banner stack */
+  .cta-banner__box { grid-template-columns: 1fr; padding: 52px 40px; }
+}
+
+/* ---------- Mobile (≤ 600px) ---------- */
+@media (max-width: 600px) {
+  .container { padding: 0 20px; }
+  .section { padding: 64px 0; }
+  .section-head { margin-bottom: 40px; }
+
+  .solutions__grid,
+  .values__grid,
+  .product-grid { grid-template-columns: 1fr; }
+
+  .portfolio__grid { grid-template-columns: 1fr; }
+  .portfolio__stats { grid-template-columns: 1fr; }
+  .portfolio-stat { border-right: none; border-bottom: 1px solid var(--color-border); }
+  .portfolio-stat:last-child { border-bottom: none; }
+
+  .footer__grid { grid-template-columns: 1fr; gap: 36px; }
+  .footer__bottom { flex-direction: column; text-align: left; }
+
+  /* Hero stats: 1 col stacked, dividers become top borders */
+  .hero__stats { grid-template-columns: 1fr; }
+  .hero__stat { border-right: none; border-bottom: 1px solid var(--color-border); margin-right: 0; padding: 18px 0; }
+  .hero__stat:last-child { border-bottom: none; }
+  .hero__actions { width: 100%; }
+  .hero__actions .btn { flex: 1; justify-content: center; }
+
+  .overview__stats { grid-template-columns: 1fr; }
+  .overview__stat { border-bottom: 1px solid var(--color-border); padding: 16px 0; }
+
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  .contact-form { padding: 30px 22px; }
+  .vm-card { padding: 40px 28px; }
+  .leader-card { padding: 36px 28px; }
+  .project-card { padding: 36px 28px; }
+
+  .detail__cta { flex-direction: column; align-items: stretch; }
+  .detail__cta .btn { justify-content: center; }
+
+  .catalog__toolbar { flex-direction: column; align-items: stretch; }
+
+  .logo__sub { display: none; }
+}
+
+/* ---------- Small mobile (≤ 380px) ---------- */
+@media (max-width: 380px) {
+  .hero h1 { font-size: 2.3rem; }
+  .filters { width: 100%; }
+  .search-box { max-width: none; width: 100%; }
+}
+
+/* ---------- Footer (index / about / products) ---------- */
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.2fr 1.5fr; gap: 40px; margin-bottom: 50px; }
+.footer-grid--3 { grid-template-columns: 1.6fr 1fr 1.4fr; }
+.footer-grid > div { min-width: 0; }
+.footer-grid a, .footer-grid span { overflow-wrap: anywhere; }
+.footer-bottom { border-top: 1px solid var(--color-border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+
+@media (max-width: 1100px) {
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 32px; }
+  .footer-grid > div:first-child { grid-column: 1 / -1; }
+  .footer-grid > div:first-child p { max-width: 520px !important; }
+}
+@media (max-width: 600px) {
+  .footer { padding-top: 56px !important; }
+  .footer-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; margin-bottom: 36px; }
+  .footer-grid > div:first-child p { max-width: 100% !important; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .footer-bottom > span:last-child { flex-wrap: wrap; gap: 8px 20px !important; }
+}

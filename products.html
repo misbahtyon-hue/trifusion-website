@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produk Alat Kesehatan — Trifusion Bionova Medika</title>
+  <meta name="description" content="Katalog alat kesehatan Trifusion Bionova Medika: Ultrasound (USG), Ventilator, Anesthesia Machine, Patient Monitoring & ECG, serta Gynecology & Obstetrics.">
+  <link rel="icon" type="image/png" href="assets/img/trifusion-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="container">
+      <a class="logo" href="index.html" aria-label="Trifusion Bionova Medika — beranda">
+        <span class="logo__mark"><img src="assets/img/trifusion-icon.png" alt="Logo Trifusion Bionova Medika"></span>
+        <span class="logo__text">
+          <span class="logo__name">TRIFUSION</span>
+          <span class="logo__sub"><span>BIONOVA</span><span>MEDIKA</span></span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navigasi utama">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Beranda</a></li>
+          <li><a class="nav__link" href="about.html">Tentang Kami</a></li>
+          <li><a class="nav__link active" href="products.html" aria-current="page">Produk</a></li>
+          <li><a class="nav__link" href="articles.html">Berita &amp; Artikel</a></li>
+        </ul>
+        <a class="btn btn--konsultasi" href="contact.html">Konsultasi Sekarang &rarr;</a>
+      </nav>
+
+      <button class="burger" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-backdrop"></div>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="products-hero">
+      <div class="products-hero__media">
+        <img src="assets/img/Radiologi.jpg" alt="Peralatan radiologi dan pencitraan medis">
+        <svg class="products-hero__wave" viewBox="0 0 200 1080" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,0 C150,300 0,700 100,1080 L0,1080 L0,0 Z" fill="rgba(244, 246, 250, 0.6)"/>
+          <path d="M0,0 C100,350 -50,650 50,1080 L0,1080 L0,0 Z" fill="#F4F6FA"/>
+        </svg>
+      </div>
+      <div class="container products-hero__inner">
+        <div class="products-hero__content" data-reveal>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Beranda</a><span class="sep">/</span><span class="current">Produk</span>
+          </nav>
+          <h1>Alat Kesehatan</h1>
+          <p>Peralatan medis inovatif dan andal untuk layanan kesehatan yang lebih baik.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Kategori (dirender dari js/products.js) ===== -->
+    <div class="container cat-nav-wrap">
+      <div class="cat-nav" id="catNav" role="group" aria-label="Kategori produk" data-reveal></div>
+    </div>
+
+    <!-- ===== Katalog ===== -->
+    <section class="section catalog" id="catalog">
+      <div class="container">
+        <div class="catalog-layout">
+
+          <aside class="filter-panel" aria-label="Filter produk">
+            <div class="filter-block">
+              <label class="filter-block__title" for="searchInput">Cari Produk</label>
+              <div class="search-field">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                <input id="searchInput" type="search" placeholder="Nama produk atau brand" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="filter-block">
+              <h3 class="filter-block__title">Brand</h3>
+              <ul class="brand-list" id="brandList"></ul>
+            </div>
+
+            <div class="vr-card">
+              <svg class="vr-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="11" rx="2" ry="2"/><path d="M6 7v0a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v0"/><circle cx="8" cy="13" r="1.5"/><circle cx="16" cy="13" r="1.5"/><path d="M12 14v4"/></svg>
+              <h4>Coba di VR</h4>
+              <p>Jelajahi solusi kami melalui pengalaman Virtual Reality.</p>
+              <a href="contact.html?topik=vr" class="vr-card__link">Jelajahi VR
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </aside>
+
+          <div class="catalog-main" id="catalogMain">
+            <header class="catalog-head">
+              <div>
+                <span class="eyebrow">Produk Kami</span>
+                <h2>Teknologi Canggih<br>untuk Masa Depan yang Lebih Sehat</h2>
+              </div>
+              <p class="catalog-head__lead">Rangkaian peralatan medis berteknologi terkini untuk mendukung perawatan pasien yang optimal dan operasional fasilitas yang efisien.</p>
+            </header>
+
+            <div class="catalog-meta">
+              <p class="catalog-meta__count" id="resultCount" aria-live="polite"></p>
+              <button type="button" class="catalog-meta__reset" id="resetFilters" hidden>Reset filter</button>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+              <noscript><p class="catalog-empty">Aktifkan JavaScript untuk melihat katalog, atau <a href="contact.html">hubungi kami</a> untuk daftar produk.</p></noscript>
+            </div>
+
+            <nav class="pagination" id="pagination" aria-label="Halaman produk"></nav>
+          </div>
+        </div>
+
+        <!-- Info bar: angka dihitung otomatis dari data -->
+        <div class="info-bar" data-reveal>
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h4 data-stat="akl" data-label="Produk Terdaftar AKL">Produk Terdaftar AKL</h4>
+              <p>Izin edar alat kesehatan</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 9.4 7.5 4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <div>
+              <h4 data-stat="brand" data-label="Brand Mitra">Brand Mitra</h4>
+              <p>Teknologi dari produsen terkemuka</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16v-3c0-5.52 4.48-10 10-10s10 4.48 10 10v3"/><path d="M4 16h4v4H4v-4z"/><path d="M16 16h4v4h-4v-4z"/></svg>
+            <div>
+              <h4>Dukungan Profesional</h4>
+              <p>Dari konsultasi hingga purna jual</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+            <div>
+              <h4>Mitra Terpercaya</h4>
+              <p>Untuk Indonesia yang lebih sehat</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-banner" data-reveal>
+          <div>
+            <h2>Butuh solusi yang tepat untuk rumah sakit Anda?</h2>
+            <p>Tim kami siap membantu memilih teknologi medis yang sesuai dengan kebutuhan fasilitas Anda.</p>
+          </div>
+          <a href="contact.html" class="cta-banner__btn">Hubungi Kami
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- ===== Footer ===== -->
+  <footer class="footer" style="padding: 70px 0 30px; background: #ffffff; border-top: 1px solid var(--color-border); position: relative; z-index: 10;">
+    <div class="container">
+      
+      <!-- Grid Utama Footer -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 50px;">
+        
+        <!-- Kolom 1: Logo & Deskripsi -->
+        <div style="grid-column: 1 / -1; max-width: 400px;">
+          <!-- Untuk desktop (min-width: 900px), logo akan mengambil 2 kolom (dijelaskan via media query jika perlu, tapi max-width sudah cukup) -->
+          <a class="logo" href="index.html" style="margin-bottom: 20px; display: inline-flex;">
+            <span class="logo__mark"><img src="assets/img/trifusion-icon.png" alt="Trifusion Bionova Medika logo"></span>
+            <span class="logo__text" style="justify-content: center; display: flex; flex-direction: column;">
+              <span class="logo__name" style="color: var(--color-primary); font-size: 1.1rem; font-weight: 700; line-height: 1.1;">TRIFUSION</span>
+              <span class="logo__sub" style="color: var(--color-accent-600); font-size: 0.55rem; font-weight: 600; letter-spacing: 2px;">BIONOVA<br>MEDIKA</span>
+            </span>
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text); margin-bottom: 24px;">
+            Mitra terpercaya dalam menyediakan solusi teknologi medis inovatif. Berfokus pada pengadaan alat kesehatan dan Kerja Sama Operasional (KSO) untuk fasilitas layanan kesehatan di seluruh Indonesia.
+          </p>
+          <div style="display: flex; gap: 10px;">
+            <a href="#" aria-label="LinkedIn" style="width: 36px; height: 36px; border-radius: 50%; background: #f4f8fc; display: flex; align-items: center; justify-content: center; color: var(--color-primary); transition: 0.3s;"><svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+            <a href="#" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background: #f4f8fc; display: flex; align-items: center; justify-content: center; color: var(--color-primary); transition: 0.3s;"><svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px;"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.94C18.88 4 12 4 12 4s-6.88 0-8.6.48a2.78 2.78 0 0 0-1.94 1.94C1 8.14 1 12 1 12s0 3.86.48 5.58a2.78 2.78 0 0 0 1.94 1.94C5.12 20 12 20 12 20s6.88 0 8.6-.48a2.78 2.78 0 0 0 1.94-1.94C23 15.86 23 12 23 12s0-3.86-.46-5.58zM9.54 15.54V8.46L15.82 12l-6.28 3.54z"/></svg></a>
+            <a href="#" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: #f4f8fc; display: flex; align-items: center; justify-content: center; color: var(--color-primary); transition: 0.3s;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Kolom 2: Perusahaan -->
+        <div>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Perusahaan</h4>
+          <ul style="display: grid; gap: 14px; padding: 0; margin: 0; list-style: none;">
+            <li><a href="index.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Beranda</a></li>
+            <li><a href="about.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Tentang Kami</a></li>
+            <li><a href="products.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Solusi Kami</a></li>
+            <li><a href="articles.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Berita & Artikel</a></li>
+            <li><a href="contact.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Hubungi Kami</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Kontak Info -->
+        <div>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Kantor Pusat</h4>
+          <ul style="display: grid; gap: 18px; padding: 0; margin: 0; list-style: none;">
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; margin-top: 2px; flex-shrink: 0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5;">Jl. Tebet Barat Dalam Raya No. 39 L, RT.6/RW.4, Tebet, Jakarta Selatan 12810</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span style="font-size: 0.9rem; color: var(--color-text);">+62 812-1090-932</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; flex-shrink: 0;"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:kontak@trifusion.co.id" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none;">kontak@trifusion.co.id</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+
+      <!-- Copyright Bar -->
+      <div style="border-top: 1px solid var(--color-border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <span style="font-size: 0.8rem; color: var(--color-text-light);">&copy; 2026 PT Trifusion Bionova Medika. All rights reserved.</span>
+        <span style="display: flex; gap: 20px; font-size: 0.8rem;">
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Kebijakan Privasi</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Syarat & Ketentuan</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Sitemap</a>
+        </span>
+      </div>
+      
+    </div>
+    
+    <!-- Hover style untuk Tautan Footer -->
+    <style>
+      .footer a:hover { color: var(--color-primary) !important; }
+      .footer .logo:hover .logo__name { color: var(--color-primary) !important; }
+      .footer .footer__social a:hover { background: var(--color-primary) !important; color: #fff !important; }
+      
+      /* Mengatur tata letak grid spesifik untuk layar desktop */
+      @media (min-width: 900px) {
+        .footer > .container > div:first-child {
+          grid-template-columns: 2fr 1fr 1fr !important;
+        }
+        .footer > .container > div:first-child > div:first-child {
+          grid-column: 1 !important;
+        }
+      }
+    </style>
+  </footer>
+
+  <!-- Urutan penting: data -> render katalog -> main.js -->
+  <script src="js/products.js"></script>
+  <script src="js/products-page.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

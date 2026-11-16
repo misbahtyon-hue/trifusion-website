@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="840" viewBox="0 0 800 840" fill="none" role="img" aria-label="Medical monitoring technology illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1B2F63"/>
+      <stop offset="0.55" stop-color="#23508C"/>
+      <stop offset="1" stop-color="#1BA3C9"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0E2148"/>
+      <stop offset="1" stop-color="#15315F"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6FD8EE"/>
+      <stop offset="1" stop-color="#1BA3C9"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#08142E" flood-opacity="0.45"/>
+    </filter>
+    <clipPath id="round"><rect width="800" height="840" rx="4"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <g clip-path="url(#round)">
+    <rect width="800" height="840" fill="url(#bg)"/>
+    <rect width="800" height="840" fill="url(#grid)"/>
+
+    <!-- ambient glow -->
+    <circle cx="650" cy="180" r="220" fill="#6FD8EE" opacity="0.12"/>
+    <circle cx="120" cy="720" r="200" fill="#1BA3C9" opacity="0.10"/>
+
+    <!-- corner ticks (blueprint) -->
+    <g stroke="#6FD8EE" stroke-width="2" opacity="0.55">
+      <path d="M40 64V40H64"/>
+      <path d="M760 64V40H736"/>
+      <path d="M40 776V800H64"/>
+      <path d="M760 776V800H736"/>
+    </g>
+
+    <!-- ===== Main monitor device ===== -->
+    <g filter="url(#soft)">
+      <rect x="150" y="150" width="500" height="380" rx="14" fill="#ffffff"/>
+      <rect x="168" y="168" width="464" height="300" rx="8" fill="url(#screen)"/>
+
+      <!-- screen grid -->
+      <g stroke="#6FD8EE" stroke-opacity="0.10" stroke-width="1">
+        <path d="M168 243H632"/><path d="M168 318H632"/><path d="M168 393H632"/>
+        <path d="M260 168V468"/><path d="M352 168V468"/><path d="M444 168V468"/><path d="M540 168V468"/>
+      </g>
+
+      <!-- ECG waveform -->
+      <polyline points="180,330 240,330 262,330 276,300 292,360 312,250 332,398 352,330 392,330 410,330 426,308 442,352 462,330 540,330 560,330 576,306 592,356 610,330 632,330"
+        fill="none" stroke="url(#cyan)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="312" cy="250" r="6" fill="#6FD8EE"/>
+
+      <!-- vitals labels -->
+      <g font-family="'JetBrains Mono', monospace">
+        <text x="186" y="208" fill="#6FD8EE" font-size="15" letter-spacing="2">HR</text>
+        <text x="186" y="438" fill="#ffffff" font-size="34" font-weight="700">72</text>
+        <text x="246" y="438" fill="#9FB6D6" font-size="14">bpm</text>
+
+        <text x="470" y="208" fill="#6FD8EE" font-size="15" letter-spacing="2" text-anchor="end">SpO2</text>
+        <text x="560" y="438" fill="#ffffff" font-size="34" font-weight="700" text-anchor="end">98</text>
+        <text x="568" y="438" fill="#9FB6D6" font-size="14">%</text>
+      </g>
+
+      <!-- device base / stand -->
+      <rect x="220" y="486" width="360" height="14" rx="4" fill="#EAEEF4"/>
+      <circle cx="250" cy="493" r="4" fill="#1BA3C9"/>
+      <circle cx="272" cy="493" r="4" fill="#C3CDD9"/>
+    </g>
+
+    <!-- ===== Floating medical cross card ===== -->
+    <g filter="url(#soft)">
+      <rect x="96" y="430" width="150" height="150" rx="14" fill="#ffffff"/>
+      <rect x="138" y="466" width="66" height="78" rx="10" fill="url(#bg)"/>
+      <g fill="#ffffff">
+        <rect x="163" y="478" width="16" height="54" rx="5"/>
+        <rect x="144" y="497" width="54" height="16" rx="5"/>
+      </g>
+    </g>
+
+    <!-- ===== Floating "shield / certified" card ===== -->
+    <g filter="url(#soft)">
+      <rect x="556" y="556" width="170" height="120" rx="14" fill="#ffffff"/>
+      <path d="M616 580l24 9v14c0 15-10 23-24 29-14-6-24-14-24-29v-14z" fill="none" stroke="#1BA3C9" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M606 612l8 8 14-15" fill="none" stroke="#1BA3C9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="641" y="650" fill="#56657A" font-family="'JetBrains Mono', monospace" font-size="13" text-anchor="middle">CERTIFIED</text>
+    </g>
+
+    <!-- molecular / connection nodes -->
+    <g stroke="#6FD8EE" stroke-width="2" opacity="0.5">
+      <line x1="120" y1="200" x2="180" y2="260"/>
+      <line x1="120" y1="200" x2="80" y2="280"/>
+      <line x1="660" y1="430" x2="700" y2="360"/>
+    </g>
+    <g fill="#6FD8EE">
+      <circle cx="120" cy="200" r="8"/>
+      <circle cx="80" cy="280" r="6" opacity="0.7"/>
+      <circle cx="700" cy="360" r="7" opacity="0.8"/>
+    </g>
+
+    <!-- bottom label strip -->
+    <text x="400" y="770" fill="#ffffff" fill-opacity="0.85" font-family="'Space Grotesk','Plus Jakarta Sans',sans-serif" font-size="26" font-weight="600" text-anchor="middle" letter-spacing="0.5">Precision Medical Technology</text>
+    <text x="400" y="800" fill="#6FD8EE" font-family="'JetBrains Mono', monospace" font-size="13" text-anchor="middle" letter-spacing="3">MONITORING · IMAGING · CARE</text>
+  </g>
+</svg>

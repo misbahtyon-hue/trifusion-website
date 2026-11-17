@@ -1576,7 +1576,7 @@ textarea.form-control { resize: vertical; min-height: 140px; }
   align-items: flex-start !important; /* Meratakan ke atas */
 }
 .mega__product:hover {
-  background: #f8fafc !important;
+  background: var(--color-bg-soft) !important;
   border-color: var(--color-border) !important;
 }
 
@@ -1594,7 +1594,7 @@ textarea.form-control { resize: vertical; min-height: 140px; }
   font-size: 0.9rem !important;
   line-height: 1.3 !important;
   margin-bottom: 4px;
-  color: #334155 !important;
+  color: var(--color-ink) !important;
   /* Membatasi teks agar tidak terlalu panjang */
   white-space: normal !important;
   display: -webkit-box !important;
@@ -1606,14 +1606,14 @@ textarea.form-control { resize: vertical; min-height: 140px; }
 /* Teks Kategori di bawah Produk */
 .mega__product-cat {
   font-size: 0.65rem !important;
-  color: #94a3b8 !important;
+  color: var(--color-text-light) !important;
 }
 
 /* Tautan "View Full Catalog" di bawah */
 .mega__footer {
   margin-top: auto !important; /* Memaksa ke bagian paling bawah panel */
   padding-top: 20px !important;
-  border-top-color: #f1f5f9 !important;
+  border-top-color: var(--color-border) !important;
 }
 .mega__footer a {
   font-size: 0.8rem !important;

@@ -9,40 +9,40 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
 
   <style>
     :root {
-      --ui-primary: #0056b3;
-      --ui-primary-hover: #004494;
+      /* Disejajarkan dengan token brand di style.css (referensi: index & about) */
+      --ui-primary: var(--color-primary-600);   /* tombol & tautan  #2E6CA6 */
+      --ui-primary-hover: var(--color-primary); /* hover / blok gelap #1B2F63 */
       --ui-bg-light: #f4f8fc;
-      --ui-border: #e2e8f0;
-      --ui-text: #334155;
-      --ui-text-dark: #0f172a;
+      --ui-border: var(--color-border);
+      --ui-text: var(--color-text);
+      --ui-text-light: var(--color-text-light);
+      --ui-text-dark: var(--color-primary);     /* judul = indigo, seperti index/about */
     }
 
-    body { background-color: #f8fafc; }
+    body { background-color: #f4f8fc; }
 
     /* ===== HERO SECTION ===== */
     .article-hero {
       position: relative;
-      background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%);
+      background: #f4f8fc;
       padding: 160px 0 80px;
       overflow: hidden;
     }
     .article-hero__bg {
-      position: absolute; top: 0; right: 0; bottom: 0; width: 55%; z-index: 1;
+      position: absolute; top: 0; right: 0; bottom: 0; width: 58%; z-index: 1;
     }
-    .article-hero__bg::before {
-      content: ''; position: absolute; top: 0; left: -1px; bottom: 0; width: 250px;
-      background: linear-gradient(to right, #eaf4fe 0%, transparent 100%);
-      z-index: 2;
+    .article-hero__wave {
+      position: absolute; top: 0; left: -2px; height: 100%; width: 250px; z-index: 2;
     }
     .article-hero__bg img {
-      width: 100%; height: 100%; object-fit: cover; opacity: 0.8; mix-blend-mode: multiply;
+      width: 100%; height: 100%; object-fit: cover; object-position: center;
     }
     .article-hero .container { position: relative; z-index: 3; }
     
@@ -74,7 +74,7 @@
 
     @media (max-width: 900px) {
       .article-hero__bg { width: 100%; opacity: 0.15; }
-      .article-hero__bg::before { display: none; }
+      .article-hero__wave { display: none; }
     }
 
     /* ===== MAIN CONTENT ===== */
@@ -105,7 +105,7 @@
     }
     .share-widget span { font-weight: 600; color: var(--ui-text-dark); margin-right: 10px; }
     .share-btn {
-        width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; display: grid; place-items: center;
+        width: 36px; height: 36px; border-radius: 50%; background: var(--color-bg-muted); display: grid; place-items: center;
         color: var(--ui-primary); text-decoration: none; transition: 0.2s;
     }
     .share-btn:hover { background: var(--ui-primary); color: white; }
@@ -123,7 +123,7 @@
     .latest-item { display: flex; gap: 16px; align-items: center; text-decoration: none; transition: transform 0.2s; }
     .latest-item:hover { transform: translateY(-2px); }
     .latest-item__img {
-      width: 70px; height: 70px; border-radius: 8px; flex-shrink: 0; background: #f1f5f9; overflow: hidden; border: 1px solid var(--ui-border);
+      width: 70px; height: 70px; border-radius: 8px; flex-shrink: 0; background: var(--color-bg-muted); overflow: hidden; border: 1px solid var(--ui-border);
     }
     .latest-item__img img { width: 100%; height: 100%; object-fit: cover; }
     .latest-item__info h4 {
@@ -242,6 +242,7 @@
         <section class="article-hero">
           <div class="article-hero__bg">
             <img src="${article.image}" alt="Background">
+            <svg class="article-hero__wave" viewBox="0 0 200 1080" preserveAspectRatio="none" aria-hidden="true"><path d="M0,0 C150,300 0,700 100,1080 L0,1080 L0,0 Z" fill="rgba(244, 248, 252, 0.6)"/><path d="M0,0 C100,350 -50,650 50,1080 L0,1080 L0,0 Z" fill="#f4f8fc"/></svg>
           </div>
           <div class="container">
             <div class="breadcrumb-ui">
@@ -275,10 +276,10 @@
                 </div>
               </div>
               
-              <div class="sidebar-widget" style="background: linear-gradient(135deg, #002b5e 0%, #0056b3 100%); color: white;">
+              <div class="sidebar-widget" style="background: var(--color-primary); color: white;">
                 <h3 style="color: white; border-color: rgba(255,255,255,0.2);">Need Consultation?</h3>
                 <p style="font-size: 0.9rem; margin-bottom: 20px; opacity: 0.9;">Contact our team for professional medical equipment solutions.</p>
-                <a href="contact.html" style="display: block; text-align: center; background: white; color: var(--ui-primary); padding: 12px; border-radius: 6px; font-weight: 600; text-decoration: none;">Contact Us</a>
+                <a href="contact.html" style="display: block; text-align: center; background: white; color: var(--color-primary); padding: 12px; border-radius: 6px; font-weight: 600; text-decoration: none;">Contact Us</a>
               </div>
             </aside>
           </div>

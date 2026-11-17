@@ -475,7 +475,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: center;
   background: #f4f8fc; /* Warna dominan kiri */
   overflow: hidden;
-  padding-top: var(--header-h); /* Jarak aman di bawah navbar */
+  padding-top: calc(var(--header-h) + 80px); /* Jarak aman di bawah navbar */
 }
 
 /* Konfigurasi Sisi Kanan (Gambar) */

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News & Articles — Trifusion Bionova Medika</title>
-  <meta name="description" content="Stay updated with the latest insights, innovations, and healthcare tips from Trifusion Bionova Medika.">
+  <title>Berita &amp; Artikel — Trifusion Bionova Medika</title>
+  <meta name="description" content="Dapatkan informasi terbaru seputar inovasi teknologi medis, wawasan klinis, dan panduan perawatan alat kesehatan dari Trifusion Bionova Medika.">
   <link rel="icon" type="image/png" href="assets/img/trifusion-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,14 +16,13 @@
 
   <style>
     :root {
-      /* Disejajarkan dengan token brand di style.css (referensi: index & about) */
-      --ui-primary: var(--color-primary-600);   /* tombol & tautan  #2E6CA6 */
-      --ui-primary-hover: var(--color-primary); /* hover / blok gelap #1B2F63 */
+      --ui-primary: var(--color-primary-600);
+      --ui-primary-hover: var(--color-primary);
       --ui-bg-light: #f4f8fc;
       --ui-border: var(--color-border);
       --ui-text: var(--color-text);
       --ui-text-light: var(--color-text-light);
-      --ui-text-dark: var(--color-primary);     /* judul = indigo, seperti index/about */
+      --ui-text-dark: var(--color-primary);
     }
 
     body {
@@ -171,7 +170,6 @@
     .newsletter-form button:hover { background: var(--ui-primary-hover); }
 
     /* ===== MAIN CONTENT ===== */
-    /* Toolbar */
     .article-toolbar {
       display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;
       margin-bottom: 30px; align-items: center;
@@ -311,7 +309,7 @@
   <!-- ===== Header ===== -->
   <header class="header">
     <div class="container">
-      <a class="logo" href="index.html" aria-label="Trifusion Bionova Medika home">
+      <a class="logo" href="index.html" aria-label="Beranda Trifusion Bionova Medika">
         <span class="logo__mark"><img src="assets/img/trifusion-icon.png" alt="Logo Trifusion Bionova Medika"></span>
         <span class="logo__text">
           <span class="logo__name">TRIFUSION</span>
@@ -323,7 +321,7 @@
         <ul class="nav__list">
           <li><a class="nav__link" href="about.html">Tentang Kami</a></li>
           <li><a class="nav__link" href="products.html">Produk</a></li>
-          <li><a class="nav__link active" href="articles.html" aria-current="page">Berita & Artikel</a></li>
+          <li><a class="nav__link active" href="articles.html" aria-current="page">Berita &amp; Artikel</a></li>
         </ul>
         <a class="btn btn--konsultasi" href="contact.html">Konsultasi Sekarang &rarr;</a>
       </nav>
@@ -339,16 +337,19 @@
     <!-- ===== Hero ===== -->
     <section class="article-hero">
       <div class="article-hero__bg">
-        <img src="assets/img/Patient Monitor X12.png" alt="Medical Monitor">
-        <svg class="article-hero__wave" viewBox="0 0 200 1080" preserveAspectRatio="none" aria-hidden="true"><path d="M0,0 C150,300 0,700 100,1080 L0,1080 L0,0 Z" fill="rgba(244, 248, 252, 0.6)"/><path d="M0,0 C100,350 -50,650 50,1080 L0,1080 L0,0 Z" fill="#f4f8fc"/></svg>
+        <img src="assets/img/Patient Monitor X12.png" alt="Monitor Pasien Medis">
+        <svg class="article-hero__wave" viewBox="0 0 200 1080" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,0 C150,300 0,700 100,1080 L0,1080 L0,0 Z" fill="rgba(244, 248, 252, 0.6)"/>
+          <path d="M0,0 C100,350 -50,650 50,1080 L0,1080 L0,0 Z" fill="#f4f8fc"/>
+        </svg>
       </div>
       <div class="container">
         <div class="breadcrumb-ui">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          <a href="index.html">Home</a> &gt; <span>News & Articles</span>
+          <a href="index.html">Beranda</a> &gt; <span>Berita &amp; Artikel</span>
         </div>
-        <h1>News & Articles</h1>
-        <p>Stay updated with the latest insights, innovations, and healthcare tips from Trifusion Bionova Medika.</p>
+        <h1>Berita &amp; Artikel</h1>
+        <p>Ikuti perkembangan terbaru seputar inovasi teknologi medis, wawasan klinis, dan panduan pengelolaan alat kesehatan dari Trifusion Bionova Medika.</p>
         <div class="line-accent"></div>
       </div>
     </section>
@@ -359,78 +360,76 @@
         
         <!-- Sidebar -->
         <aside>
-          <!-- Categories -->
+          <!-- Kategori -->
           <div class="sidebar-widget">
-            <h3>Categories</h3>
+            <h3>Kategori</h3>
             <ul class="cat-list" id="catListSidebar">
-              <!-- Rendered by JS -->
+              <!-- Dirender oleh JS -->
             </ul>
           </div>
 
-          <!-- Latest Articles -->
+          <!-- Artikel Terbaru -->
           <div class="sidebar-widget">
-            <h3>Latest Articles</h3>
+            <h3>Artikel Terbaru</h3>
             <div class="latest-list" id="latestArticlesSidebar">
-              <!-- Rendered by JS -->
+              <!-- Dirender oleh JS -->
             </div>
           </div>
 
-          <!-- Newsletter -->
+          <!-- Buletin -->
           <div class="sidebar-widget newsletter-widget">
-            <h3>Subscribe to<br>Our Newsletter</h3>
-            <p>Get the latest news and insights from Trifusion Bionova Medika.</p>
+            <h3>Berlangganan<br>Buletin Kami</h3>
+            <p>Dapatkan berita dan wawasan teknologi medis terbaru dari Trifusion Bionova Medika.</p>
             <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Terima kasih telah berlangganan!'); this.reset();">
-              <input type="email" placeholder="Your email address" required>
-              <button type="submit" aria-label="Subscribe">
+              <input type="email" placeholder="Alamat email Anda" required>
+              <button type="submit" aria-label="Berlangganan">
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </button>
             </form>
           </div>
         </aside>
 
-        <!-- Main Content -->
+        <!-- Konten Utama -->
         <div>
           <!-- Toolbar -->
           <div class="article-toolbar">
             <div class="search-bar">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              <input type="text" id="searchInput" placeholder="Search articles...">
-              <button type="button" id="searchBtn">Search</button>
+              <input type="text" id="searchInput" placeholder="Cari artikel...">
+              <button type="button" id="searchBtn">Cari</button>
             </div>
             
-            <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-top: 10px;">
+            <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-top: 10px; flex-wrap: wrap; gap: 12px;">
               <div class="filter-pills" id="catFilterPills">
-                <!-- Rendered by JS -->
+                <!-- Dirender oleh JS -->
               </div>
               <div class="sort-wrap">
-                Sort by: 
+                Urutkan: 
                 <select class="sort-select" id="sortSelect">
-                  <option value="newest">Latest First</option>
-                  <option value="oldest">Oldest First</option>
+                  <option value="newest">Terbaru</option>
+                  <option value="oldest">Terlama</option>
                 </select>
               </div>
             </div>
           </div>
 
-          <!-- Grid -->
+          <!-- Grid Artikel -->
           <div class="article-grid" id="articleGrid">
-            <!-- Rendered by JS -->
+            <!-- Dirender oleh JS -->
           </div>
 
-          <!-- Empty State -->
+          <!-- State Kosong -->
           <div class="empty-state" id="emptyState">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg>
-            <h3>No articles found</h3>
-            <p style="color: var(--ui-text);">Try adjusting your search or category filter.</p>
+            <h3>Artikel tidak ditemukan</h3>
+            <p style="color: var(--ui-text);">Coba ubah kata kunci pencarian atau pilih kategori lainnya.</p>
           </div>
 
           <!-- Pagination -->
           <div class="pagination" id="pagination">
-            <button class="page-btn" aria-label="Previous">&lt;</button>
+            <button class="page-btn" aria-label="Sebelumnya">&lt;</button>
             <button class="page-btn active">1</button>
-            <button class="page-btn">2</button>
-            <button class="page-btn">3</button>
-            <button class="page-btn" aria-label="Next">&gt;</button>
+            <button class="page-btn" aria-label="Berikutnya">&gt;</button>
           </div>
         </div>
 
@@ -443,12 +442,12 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
           </div>
           <div>
-            <h2>Need More Information?</h2>
-            <p style="margin: 0; font-size: 1.05rem; opacity: 0.9;">Our team is ready to provide the best solution for your hospital.</p>
+            <h2>Butuh Informasi Lebih Lanjut?</h2>
+            <p style="margin: 0; font-size: 1.05rem; opacity: 0.9;">Tim kami siap menyediakan solusi teknologi medis terbaik untuk rumah sakit Anda.</p>
           </div>
         </div>
         <a href="contact.html" class="btn-white">
-          Contact Us 
+          Hubungi Kami 
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
@@ -460,13 +459,11 @@
   <footer class="footer" style="padding: 70px 0 30px; background: #ffffff; border-top: 1px solid var(--color-border); position: relative; z-index: 10;">
     <div class="container">
       
-      <!-- Grid Utama Footer -->
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 50px;">
         
-        <!-- Kolom 1: Logo & Deskripsi -->
         <div style="grid-column: 1 / -1; max-width: 400px;">
           <a class="logo" href="index.html" style="margin-bottom: 20px; display: inline-flex;">
-            <span class="logo__mark"><img src="assets/img/trifusion-icon.png" alt="Trifusion Bionova Medika logo"></span>
+            <span class="logo__mark"><img src="assets/img/trifusion-icon.png" alt="Logo Trifusion Bionova Medika"></span>
             <span class="logo__text" style="justify-content: center; display: flex; flex-direction: column;">
               <span class="logo__name" style="color: var(--color-primary); font-size: 1.1rem; font-weight: 700; line-height: 1.1;">TRIFUSION</span>
               <span class="logo__sub" style="color: var(--color-accent-600); font-size: 0.55rem; font-weight: 600; letter-spacing: 2px;">BIONOVA<br>MEDIKA</span>
@@ -482,19 +479,17 @@
           </div>
         </div>
 
-        <!-- Kolom 2: Perusahaan -->
         <div>
           <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Perusahaan</h4>
           <ul style="display: grid; gap: 14px; padding: 0; margin: 0; list-style: none;">
             <li><a href="index.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Beranda</a></li>
             <li><a href="about.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Tentang Kami</a></li>
             <li><a href="products.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Solusi Kami</a></li>
-            <li><a href="articles.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Berita & Artikel</a></li>
+            <li><a href="articles.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Berita &amp; Artikel</a></li>
             <li><a href="contact.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Hubungi Kami</a></li>
           </ul>
         </div>
 
-        <!-- Kolom 3: Kontak Info -->
         <div>
           <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Kantor Pusat</h4>
           <ul style="display: grid; gap: 18px; padding: 0; margin: 0; list-style: none;">
@@ -504,7 +499,7 @@
             </li>
             <li style="display: flex; gap: 12px; align-items: center;">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <span style="font-size: 0.9rem; color: var(--color-text);">+62 812-1090-932</span>
+              <span style="font-size: 0.9rem; color: var(--color-text);">(021) 38825214</span>
             </li>
             <li style="display: flex; gap: 12px; align-items: center;">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; flex-shrink: 0;"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -515,13 +510,12 @@
         
       </div>
 
-      <!-- Copyright Bar -->
       <div style="border-top: 1px solid var(--color-border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-        <span style="font-size: 0.8rem; color: var(--color-text-light);">&copy; 2026 PT Trifusion Bionova Medika. All rights reserved.</span>
+        <span style="font-size: 0.8rem; color: var(--color-text-light);">&copy; 2026 PT Trifusion Bionova Medika. Hak cipta dilindungi.</span>
         <span style="display: flex; gap: 20px; font-size: 0.8rem;">
           <a href="#" style="color: var(--color-text-light); text-decoration: none;">Kebijakan Privasi</a>
-          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Syarat & Ketentuan</a>
-          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Sitemap</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Syarat &amp; Ketentuan</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Peta Situs</a>
         </span>
       </div>
       
@@ -555,20 +549,19 @@
 
       const { ARTICLE_CATEGORIES, ARTICLES } = data;
       
-      // Mengambil elemen HTML menggunakan ID yang sesuai
       const catListSidebar = document.getElementById('catListSidebar');
       const catFilterPills = document.getElementById('catFilterPills');
       const latestArticlesSidebar = document.getElementById('latestArticlesSidebar');
       const articleGrid = document.getElementById('articleGrid');
       const searchInput = document.getElementById('searchInput');
       const searchBtn = document.getElementById('searchBtn');
+      const sortSelect = document.getElementById('sortSelect');
       const emptyState = document.getElementById('emptyState');
       
-      // Initial state
       let currentCategory = 'all';
       let searchQuery = '';
+      let sortOrder = 'newest';
 
-      // --- 1. RENDER KATEGORI DI SIDEBAR & PILLS ---
       function renderCategories() {
         if (!catListSidebar || !catFilterPills) return;
         
@@ -576,19 +569,16 @@
         catFilterPills.innerHTML = '';
         
         ARTICLE_CATEGORIES.forEach(cat => {
-          // Menghitung jumlah artikel per kategori
           const count = cat.id === 'all' 
             ? ARTICLES.length 
             : ARTICLES.filter(a => a.category === cat.id).length;
             
-          // Memilih Ikon (SVG)
           let iconSvg = '';
           if(cat.id === 'all') iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>';
           else if(cat.id === 'product-insight') iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>';
           else if(cat.id === 'medical-insight') iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>';
           else if(cat.id === 'healthcare-tips') iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>';
 
-          // Merender daftar sidebar (li > a)
           const li = document.createElement('li');
           const a = document.createElement('a');
           a.className = `cat-item ${cat.id === currentCategory ? 'active' : ''}`;
@@ -607,7 +597,6 @@
           li.appendChild(a);
           catListSidebar.appendChild(li);
 
-          // Merender Filter Pills (tombol di atas grid)
           const pill = document.createElement('button');
           pill.className = `filter-pill ${cat.id === currentCategory ? 'active' : ''}`;
           pill.textContent = cat.label;
@@ -616,12 +605,11 @@
         });
       }
 
-      // --- 2. RENDER ARTIKEL TERBARU DI SIDEBAR ---
       function renderLatestSidebar() {
         if (!latestArticlesSidebar) return;
         
         latestArticlesSidebar.innerHTML = '';
-        const latest = ARTICLES.slice(0, 3); // Ambil 3 artikel teratas dari file JS
+        const latest = ARTICLES.slice(0, 3);
         
         latest.forEach(art => {
           const a = document.createElement('a');
@@ -643,7 +631,6 @@
         });
       }
 
-      // --- 3. LOGIKA PENCARIAN & FILTER KATEGORI ---
       function setCategory(id) {
         currentCategory = id;
         renderCategories(); 
@@ -651,7 +638,7 @@
       }
 
       function filterArticles() {
-        let filtered = ARTICLES;
+        let filtered = [...ARTICLES];
 
         if (currentCategory !== 'all') {
           filtered = filtered.filter(a => a.category === currentCategory);
@@ -665,10 +652,13 @@
           );
         }
 
+        if (sortOrder === 'oldest') {
+          filtered.reverse();
+        }
+
         renderGrid(filtered);
       }
 
-      // --- 4. RENDER GRID ARTIKEL UTAMA ---
       function renderGrid(articles) {
         if (!articleGrid || !emptyState) return;
         
@@ -716,7 +706,6 @@
         });
       }
 
-      // --- MENDENGARKAN KETIKAN DI KOTAK PENCARIAN ---
       if (searchInput && searchBtn) {
         searchInput.addEventListener('input', (e) => {
           searchQuery = e.target.value;
@@ -728,7 +717,13 @@
         });
       }
 
-      // --- MEMULAI FUNGSI SAAT HALAMAN DIBUKA ---
+      if (sortSelect) {
+        sortSelect.addEventListener('change', (e) => {
+          sortOrder = e.target.value;
+          filterArticles();
+        });
+      }
+
       renderCategories();
       renderLatestSidebar();
       filterArticles();
@@ -736,4 +731,3 @@
   </script>
 </body>
 </html>
-"""

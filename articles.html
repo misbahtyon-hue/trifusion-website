@@ -25,279 +25,102 @@
       --ui-text-dark: var(--color-primary);
     }
 
-    body {
-      background-color: #f4f8fc;
-    }
+    body { background-color: #f4f8fc; }
 
     /* ===== HERO SECTION ===== */
-    .article-hero {
-      position: relative;
-      background: #f4f8fc;
-      padding: 160px 0 80px;
-      overflow: hidden;
-    }
-    .article-hero__bg {
-      position: absolute;
-      top: 0; right: 0; bottom: 0; width: 58%;
-      z-index: 1;
-    }
-    .article-hero__wave {
-      position: absolute; top: 0; left: -2px; height: 100%; width: 250px; z-index: 2;
-    }
-    .article-hero__bg img {
-      width: 100%; height: 100%; object-fit: cover; object-position: center;
-    }
-    .article-hero .container {
-      position: relative; z-index: 3;
-    }
-    .breadcrumb-ui {
-      font-size: 0.85rem; display: flex; gap: 8px; align-items: center;
-      font-weight: 600; color: var(--ui-primary); margin-bottom: 20px;
-    }
+    .article-hero { position: relative; background: #f4f8fc; padding: 160px 0 80px; overflow: hidden; }
+    .article-hero__bg { position: absolute; top: 0; right: 0; bottom: 0; width: 58%; z-index: 1; }
+    .article-hero__wave { position: absolute; top: 0; left: -2px; height: 100%; width: 250px; z-index: 2; }
+    .article-hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .article-hero .container { position: relative; z-index: 3; }
+    .breadcrumb-ui { font-size: 0.85rem; display: flex; gap: 8px; align-items: center; font-weight: 600; color: var(--ui-primary); margin-bottom: 20px; }
     .breadcrumb-ui a { color: var(--ui-primary); text-decoration: none; }
     .breadcrumb-ui svg { width: 14px; height: 14px; }
-    
-    .article-hero h1 {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      color: var(--ui-text-dark);
-      margin-bottom: 16px;
-      letter-spacing: -0.03em;
-    }
-    .article-hero p {
-      font-size: 1.15rem; color: var(--ui-text);
-      max-width: 460px; line-height: 1.5; margin-bottom: 24px;
-    }
-    .line-accent {
-      width: 60px; height: 4px; background: var(--color-accent-600); border-radius: 2px;
-    }
-
+    .article-hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); color: var(--ui-text-dark); margin-bottom: 16px; letter-spacing: -0.03em; }
+    .article-hero p { font-size: 1.15rem; color: var(--ui-text); max-width: 460px; line-height: 1.5; margin-bottom: 24px; }
+    .line-accent { width: 60px; height: 4px; background: var(--color-accent-600); border-radius: 2px; }
     @media (max-width: 900px) {
       .article-hero__bg { width: 100%; opacity: 0.15; }
       .article-hero__wave { display: none; }
     }
 
     /* ===== MAIN LAYOUT ===== */
-    .article-layout {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      padding: 60px 0 80px;
-    }
-    @media (min-width: 992px) {
-      .article-layout { grid-template-columns: 320px 1fr; align-items: start; }
-    }
+    .article-layout { display: grid; grid-template-columns: 1fr; gap: 40px; padding: 60px 0 80px; }
+    @media (min-width: 992px) { .article-layout { grid-template-columns: 320px 1fr; align-items: start; } }
 
     /* ===== SIDEBAR ===== */
-    .sidebar-widget {
-      background: white; border-radius: 16px; padding: 30px;
-      border: 1px solid var(--ui-border); margin-bottom: 30px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-    }
-    .sidebar-widget h3 {
-      font-size: 1.25rem; color: var(--ui-text-dark);
-      margin-bottom: 24px; padding-bottom: 16px;
-      border-bottom: 1px solid var(--ui-border);
-    }
-    
-    /* Categories List */
+    .sidebar-widget { background: white; border-radius: 16px; padding: 30px; border: 1px solid var(--ui-border); margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
+    .sidebar-widget h3 { font-size: 1.25rem; color: var(--ui-text-dark); margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--ui-border); }
     .cat-list { list-style: none; padding: 0; margin: 0; }
-    .cat-item {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 0; border-bottom: 1px solid var(--color-bg-muted);
-      color: var(--ui-primary); font-weight: 500; font-size: 0.95rem;
-      text-decoration: none; cursor: pointer; transition: all 0.2s;
-    }
+    .cat-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--color-bg-muted); color: var(--ui-primary); font-weight: 500; font-size: 0.95rem; text-decoration: none; cursor: pointer; transition: all 0.2s; }
     .cat-item:last-child { border-bottom: none; }
     .cat-item:hover, .cat-item.active { color: var(--ui-primary-hover); transform: translateX(4px); }
     .cat-item__inner { display: flex; align-items: center; gap: 12px; }
-    .cat-icon {
-      width: 24px; height: 24px; display: grid; place-items: center;
-      color: var(--color-accent-600);
-    }
-    .cat-count {
-      background: var(--color-bg-muted); color: var(--ui-text); font-size: 0.75rem;
-      padding: 4px 10px; border-radius: 20px; font-weight: 600;
-    }
+    .cat-icon { width: 24px; height: 24px; display: grid; place-items: center; color: var(--color-accent-600); }
+    .cat-count { background: var(--color-bg-muted); color: var(--ui-text); font-size: 0.75rem; padding: 4px 10px; border-radius: 20px; font-weight: 600; }
     .cat-item.active .cat-count { background: var(--ui-primary); color: white; }
 
-    /* Latest Articles Widget */
     .latest-list { display: grid; gap: 20px; }
-    .latest-item {
-      display: flex; gap: 16px; align-items: center; text-decoration: none;
-      transition: transform 0.2s;
-    }
+    .latest-item { display: flex; gap: 16px; align-items: center; text-decoration: none; transition: transform 0.2s; }
     .latest-item:hover { transform: translateY(-2px); }
-    .latest-item__img {
-      width: 70px; height: 70px; border-radius: 8px; flex-shrink: 0;
-      background: var(--color-bg-muted); overflow: hidden; border: 1px solid var(--ui-border);
-    }
+    .latest-item__img { width: 70px; height: 70px; border-radius: 8px; flex-shrink: 0; background: var(--color-bg-muted); overflow: hidden; border: 1px solid var(--ui-border); }
     .latest-item__img img { width: 100%; height: 100%; object-fit: cover; }
-    .latest-item__info h4 {
-      font-size: 0.9rem; color: var(--ui-text-dark); margin: 0 0 6px;
-      line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical; overflow: hidden;
-    }
-    .latest-item__meta {
-      font-size: 0.75rem; color: var(--ui-text); display: flex; align-items: center; gap: 6px;
-    }
+    .latest-item__info h4 { font-size: 0.9rem; color: var(--ui-text-dark); margin: 0 0 6px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .latest-item__meta { font-size: 0.75rem; color: var(--ui-text); display: flex; align-items: center; gap: 6px; }
     .latest-item__meta svg { width: 12px; height: 12px; }
 
-    /* Newsletter Widget */
-    .newsletter-widget {
-      background: linear-gradient(135deg, #f4f8fc 0%, #eaf3fa 100%);
-      position: relative; overflow: hidden;
-    }
-    .newsletter-widget::after {
-      content: ''; position: absolute; top: -10px; right: -10px;
-      width: 100px; height: 100px;
-      background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="%231BA3C9" stroke-width="1" opacity="0.1"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>') no-repeat center/contain;
-    }
+    .newsletter-widget { background: linear-gradient(135deg, #f4f8fc 0%, #eaf3fa 100%); position: relative; overflow: hidden; }
+    .newsletter-widget::after { content: ''; position: absolute; top: -10px; right: -10px; width: 100px; height: 100px; background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="%231BA3C9" stroke-width="1" opacity="0.1"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>') no-repeat center/contain; }
     .newsletter-widget h3 { border: none; margin-bottom: 12px; padding: 0; font-size: 1.2rem; }
     .newsletter-widget p { font-size: 0.9rem; color: var(--ui-text); margin-bottom: 20px; line-height: 1.5; }
-    .newsletter-form {
-      display: flex; gap: 8px; background: white; padding: 6px; border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    .newsletter-form input {
-      flex: 1; border: none; background: transparent; padding: 8px 12px;
-      font-size: 0.85rem; outline: none; min-width: 0;
-    }
-    .newsletter-form button {
-      background: var(--ui-primary); color: white; border: none;
-      width: 36px; height: 36px; border-radius: 6px;
-      display: grid; place-items: center; cursor: pointer; transition: 0.2s;
-    }
+    .newsletter-form { display: flex; gap: 8px; background: white; padding: 6px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .newsletter-form input { flex: 1; border: none; background: transparent; padding: 8px 12px; font-size: 0.85rem; outline: none; min-width: 0; }
+    .newsletter-form button { background: var(--ui-primary); color: white; border: none; width: 36px; height: 36px; border-radius: 6px; display: grid; place-items: center; cursor: pointer; transition: 0.2s; }
     .newsletter-form button:hover { background: var(--ui-primary-hover); }
 
     /* ===== MAIN CONTENT ===== */
-    .article-toolbar {
-      display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;
-      margin-bottom: 30px; align-items: center;
-    }
-    .search-bar {
-      display: flex; background: white; border-radius: 30px;
-      border: 1px solid var(--ui-border); overflow: hidden;
-      width: 100%; max-width: 400px; padding: 4px;
-    }
-    .search-bar svg {
-      width: 18px; height: 18px; color: var(--ui-text); margin: auto 12px;
-    }
-    .search-bar input {
-      flex: 1; border: none; outline: none; padding: 10px 0; font-size: 0.95rem;
-    }
-    .search-bar button {
-      background: var(--ui-primary); color: white; border: none;
-      padding: 10px 24px; border-radius: 24px; font-weight: 600; cursor: pointer;
-    }
-    
+    .article-toolbar { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; margin-bottom: 30px; align-items: center; }
+    .search-bar { display: flex; background: white; border-radius: 30px; border: 1px solid var(--ui-border); overflow: hidden; width: 100%; max-width: 400px; padding: 4px; }
+    .search-bar svg { width: 18px; height: 18px; color: var(--ui-text); margin: auto 12px; }
+    .search-bar input { flex: 1; border: none; outline: none; padding: 10px 0; font-size: 0.95rem; }
+    .search-bar button { background: var(--ui-primary); color: white; border: none; padding: 10px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; }
     .filter-pills { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-    .filter-pill {
-      background: white; border: 1px solid var(--ui-border); color: var(--ui-text);
-      padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;
-      cursor: pointer; transition: 0.2s;
-    }
+    .filter-pill { background: white; border: 1px solid var(--ui-border); color: var(--ui-text); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: 0.2s; }
     .filter-pill:hover { border-color: var(--color-accent-600); color: var(--color-accent-600); }
     .filter-pill.active { background: var(--ui-primary); border-color: var(--ui-primary); color: white; }
-    
     .sort-wrap { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--ui-text); }
-    .sort-select {
-      border: none; background: transparent; font-weight: 600; color: var(--ui-primary);
-      cursor: pointer; outline: none; font-size: 0.85rem;
-    }
+    .sort-select { border: none; background: transparent; font-weight: 600; color: var(--ui-primary); cursor: pointer; outline: none; font-size: 0.85rem; }
 
-    /* Grid */
-    .article-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;
-      margin-bottom: 50px;
-    }
-
-    /* Article Card */
-    .art-card {
-      background: white; border-radius: 16px; overflow: hidden;
-      border: 1px solid var(--ui-border); box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-      transition: transform 0.3s, box-shadow 0.3s;
-      display: flex; flex-direction: column;
-    }
+    .article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-bottom: 50px; }
+    .art-card { background: white; border-radius: 16px; overflow: hidden; border: 1px solid var(--ui-border); box-shadow: 0 4px 15px rgba(0,0,0,0.02); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
     .art-card:hover { transform: translateY(-6px); box-shadow: 0 12px 25px rgba(0,0,0,0.06); border-color: transparent; }
-    
-    .art-card__media {
-      position: relative; aspect-ratio: 16/10; overflow: hidden; background: var(--color-bg-muted);
-    }
-    .art-card__media img {
-      width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;
-    }
+    .art-card__media { position: relative; aspect-ratio: 16/10; overflow: hidden; background: var(--color-bg-muted); }
+    .art-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
     .art-card:hover .art-card__media img { transform: scale(1.05); }
-    
-    .art-card__cat {
-      position: absolute; bottom: 12px; left: 16px;
-      background: white; color: var(--ui-primary); font-size: 0.7rem; font-weight: 700;
-      padding: 6px 12px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      letter-spacing: 0.05em; text-transform: uppercase;
-    }
-
+    .art-card__cat { position: absolute; bottom: 12px; left: 16px; background: white; color: var(--ui-primary); font-size: 0.7rem; font-weight: 700; padding: 6px 12px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); letter-spacing: 0.05em; text-transform: uppercase; }
     .art-card__body { padding: 24px 20px; display: flex; flex-direction: column; flex: 1; }
-    .art-card__title {
-      font-size: 1.15rem; color: var(--ui-text-dark); margin: 0 0 12px;
-      line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical; overflow: hidden;
-    }
+    .art-card__title { font-size: 1.15rem; color: var(--ui-text-dark); margin: 0 0 12px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .art-card:hover .art-card__title { color: var(--color-accent-600); }
-    .art-card__excerpt {
-      font-size: 0.9rem; color: var(--ui-text); margin-bottom: 20px; line-height: 1.5;
-      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
-      flex: 1;
-    }
-    
-    .art-card__footer {
-      display: flex; align-items: center; justify-content: space-between;
-      border-top: 1px solid var(--color-bg-muted); padding-top: 16px;
-      font-size: 0.75rem; color: var(--ui-text-light); font-weight: 500;
-    }
+    .art-card__excerpt { font-size: 0.9rem; color: var(--ui-text); margin-bottom: 20px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex: 1; }
+    .art-card__footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--color-bg-muted); padding-top: 16px; font-size: 0.75rem; color: var(--ui-text-light); font-weight: 500; }
     .art-card__meta { display: flex; align-items: center; gap: 6px; }
     .art-card__meta svg { width: 14px; height: 14px; color: var(--color-accent-600); }
 
-    /* Pagination */
     .pagination { display: flex; justify-content: center; gap: 8px; }
-    .page-btn {
-      width: 36px; height: 36px; display: grid; place-items: center;
-      background: white; border: 1px solid var(--ui-border); border-radius: 50%;
-      color: var(--ui-text); font-weight: 600; font-size: 0.85rem;
-      cursor: pointer; transition: 0.2s; text-decoration: none;
-    }
+    .page-btn { width: 36px; height: 36px; display: grid; place-items: center; background: white; border: 1px solid var(--ui-border); border-radius: 50%; color: var(--ui-text); font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: 0.2s; text-decoration: none; }
     .page-btn:hover { border-color: var(--ui-primary); color: var(--ui-primary); }
     .page-btn.active { background: var(--ui-primary); color: white; border-color: var(--ui-primary); }
 
-    /* Bottom CTA Banner */
-    .cta-banner {
-      background: var(--color-primary);
-      border-radius: 16px; padding: 40px; color: white;
-      display: flex; flex-direction: column; gap: 20px;
-      margin-bottom: 60px; position: relative; overflow: hidden;
-    }
-    .cta-banner::before {
-      content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0;
-      background: url('https://images.unsplash.com/photo-1576091160550-2173ff9e5ee5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover;
-      opacity: 0.15; mix-blend-mode: overlay; z-index: 1;
-    }
-    @media (min-width: 768px) {
-      .cta-banner { flex-direction: row; align-items: center; justify-content: space-between; }
-    }
+    .cta-banner { background: var(--color-primary); border-radius: 16px; padding: 40px; color: white; display: flex; flex-direction: column; gap: 20px; margin-bottom: 60px; position: relative; overflow: hidden; }
+    .cta-banner::before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: url('https://images.unsplash.com/photo-1576091160550-2173ff9e5ee5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover; opacity: 0.15; mix-blend-mode: overlay; z-index: 1; }
+    @media (min-width: 768px) { .cta-banner { flex-direction: row; align-items: center; justify-content: space-between; } }
     .cta-banner > div { position: relative; z-index: 2; display: flex; align-items: center; gap: 24px; }
-    .cta-banner__icon {
-      width: 64px; height: 64px; background: rgba(255,255,255,0.1); border-radius: 50%;
-      display: grid; place-items: center; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.2);
-    }
+    .cta-banner__icon { width: 64px; height: 64px; background: rgba(255,255,255,0.1); border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.2); }
     .cta-banner__icon svg { width: 32px; height: 32px; color: white; }
     .cta-banner h2 { color: white; font-size: 1.6rem; margin-bottom: 8px; letter-spacing: -0.02em; }
-    .btn-white {
-      position: relative; z-index: 2;
-      background: white; color: var(--color-primary); padding: 12px 28px; border-radius: 30px;
-      font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
-      transition: all 0.2s; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
+    .btn-white { position: relative; z-index: 2; background: white; color: var(--color-primary); padding: 12px 28px; border-radius: 30px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
     .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
 
-    /* Empty State */
     .empty-state { text-align: center; padding: 60px 20px; background: white; border-radius: 16px; border: 1px dashed var(--ui-border); display: none; }
     .empty-state.show { display: block; }
     .empty-state svg { width: 48px; height: 48px; color: var(--color-border-strong); margin-bottom: 16px; }
@@ -319,11 +142,11 @@
 
       <nav class="nav" aria-label="Navigasi utama">
         <ul class="nav__list">
-          <li><a class="nav__link" href="about.html">Tentang Kami</a></li>
-          <li><a class="nav__link" href="products.html">Produk</a></li>
-          <li><a class="nav__link active" href="articles.html" aria-current="page">Berita &amp; Artikel</a></li>
+          <li><a class="nav__link" href="about.html" data-i18n="nav.about">Tentang Kami</a></li>
+          <li><a class="nav__link" href="products.html"><span data-i18n="nav.products">Produk</span></a></li>
+          <li><a class="nav__link active" href="articles.html" aria-current="page" data-i18n="nav.articles">Berita &amp; Artikel</a></li>
         </ul>
-        <a class="btn btn--konsultasi" href="contact.html">Konsultasi Sekarang &rarr;</a>
+        <a class="btn btn--konsultasi" href="contact.html" data-i18n="nav.cta">Konsultasi Sekarang &rarr;</a>
       </nav>
 
       <button class="burger" aria-label="Buka menu" aria-expanded="false">
@@ -346,10 +169,10 @@
       <div class="container">
         <div class="breadcrumb-ui">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          <a href="index.html">Beranda</a> &gt; <span>Berita &amp; Artikel</span>
+          <a href="index.html" data-i18n="nav.home">Beranda</a> &gt; <span data-i18n="nav.articles">Berita &amp; Artikel</span>
         </div>
-        <h1>Berita &amp; Artikel</h1>
-        <p>Ikuti perkembangan terbaru seputar inovasi teknologi medis, wawasan klinis, dan panduan pengelolaan alat kesehatan dari Trifusion Bionova Medika.</p>
+        <h1 data-i18n="art.hero.title">Berita &amp; Artikel</h1>
+        <p data-i18n="art.hero.sub">Ikuti perkembangan terbaru seputar inovasi teknologi medis, wawasan klinis, dan panduan pengelolaan alat kesehatan dari Trifusion Bionova Medika.</p>
         <div class="line-accent"></div>
       </div>
     </section>
@@ -360,29 +183,22 @@
         
         <!-- Sidebar -->
         <aside>
-          <!-- Kategori -->
           <div class="sidebar-widget">
-            <h3>Kategori</h3>
-            <ul class="cat-list" id="catListSidebar">
-              <!-- Dirender oleh JS -->
-            </ul>
+            <h3 data-i18n="art.side.cat">Kategori</h3>
+            <ul class="cat-list" id="catListSidebar"></ul>
           </div>
 
-          <!-- Artikel Terbaru -->
           <div class="sidebar-widget">
-            <h3>Artikel Terbaru</h3>
-            <div class="latest-list" id="latestArticlesSidebar">
-              <!-- Dirender oleh JS -->
-            </div>
+            <h3 data-i18n="art.side.latest">Artikel Terbaru</h3>
+            <div class="latest-list" id="latestArticlesSidebar"></div>
           </div>
 
-          <!-- Buletin -->
           <div class="sidebar-widget newsletter-widget">
-            <h3>Berlangganan<br>Buletin Kami</h3>
-            <p>Dapatkan berita dan wawasan teknologi medis terbaru dari Trifusion Bionova Medika.</p>
-            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Terima kasih telah berlangganan!'); this.reset();">
-              <input type="email" placeholder="Alamat email Anda" required>
-              <button type="submit" aria-label="Berlangganan">
+            <h3 data-i18n="art.side.newsTitle">Berlangganan<br>Buletin Kami</h3>
+            <p data-i18n="art.side.newsDesc">Dapatkan berita dan wawasan teknologi medis terbaru dari Trifusion Bionova Medika.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert(window.TBM_LANG && window.TBM_LANG.getLang()==='en' ? 'Thank you for subscribing!' : 'Terima kasih telah berlangganan!'); this.reset();">
+              <input type="email" placeholder="Alamat email Anda" data-i18n-placeholder="art.side.newsPh" required>
+              <button type="submit" aria-label="Subscribe">
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </button>
             </form>
@@ -391,48 +207,39 @@
 
         <!-- Konten Utama -->
         <div>
-          <!-- Toolbar -->
           <div class="article-toolbar">
             <div class="search-bar">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              <input type="text" id="searchInput" placeholder="Cari artikel...">
-              <button type="button" id="searchBtn">Cari</button>
+              <input type="text" id="searchInput" placeholder="Cari artikel..." data-i18n-placeholder="art.search.ph">
+              <button type="button" id="searchBtn" data-i18n="art.search.btn">Cari</button>
             </div>
             
             <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-top: 10px; flex-wrap: wrap; gap: 12px;">
-              <div class="filter-pills" id="catFilterPills">
-                <!-- Dirender oleh JS -->
-              </div>
+              <div class="filter-pills" id="catFilterPills"></div>
               <div class="sort-wrap">
-                Urutkan: 
+                <span data-i18n="art.sort.label">Urutkan:</span>
                 <select class="sort-select" id="sortSelect">
-                  <option value="newest">Terbaru</option>
-                  <option value="oldest">Terlama</option>
+                  <option value="newest" data-i18n="art.sort.newest">Terbaru</option>
+                  <option value="oldest" data-i18n="art.sort.oldest">Terlama</option>
                 </select>
               </div>
             </div>
           </div>
 
-          <!-- Grid Artikel -->
-          <div class="article-grid" id="articleGrid">
-            <!-- Dirender oleh JS -->
-          </div>
+          <div class="article-grid" id="articleGrid"></div>
 
-          <!-- State Kosong -->
           <div class="empty-state" id="emptyState">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg>
-            <h3>Artikel tidak ditemukan</h3>
-            <p style="color: var(--ui-text);">Coba ubah kata kunci pencarian atau pilih kategori lainnya.</p>
+            <h3 data-i18n="art.empty.title">Artikel tidak ditemukan</h3>
+            <p style="color: var(--ui-text);" data-i18n="art.empty.desc">Coba ubah kata kunci pencarian atau pilih kategori lainnya.</p>
           </div>
 
-          <!-- Pagination -->
           <div class="pagination" id="pagination">
-            <button class="page-btn" aria-label="Sebelumnya">&lt;</button>
+            <button class="page-btn" aria-label="Previous">&lt;</button>
             <button class="page-btn active">1</button>
-            <button class="page-btn" aria-label="Berikutnya">&gt;</button>
+            <button class="page-btn" aria-label="Next">&gt;</button>
           </div>
         </div>
-
       </div>
 
       <!-- Bottom CTA Banner -->
@@ -442,25 +249,22 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
           </div>
           <div>
-            <h2>Butuh Informasi Lebih Lanjut?</h2>
-            <p style="margin: 0; font-size: 1.05rem; opacity: 0.9;">Tim kami siap menyediakan solusi teknologi medis terbaik untuk rumah sakit Anda.</p>
+            <h2 data-i18n="art.cta.title">Butuh Informasi Lebih Lanjut?</h2>
+            <p style="margin: 0; font-size: 1.05rem; opacity: 0.9;" data-i18n="art.cta.desc">Tim kami siap menyediakan solusi teknologi medis terbaik untuk rumah sakit Anda.</p>
           </div>
         </div>
         <a href="contact.html" class="btn-white">
-          Hubungi Kami 
+          <span data-i18n="art.cta.btn">Hubungi Kami</span>
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
-
     </section>
   </main>
 
   <!-- ===== Footer ===== -->
   <footer class="footer" style="padding: 70px 0 30px; background: #ffffff; border-top: 1px solid var(--color-border); position: relative; z-index: 10;">
     <div class="container">
-      
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 50px;">
-        
         <div style="grid-column: 1 / -1; max-width: 400px;">
           <a class="logo" href="index.html" style="margin-bottom: 20px; display: inline-flex;">
             <span class="logo__mark"><img src="assets/img/trifusion-icon.png" alt="Logo Trifusion Bionova Medika"></span>
@@ -469,7 +273,7 @@
               <span class="logo__sub" style="color: var(--color-accent-600); font-size: 0.55rem; font-weight: 600; letter-spacing: 2px;">BIONOVA<br>MEDIKA</span>
             </span>
           </a>
-          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text); margin-bottom: 24px;">
+          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text); margin-bottom: 24px;" data-i18n="footer.desc">
             Mitra terpercaya dalam menyediakan solusi teknologi medis inovatif. Berfokus pada pengadaan alat kesehatan dan Kerja Sama Operasional (KSO) untuk fasilitas layanan kesehatan di seluruh Indonesia.
           </p>
           <div style="display: flex; gap: 10px;">
@@ -480,18 +284,18 @@
         </div>
 
         <div>
-          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Perusahaan</h4>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;" data-i18n="footer.company">Perusahaan</h4>
           <ul style="display: grid; gap: 14px; padding: 0; margin: 0; list-style: none;">
-            <li><a href="index.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Beranda</a></li>
-            <li><a href="about.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Tentang Kami</a></li>
-            <li><a href="products.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Solusi Kami</a></li>
-            <li><a href="articles.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Berita &amp; Artikel</a></li>
-            <li><a href="contact.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Hubungi Kami</a></li>
+            <li><a href="index.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.home">Beranda</a></li>
+            <li><a href="about.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.about">Tentang Kami</a></li>
+            <li><a href="products.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="footer.solutions">Solusi Kami</a></li>
+            <li><a href="articles.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.articles">Berita &amp; Artikel</a></li>
+            <li><a href="contact.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="footer.contact">Hubungi Kami</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Kantor Pusat</h4>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;" data-i18n="footer.hq">Kantor Pusat</h4>
           <ul style="display: grid; gap: 18px; padding: 0; margin: 0; list-style: none;">
             <li style="display: flex; gap: 12px; align-items: flex-start;">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; margin-top: 2px; flex-shrink: 0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -507,32 +311,23 @@
             </li>
           </ul>
         </div>
-        
       </div>
 
       <div style="border-top: 1px solid var(--color-border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-        <span style="font-size: 0.8rem; color: var(--color-text-light);">&copy; 2026 PT Trifusion Bionova Medika. Hak cipta dilindungi.</span>
+        <span style="font-size: 0.8rem; color: var(--color-text-light);">&copy; 2026 PT Trifusion Bionova Medika. All rights reserved.</span>
         <span style="display: flex; gap: 20px; font-size: 0.8rem;">
-          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Kebijakan Privasi</a>
-          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Syarat &amp; Ketentuan</a>
-          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Peta Situs</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.privacy">Kebijakan Privasi</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.terms">Syarat &amp; Ketentuan</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.sitemap">Sitemap</a>
         </span>
       </div>
-      
     </div>
-    
     <style>
       .footer a:hover { color: var(--color-primary) !important; }
       .footer .logo:hover .logo__name { color: var(--color-primary) !important; }
-      .footer .footer__social a:hover { background: var(--color-primary) !important; color: #fff !important; }
-      
       @media (min-width: 900px) {
-        .footer > .container > div:first-child {
-          grid-template-columns: 2fr 1fr 1fr !important;
-        }
-        .footer > .container > div:first-child > div:first-child {
-          grid-column: 1 !important;
-        }
+        .footer > .container > div:first-child { grid-template-columns: 2fr 1fr 1fr !important; }
+        .footer > .container > div:first-child > div:first-child { grid-column: 1 !important; }
       }
     </style>
   </footer>
@@ -541,6 +336,7 @@
   <script src="js/products.js"></script>
   <script src="js/articles.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/lang.js"></script>
   
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -548,7 +344,6 @@
       if (!data) return;
 
       const { ARTICLE_CATEGORIES, ARTICLES } = data;
-      
       const catListSidebar = document.getElementById('catListSidebar');
       const catFilterPills = document.getElementById('catFilterPills');
       const latestArticlesSidebar = document.getElementById('latestArticlesSidebar');
@@ -557,49 +352,41 @@
       const searchBtn = document.getElementById('searchBtn');
       const sortSelect = document.getElementById('sortSelect');
       const emptyState = document.getElementById('emptyState');
-      
+
       let currentCategory = 'all';
       let searchQuery = '';
       let sortOrder = 'newest';
 
+      const getLang = () => (window.TBM_LANG ? window.TBM_LANG.getLang() : 'id');
+      const pick = (val) => (val && typeof val === 'object' ? (val[getLang()] || val.id) : val);
+
       function renderCategories() {
         if (!catListSidebar || !catFilterPills) return;
-        
         catListSidebar.innerHTML = '';
         catFilterPills.innerHTML = '';
-        
+
         ARTICLE_CATEGORIES.forEach(cat => {
-          const count = cat.id === 'all' 
-            ? ARTICLES.length 
-            : ARTICLES.filter(a => a.category === cat.id).length;
-            
+          const count = cat.id === 'all' ? ARTICLES.length : ARTICLES.filter(a => a.category === cat.id).length;
+          const label = pick(cat.label);
+
           let iconSvg = '';
-          if(cat.id === 'all') iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>';
-          else if(cat.id === 'product-insight') iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>';
-          else if(cat.id === 'medical-insight') iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>';
-          else if(cat.id === 'healthcare-tips') iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>';
+          if (cat.id === 'all') iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>';
+          else if (cat.id === 'product-insight') iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>';
+          else if (cat.id === 'medical-insight') iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>';
+          else if (cat.id === 'healthcare-tips') iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>';
 
           const li = document.createElement('li');
           const a = document.createElement('a');
           a.className = `cat-item ${cat.id === currentCategory ? 'active' : ''}`;
           a.href = "#";
-          a.innerHTML = `
-            <span class="cat-item__inner">
-              <span class="cat-icon">${iconSvg}</span>
-              ${cat.label}
-            </span>
-            <span class="cat-count">${count}</span>
-          `;
-          a.addEventListener('click', (e) => {
-            e.preventDefault();
-            setCategory(cat.id);
-          });
+          a.innerHTML = `<span class="cat-item__inner"><span class="cat-icon">${iconSvg}</span>${label}</span><span class="cat-count">${count}</span>`;
+          a.addEventListener('click', (e) => { e.preventDefault(); setCategory(cat.id); });
           li.appendChild(a);
           catListSidebar.appendChild(li);
 
           const pill = document.createElement('button');
           pill.className = `filter-pill ${cat.id === currentCategory ? 'active' : ''}`;
-          pill.textContent = cat.label;
+          pill.textContent = label;
           pill.addEventListener('click', () => setCategory(cat.id));
           catFilterPills.appendChild(pill);
         });
@@ -607,61 +394,50 @@
 
       function renderLatestSidebar() {
         if (!latestArticlesSidebar) return;
-        
         latestArticlesSidebar.innerHTML = '';
-        const latest = ARTICLES.slice(0, 3);
-        
-        latest.forEach(art => {
+        ARTICLES.slice(0, 3).forEach(art => {
+          const title = pick(art.title);
+          const date = pick(art.date);
           const a = document.createElement('a');
           a.href = `article-detail.html?id=${art.id}`;
           a.className = 'latest-item';
           a.innerHTML = `
-            <div class="latest-item__img">
-              <img src="${art.image}" alt="${art.title}">
-            </div>
+            <div class="latest-item__img"><img src="${art.image}" alt="${title}"></div>
             <div class="latest-item__info">
-              <h4>${art.title}</h4>
+              <h4>${title}</h4>
               <div class="latest-item__meta">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                ${art.date}
+                ${date}
               </div>
-            </div>
-          `;
+            </div>`;
           latestArticlesSidebar.appendChild(a);
         });
       }
 
       function setCategory(id) {
         currentCategory = id;
-        renderCategories(); 
+        renderCategories();
         filterArticles();
       }
 
       function filterArticles() {
         let filtered = [...ARTICLES];
-
         if (currentCategory !== 'all') {
           filtered = filtered.filter(a => a.category === currentCategory);
         }
-
         if (searchQuery) {
           const q = searchQuery.toLowerCase();
-          filtered = filtered.filter(a => 
-            a.title.toLowerCase().includes(q) || 
-            a.excerpt.toLowerCase().includes(q)
+          filtered = filtered.filter(a =>
+            pick(a.title).toLowerCase().includes(q) ||
+            pick(a.excerpt).toLowerCase().includes(q)
           );
         }
-
-        if (sortOrder === 'oldest') {
-          filtered.reverse();
-        }
-
+        if (sortOrder === 'oldest') filtered.reverse();
         renderGrid(filtered);
       }
 
       function renderGrid(articles) {
         if (!articleGrid || !emptyState) return;
-        
         articleGrid.innerHTML = '';
 
         if (articles.length === 0) {
@@ -676,57 +452,56 @@
         document.getElementById('pagination').style.display = 'flex';
 
         articles.forEach(art => {
-          const catLabel = ARTICLE_CATEGORIES.find(c => c.id === art.category)?.label || art.category;
-          
+          const catObj = ARTICLE_CATEGORIES.find(c => c.id === art.category);
+          const catLabel = catObj ? pick(catObj.label) : art.category;
+          const title = pick(art.title);
+          const excerpt = pick(art.excerpt);
+          const date = pick(art.date);
+          const readTime = pick(art.readTime);
+
           const card = document.createElement('div');
           card.className = 'art-card';
           card.innerHTML = `
             <a href="article-detail.html?id=${art.id}" style="display:block; text-decoration:none; color:inherit; height:100%; display:flex; flex-direction:column;">
               <div class="art-card__media">
-                <img src="${art.image}" alt="${art.title}" loading="lazy">
+                <img src="${art.image}" alt="${title}" loading="lazy">
                 <span class="art-card__cat">${catLabel}</span>
               </div>
               <div class="art-card__body">
-                <h3 class="art-card__title">${art.title}</h3>
-                <p class="art-card__excerpt">${art.excerpt}</p>
+                <h3 class="art-card__title">${title}</h3>
+                <p class="art-card__excerpt">${excerpt}</p>
                 <div class="art-card__footer">
                   <div class="art-card__meta">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    ${art.date}
+                    ${date}
                   </div>
                   <div class="art-card__meta">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    ${art.readTime}
+                    ${readTime}
                   </div>
                 </div>
               </div>
-            </a>
-          `;
+            </a>`;
           articleGrid.appendChild(card);
         });
       }
 
+      function renderAll() {
+        renderCategories();
+        renderLatestSidebar();
+        filterArticles();
+      }
+
       if (searchInput && searchBtn) {
-        searchInput.addEventListener('input', (e) => {
-          searchQuery = e.target.value;
-          filterArticles();
-        });
-        searchBtn.addEventListener('click', () => {
-          searchQuery = searchInput.value;
-          filterArticles();
-        });
+        searchInput.addEventListener('input', (e) => { searchQuery = e.target.value; filterArticles(); });
+        searchBtn.addEventListener('click', () => { searchQuery = searchInput.value; filterArticles(); });
       }
-
       if (sortSelect) {
-        sortSelect.addEventListener('change', (e) => {
-          sortOrder = e.target.value;
-          filterArticles();
-        });
+        sortSelect.addEventListener('change', (e) => { sortOrder = e.target.value; filterArticles(); });
       }
 
-      renderCategories();
-      renderLatestSidebar();
-      filterArticles();
+      window.addEventListener("tbm:langchange", renderAll);
+      renderAll();
     });
   </script>
 </body>

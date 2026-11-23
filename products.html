@@ -30,11 +30,11 @@
 
       <nav class="nav" aria-label="Navigasi utama">
         <ul class="nav__list">
-          <li><a class="nav__link" href="about.html">Tentang Kami</a></li>
-          <li><a class="nav__link active" href="products.html" aria-current="page">Produk</a></li>
-          <li><a class="nav__link" href="articles.html">Berita &amp; Artikel</a></li>
+          <li><a class="nav__link" href="about.html" data-i18n="nav.about">Tentang Kami</a></li>
+          <li><a class="nav__link active" href="products.html" aria-current="page"><span data-i18n="nav.products">Produk</span></a></li>
+          <li><a class="nav__link" href="articles.html" data-i18n="nav.articles">Berita &amp; Artikel</a></li>
         </ul>
-        <a class="btn btn--konsultasi" href="contact.html">Konsultasi Sekarang &rarr;</a>
+        <a class="btn btn--konsultasi" href="contact.html" data-i18n="nav.cta">Konsultasi Sekarang &rarr;</a>
       </nav>
 
       <button class="burger" aria-label="Buka menu" aria-expanded="false">
@@ -57,10 +57,10 @@
       <div class="container products-hero__inner">
         <div class="products-hero__content" data-reveal>
           <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="index.html">Beranda</a><span class="sep">/</span><span class="current">Produk</span>
+            <a href="index.html" data-i18n="nav.home">Beranda</a><span class="sep">/</span><span class="current" data-i18n="nav.products">Produk</span>
           </nav>
-          <h1>Alat Kesehatan</h1>
-          <p>Peralatan medis inovatif dan andal untuk layanan kesehatan yang lebih baik.</p>
+          <h1 data-i18n="prod.hero.title">Alat Kesehatan</h1>
+          <p data-i18n="prod.hero.sub">Peralatan medis inovatif dan andal untuk layanan kesehatan yang lebih baik.</p>
         </div>
       </div>
     </section>
@@ -77,23 +77,24 @@
 
           <aside class="filter-panel" aria-label="Filter produk">
             <div class="filter-block">
-              <label class="filter-block__title" for="searchInput">Cari Produk</label>
+              <label class="filter-block__title" for="searchInput" data-i18n="prod.filter.searchLabel">Cari Produk</label>
               <div class="search-field">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-                <input id="searchInput" type="search" placeholder="Nama produk atau brand" autocomplete="off">
+                <input id="searchInput" type="search" placeholder="Nama produk atau brand" data-i18n-placeholder="prod.filter.searchPh" autocomplete="off">
               </div>
             </div>
 
             <div class="filter-block">
-              <h3 class="filter-block__title">Brand</h3>
+              <h3 class="filter-block__title" data-i18n="prod.filter.brand">Brand</h3>
               <ul class="brand-list" id="brandList"></ul>
             </div>
 
             <div class="vr-card">
               <svg class="vr-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="11" rx="2" ry="2"/><path d="M6 7v0a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v0"/><circle cx="8" cy="13" r="1.5"/><circle cx="16" cy="13" r="1.5"/><path d="M12 14v4"/></svg>
-              <h4>Coba di VR</h4>
-              <p>Jelajahi solusi kami melalui pengalaman Virtual Reality.</p>
-              <a href="contact.html?topik=vr" class="vr-card__link">Jelajahi VR
+              <h4 data-i18n="prod.vr.title">Coba di VR</h4>
+              <p data-i18n="prod.vr.desc">Jelajahi solusi kami melalui pengalaman Virtual Reality.</p>
+              <a href="contact.html?topik=vr" class="vr-card__link">
+                <span data-i18n="prod.vr.btn">Jelajahi VR</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -102,15 +103,15 @@
           <div class="catalog-main" id="catalogMain">
             <header class="catalog-head">
               <div>
-                <span class="eyebrow">Produk Kami</span>
-                <h2>Teknologi Canggih<br>untuk Masa Depan yang Lebih Sehat</h2>
+                <span class="eyebrow" data-i18n="prod.cat.eyebrow">Produk Kami</span>
+                <h2 data-i18n="prod.cat.title">Teknologi Canggih<br>untuk Masa Depan yang Lebih Sehat</h2>
               </div>
-              <p class="catalog-head__lead">Rangkaian peralatan medis berteknologi terkini untuk mendukung perawatan pasien yang optimal dan operasional fasilitas yang efisien.</p>
+              <p class="catalog-head__lead" data-i18n="prod.cat.lead">Rangkaian peralatan medis berteknologi terkini untuk mendukung perawatan pasien yang optimal dan operasional fasilitas yang efisien.</p>
             </header>
 
             <div class="catalog-meta">
               <p class="catalog-meta__count" id="resultCount" aria-live="polite"></p>
-              <button type="button" class="catalog-meta__reset" id="resetFilters" hidden>Reset filter</button>
+              <button type="button" class="catalog-meta__reset" id="resetFilters" hidden data-i18n="prod.cat.reset">Reset filter</button>
             </div>
 
             <div class="product-grid" id="productGrid">
@@ -121,44 +122,45 @@
           </div>
         </div>
 
-        <!-- Info bar: angka dihitung otomatis dari data -->
+        <!-- Info bar -->
         <div class="info-bar" data-reveal>
           <div class="info-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
             <div>
               <h4 data-stat="akl" data-label="Produk Terdaftar AKL">Produk Terdaftar AKL</h4>
-              <p>Izin edar alat kesehatan</p>
+              <p data-i18n="prod.info.aklDesc">Izin edar alat kesehatan</p>
             </div>
           </div>
           <div class="info-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 9.4 7.5 4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
             <div>
               <h4 data-stat="brand" data-label="Brand Mitra">Brand Mitra</h4>
-              <p>Teknologi dari produsen terkemuka</p>
+              <p data-i18n="prod.info.brandDesc">Teknologi dari produsen terkemuka</p>
             </div>
           </div>
           <div class="info-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16v-3c0-5.52 4.48-10 10-10s10 4.48 10 10v3"/><path d="M4 16h4v4H4v-4z"/><path d="M16 16h4v4h-4v-4z"/></svg>
             <div>
-              <h4>Dukungan Profesional</h4>
-              <p>Dari konsultasi hingga purna jual</p>
+              <h4 data-i18n="prod.info.supTitle">Dukungan Profesional</h4>
+              <p data-i18n="prod.info.supDesc">Dari konsultasi hingga purna jual</p>
             </div>
           </div>
           <div class="info-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
             <div>
-              <h4>Mitra Terpercaya</h4>
-              <p>Untuk Indonesia yang lebih sehat</p>
+              <h4 data-i18n="prod.info.partTitle">Mitra Terpercaya</h4>
+              <p data-i18n="prod.info.partDesc">Untuk Indonesia yang lebih sehat</p>
             </div>
           </div>
         </div>
 
         <div class="cta-banner" data-reveal>
           <div>
-            <h2>Butuh solusi yang tepat untuk rumah sakit Anda?</h2>
-            <p>Tim kami siap membantu memilih teknologi medis yang sesuai dengan kebutuhan fasilitas Anda.</p>
+            <h2 data-i18n="prod.cta.title">Butuh solusi yang tepat untuk rumah sakit Anda?</h2>
+            <p data-i18n="prod.cta.desc">Tim kami siap membantu memilih teknologi medis yang sesuai dengan kebutuhan fasilitas Anda.</p>
           </div>
-          <a href="contact.html" class="cta-banner__btn">Hubungi Kami
+          <a href="contact.html" class="cta-banner__btn">
+            <span data-i18n="prod.cta.btn">Hubungi Kami</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -166,16 +168,11 @@
     </section>
   </main>
 
-<!-- ===== Footer ===== -->
+  <!-- ===== Footer ===== -->
   <footer class="footer" style="padding: 70px 0 30px; background: #ffffff; border-top: 1px solid var(--color-border); position: relative; z-index: 10;">
     <div class="container">
-      
-      <!-- Grid Utama Footer -->
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 50px;">
-        
-        <!-- Kolom 1: Logo & Deskripsi -->
         <div style="grid-column: 1 / -1; max-width: 400px;">
-          <!-- Untuk desktop (min-width: 900px), logo akan mengambil 2 kolom (dijelaskan via media query jika perlu, tapi max-width sudah cukup) -->
           <a class="logo" href="index.html" style="margin-bottom: 20px; display: inline-flex;">
             <span class="logo__mark"><img src="assets/img/trifusion-icon.png" alt="Trifusion Bionova Medika logo"></span>
             <span class="logo__text" style="justify-content: center; display: flex; flex-direction: column;">
@@ -183,7 +180,7 @@
               <span class="logo__sub" style="color: var(--color-accent-600); font-size: 0.55rem; font-weight: 600; letter-spacing: 2px;">BIONOVA<br>MEDIKA</span>
             </span>
           </a>
-          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text); margin-bottom: 24px;">
+          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text); margin-bottom: 24px;" data-i18n="footer.desc">
             Mitra terpercaya dalam menyediakan solusi teknologi medis inovatif. Berfokus pada pengadaan alat kesehatan dan Kerja Sama Operasional (KSO) untuk fasilitas layanan kesehatan di seluruh Indonesia.
           </p>
           <div style="display: flex; gap: 10px;">
@@ -193,21 +190,19 @@
           </div>
         </div>
 
-        <!-- Kolom 2: Perusahaan -->
         <div>
-          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Perusahaan</h4>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;" data-i18n="footer.company">Perusahaan</h4>
           <ul style="display: grid; gap: 14px; padding: 0; margin: 0; list-style: none;">
-            <li><a href="index.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Beranda</a></li>
-            <li><a href="about.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Tentang Kami</a></li>
-            <li><a href="products.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Solusi Kami</a></li>
-            <li><a href="articles.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Berita & Artikel</a></li>
-            <li><a href="contact.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Hubungi Kami</a></li>
+            <li><a href="index.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.home">Beranda</a></li>
+            <li><a href="about.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.about">Tentang Kami</a></li>
+            <li><a href="products.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="footer.solutions">Solusi Kami</a></li>
+            <li><a href="articles.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.articles">Berita &amp; Artikel</a></li>
+            <li><a href="contact.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="footer.contact">Hubungi Kami</a></li>
           </ul>
         </div>
 
-        <!-- Kolom 3: Kontak Info -->
         <div>
-          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Kantor Pusat</h4>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;" data-i18n="footer.hq">Kantor Pusat</h4>
           <ul style="display: grid; gap: 18px; padding: 0; margin: 0; list-style: none;">
             <li style="display: flex; gap: 12px; align-items: flex-start;">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; margin-top: 2px; flex-shrink: 0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -223,42 +218,32 @@
             </li>
           </ul>
         </div>
-        
       </div>
 
-      <!-- Copyright Bar -->
       <div style="border-top: 1px solid var(--color-border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
         <span style="font-size: 0.8rem; color: var(--color-text-light);">&copy; 2026 PT Trifusion Bionova Medika. All rights reserved.</span>
         <span style="display: flex; gap: 20px; font-size: 0.8rem;">
-          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Kebijakan Privasi</a>
-          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Syarat & Ketentuan</a>
-          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Sitemap</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.privacy">Kebijakan Privasi</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.terms">Syarat &amp; Ketentuan</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.sitemap">Sitemap</a>
         </span>
       </div>
-      
     </div>
     
-    <!-- Hover style untuk Tautan Footer -->
     <style>
       .footer a:hover { color: var(--color-primary) !important; }
       .footer .logo:hover .logo__name { color: var(--color-primary) !important; }
-      .footer .footer__social a:hover { background: var(--color-primary) !important; color: #fff !important; }
-      
-      /* Mengatur tata letak grid spesifik untuk layar desktop */
       @media (min-width: 900px) {
-        .footer > .container > div:first-child {
-          grid-template-columns: 2fr 1fr 1fr !important;
-        }
-        .footer > .container > div:first-child > div:first-child {
-          grid-column: 1 !important;
-        }
+        .footer > .container > div:first-child { grid-template-columns: 2fr 1fr 1fr !important; }
+        .footer > .container > div:first-child > div:first-child { grid-column: 1 !important; }
       }
     </style>
   </footer>
 
-  <!-- Urutan penting: data -> render katalog -> main.js -->
+  <!-- Scripts -->
   <script src="js/products.js"></script>
   <script src="js/products-page.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/lang.js"></script>
 </body>
 </html>

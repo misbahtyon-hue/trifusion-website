@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Article Detail — Trifusion Bionova Medika</title>
-  <meta name="description" content="Read our latest medical insights and product updates.">
+  <title>Detail Artikel — Trifusion Bionova Medika</title>
+  <meta name="description" content="Baca wawasan medis dan pembaruan teknologi kesehatan terbaru dari Trifusion Bionova Medika.">
   <link rel="icon" type="image/png" href="assets/img/trifusion-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,61 +16,32 @@
 
   <style>
     :root {
-      /* Disejajarkan dengan token brand di style.css (referensi: index & about) */
-      --ui-primary: var(--color-primary-600);   /* tombol & tautan  #2E6CA6 */
-      --ui-primary-hover: var(--color-primary); /* hover / blok gelap #1B2F63 */
+      --ui-primary: var(--color-primary-600);
+      --ui-primary-hover: var(--color-primary);
       --ui-bg-light: #f4f8fc;
       --ui-border: var(--color-border);
       --ui-text: var(--color-text);
       --ui-text-light: var(--color-text-light);
-      --ui-text-dark: var(--color-primary);     /* judul = indigo, seperti index/about */
+      --ui-text-dark: var(--color-primary);
     }
 
     body { background-color: #f4f8fc; }
 
     /* ===== HERO SECTION ===== */
-    .article-hero {
-      position: relative;
-      background: #f4f8fc;
-      padding: 160px 0 80px;
-      overflow: hidden;
-    }
-    .article-hero__bg {
-      position: absolute; top: 0; right: 0; bottom: 0; width: 58%; z-index: 1;
-    }
-    .article-hero__wave {
-      position: absolute; top: 0; left: -2px; height: 100%; width: 250px; z-index: 2;
-    }
-    .article-hero__bg img {
-      width: 100%; height: 100%; object-fit: cover; object-position: center;
-    }
+    .article-hero { position: relative; background: #f4f8fc; padding: 160px 0 80px; overflow: hidden; }
+    .article-hero__bg { position: absolute; top: 0; right: 0; bottom: 0; width: 58%; z-index: 1; }
+    .article-hero__wave { position: absolute; top: 0; left: -2px; height: 100%; width: 250px; z-index: 2; }
+    .article-hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
     .article-hero .container { position: relative; z-index: 3; }
-    
-    .breadcrumb-ui {
-      font-size: 0.85rem; display: flex; gap: 8px; align-items: center;
-      font-weight: 600; color: var(--ui-primary); margin-bottom: 20px;
-    }
+
+    .breadcrumb-ui { font-size: 0.85rem; display: flex; gap: 8px; align-items: center; font-weight: 600; color: var(--ui-primary); margin-bottom: 20px; flex-wrap: wrap; }
     .breadcrumb-ui a { color: var(--ui-primary); text-decoration: none; }
     .breadcrumb-ui svg { width: 14px; height: 14px; }
-    
-    .article-hero h1 {
-      font-size: clamp(2.5rem, 4vw, 3rem);
-      color: var(--ui-text-dark); margin-bottom: 16px;
-      letter-spacing: -0.03em; max-width: 800px;
-    }
-    
-    .article-hero__meta {
-        display: flex; gap: 20px; font-size: 0.9rem; color: var(--ui-text);
-        margin-top: 20px; align-items: center;
-    }
+    .article-hero h1 { font-size: clamp(2.1rem, 4vw, 3rem); color: var(--ui-text-dark); margin-bottom: 16px; letter-spacing: -0.03em; max-width: 800px; }
+    .article-hero__meta { display: flex; gap: 20px; font-size: 0.9rem; color: var(--ui-text); margin-top: 20px; align-items: center; flex-wrap: wrap; }
     .article-hero__meta span { display: flex; align-items: center; gap: 6px; }
     .article-hero__meta svg { width: 16px; height: 16px; color: var(--color-accent-600); }
-    
-    .article-hero__cat {
-        background: white; color: var(--ui-primary); font-size: 0.75rem; font-weight: 700;
-        padding: 6px 14px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        letter-spacing: 0.05em; text-transform: uppercase; margin-right: 10px;
-    }
+    .article-hero__cat { background: white; color: var(--ui-primary); font-size: 0.75rem; font-weight: 700; padding: 6px 14px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); letter-spacing: 0.05em; text-transform: uppercase; margin-right: 10px; }
 
     @media (max-width: 900px) {
       .article-hero__bg { width: 100%; opacity: 0.15; }
@@ -78,57 +49,29 @@
     }
 
     /* ===== MAIN CONTENT ===== */
-    .article-layout {
-        display: grid; grid-template-columns: 1fr; gap: 40px; padding: 60px 0 80px;
-    }
-    @media (min-width: 992px) {
-        .article-layout { grid-template-columns: 1fr 320px; align-items: start; }
-    }
+    .article-layout { display: grid; grid-template-columns: 1fr; gap: 40px; padding: 60px 0 80px; }
+    @media (min-width: 992px) { .article-layout { grid-template-columns: 1fr 320px; align-items: start; } }
 
-    .article-content {
-        background: white; border-radius: 16px; padding: 40px;
-        border: 1px solid var(--ui-border); box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-    }
-    
-    .article-content img {
-        width: 100%; border-radius: 12px; margin-bottom: 30px; object-fit: cover; max-height: 400px;
-    }
-    .article-content h3 {
-        font-size: 1.6rem; color: var(--ui-text-dark); margin: 30px 0 15px; letter-spacing: -0.02em;
-    }
-    .article-content p {
-        font-size: 1.05rem; color: var(--ui-text); line-height: 1.7; margin-bottom: 20px;
-    }
-    
-    .share-widget {
-        display: flex; gap: 10px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--ui-border); align-items: center;
-    }
+    .article-content { background: white; border-radius: 16px; padding: 40px; border: 1px solid var(--ui-border); box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
+    .article-content img { width: 100%; border-radius: 12px; margin-bottom: 30px; object-fit: cover; max-height: 400px; }
+    .article-content h3 { font-size: 1.45rem; color: var(--ui-text-dark); margin: 30px 0 14px; letter-spacing: -0.02em; }
+    .article-content p { font-size: 1.03rem; color: var(--ui-text); line-height: 1.75; margin-bottom: 18px; }
+    .article-content ul { padding-left: 20px; margin: 0 0 22px; display: grid; gap: 10px; color: var(--ui-text); line-height: 1.7; }
+
+    .share-widget { display: flex; gap: 10px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--ui-border); align-items: center; }
     .share-widget span { font-weight: 600; color: var(--ui-text-dark); margin-right: 10px; }
-    .share-btn {
-        width: 36px; height: 36px; border-radius: 50%; background: var(--color-bg-muted); display: grid; place-items: center;
-        color: var(--ui-primary); text-decoration: none; transition: 0.2s;
-    }
+    .share-btn { width: 36px; height: 36px; border-radius: 50%; background: var(--color-bg-muted); display: grid; place-items: center; color: var(--ui-primary); text-decoration: none; transition: 0.2s; }
     .share-btn:hover { background: var(--ui-primary); color: white; }
 
     /* ===== SIDEBAR ===== */
-    .sidebar-widget {
-      background: white; border-radius: 16px; padding: 30px;
-      border: 1px solid var(--ui-border); margin-bottom: 30px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-    }
-    .sidebar-widget h3 {
-      font-size: 1.25rem; color: var(--ui-text-dark); margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--ui-border);
-    }
+    .sidebar-widget { background: white; border-radius: 16px; padding: 30px; border: 1px solid var(--ui-border); margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
+    .sidebar-widget h3 { font-size: 1.25rem; color: var(--ui-text-dark); margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--ui-border); }
     .latest-list { display: grid; gap: 20px; }
     .latest-item { display: flex; gap: 16px; align-items: center; text-decoration: none; transition: transform 0.2s; }
     .latest-item:hover { transform: translateY(-2px); }
-    .latest-item__img {
-      width: 70px; height: 70px; border-radius: 8px; flex-shrink: 0; background: var(--color-bg-muted); overflow: hidden; border: 1px solid var(--ui-border);
-    }
+    .latest-item__img { width: 70px; height: 70px; border-radius: 8px; flex-shrink: 0; background: var(--color-bg-muted); overflow: hidden; border: 1px solid var(--ui-border); }
     .latest-item__img img { width: 100%; height: 100%; object-fit: cover; }
-    .latest-item__info h4 {
-      font-size: 0.9rem; color: var(--ui-text-dark); margin: 0 0 6px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-    }
+    .latest-item__info h4 { font-size: 0.9rem; color: var(--ui-text-dark); margin: 0 0 6px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .latest-item__meta { font-size: 0.75rem; color: var(--ui-text); display: flex; align-items: center; gap: 6px; }
     .latest-item__meta svg { width: 12px; height: 12px; }
   </style>
@@ -148,11 +91,11 @@
 
       <nav class="nav" aria-label="Navigasi utama">
         <ul class="nav__list">
-          <li><a class="nav__link" href="about.html">Tentang Kami</a></li>
-          <li><a class="nav__link" href="products.html">Produk</a></li>
-          <li><a class="nav__link active" href="articles.html" aria-current="page">Berita & Artikel</a></li>
+          <li><a class="nav__link" href="about.html" data-i18n="nav.about">Tentang Kami</a></li>
+          <li><a class="nav__link" href="products.html"><span data-i18n="nav.products">Produk</span></a></li>
+          <li><a class="nav__link active" href="articles.html" aria-current="page" data-i18n="nav.articles">Berita &amp; Artikel</a></li>
         </ul>
-        <a class="btn btn--konsultasi" href="contact.html">Konsultasi Sekarang &rarr;</a>
+        <a class="btn btn--konsultasi" href="contact.html" data-i18n="nav.cta">Konsultasi Sekarang &rarr;</a>
       </nav>
 
       <button class="burger" aria-label="Buka menu" aria-expanded="false">
@@ -162,10 +105,7 @@
   </header>
   <div class="nav-backdrop"></div>
 
-  <!-- Container tempat Artikel dirender oleh JS -->
-  <main id="articleContainer">
-    <!-- Konten akan diisi otomatis -->
-  </main>
+  <main id="articleContainer"></main>
 
   <!-- ===== Footer ===== -->
   <footer class="footer" style="padding: 70px 0 30px; background: #ffffff; border-top: 1px solid var(--color-border); position: relative; z-index: 10;">
@@ -173,22 +113,76 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 50px;">
         <div style="grid-column: 1 / -1; max-width: 400px;">
           <a class="logo" href="index.html" style="margin-bottom: 20px; display: inline-flex;">
-            <span class="logo__mark"><img src="assets/img/trifusion-icon.png" alt="Trifusion Bionova Medika logo"></span>
+            <span class="logo__mark"><img src="assets/img/trifusion-icon.png" alt="Logo Trifusion Bionova Medika"></span>
             <span class="logo__text" style="justify-content: center; display: flex; flex-direction: column;">
               <span class="logo__name" style="color: var(--color-primary); font-size: 1.1rem; font-weight: 700; line-height: 1.1;">TRIFUSION</span>
               <span class="logo__sub" style="color: var(--color-accent-600); font-size: 0.55rem; font-weight: 600; letter-spacing: 2px;">BIONOVA<br>MEDIKA</span>
             </span>
           </a>
-          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text); margin-bottom: 24px;">Mitra terpercaya dalam menyediakan solusi teknologi medis inovatif.</p>
+          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text); margin-bottom: 24px;" data-i18n="footer.desc">
+            Mitra terpercaya dalam menyediakan solusi teknologi medis inovatif. Berfokus pada pengadaan alat kesehatan dan Kerja Sama Operasional (KSO) untuk fasilitas layanan kesehatan di seluruh Indonesia.
+          </p>
+          <div style="display: flex; gap: 10px;">
+            <a href="#" aria-label="LinkedIn" style="width: 36px; height: 36px; border-radius: 50%; background: #f4f8fc; display: flex; align-items: center; justify-content: center; color: var(--color-primary); transition: 0.3s;"><svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+            <a href="#" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background: #f4f8fc; display: flex; align-items: center; justify-content: center; color: var(--color-primary); transition: 0.3s;"><svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px;"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.94C18.88 4 12 4 12 4s-6.88 0-8.6.48a2.78 2.78 0 0 0-1.94 1.94C1 8.14 1 12 1 12s0 3.86.48 5.58a2.78 2.78 0 0 0 1.94 1.94C5.12 20 12 20 12 20s6.88 0 8.6-.48a2.78 2.78 0 0 0 1.94-1.94C23 15.86 23 12 23 12s0-3.86-.46-5.58zM9.54 15.54V8.46L15.82 12l-6.28 3.54z"/></svg></a>
+            <a href="#" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: #f4f8fc; display: flex; align-items: center; justify-content: center; color: var(--color-primary); transition: 0.3s;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;" data-i18n="footer.company">Perusahaan</h4>
+          <ul style="display: grid; gap: 14px; padding: 0; margin: 0; list-style: none;">
+            <li><a href="index.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.home">Beranda</a></li>
+            <li><a href="about.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.about">Tentang Kami</a></li>
+            <li><a href="products.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="footer.solutions">Solusi Kami</a></li>
+            <li><a href="articles.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.articles">Berita &amp; Artikel</a></li>
+            <li><a href="contact.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="footer.contact">Hubungi Kami</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;" data-i18n="footer.hq">Kantor Pusat</h4>
+          <ul style="display: grid; gap: 18px; padding: 0; margin: 0; list-style: none;">
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; margin-top: 2px; flex-shrink: 0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5;">Jl. Tebet Barat Dalam Raya No. 39 L, RT.6/RW.4, Tebet, Jakarta Selatan 12810</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span style="font-size: 0.9rem; color: var(--color-text);">(021) 38825214</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; flex-shrink: 0;"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:kontak@trifusion.co.id" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none;">kontak@trifusion.co.id</a>
+            </li>
+          </ul>
         </div>
       </div>
+
+      <div style="border-top: 1px solid var(--color-border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <span style="font-size: 0.8rem; color: var(--color-text-light);">&copy; 2026 PT Trifusion Bionova Medika. All rights reserved.</span>
+        <span style="display: flex; gap: 20px; font-size: 0.8rem;">
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.privacy">Kebijakan Privasi</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.terms">Syarat &amp; Ketentuan</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.sitemap">Sitemap</a>
+        </span>
+      </div>
     </div>
+    <style>
+      .footer a:hover { color: var(--color-primary) !important; }
+      .footer .logo:hover .logo__name { color: var(--color-primary) !important; }
+      @media (min-width: 900px) {
+        .footer > .container > div:first-child { grid-template-columns: 2fr 1fr 1fr !important; }
+        .footer > .container > div:first-child > div:first-child { grid-column: 1 !important; }
+      }
+    </style>
   </footer>
 
   <!-- Scripts -->
   <script src="js/products.js"></script>
   <script src="js/articles.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/lang.js"></script>
   
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -199,91 +193,95 @@
       const params = new URLSearchParams(window.location.search);
       const articleId = params.get('id');
       const article = ARTICLES.find(a => a.id === articleId);
-
       const mainContainer = document.getElementById('articleContainer');
 
-      if (!article) {
-        mainContainer.innerHTML = `
-          <section class="container" style="padding: 150px 0; text-align: center;">
-            <h2>Article Not Found</h2>
-            <p>The article you are looking for does not exist or has been removed.</p>
-            <a href="articles.html" class="btn btn--primary" style="margin-top:20px;">Back to Articles</a>
-          </section>
-        `;
-        return;
-      }
+      const getLang = () => (window.TBM_LANG ? window.TBM_LANG.getLang() : 'id');
+      const pick = (val) => (val && typeof val === 'object' ? (val[getLang()] || val.id) : val);
 
-      const catLabel = ARTICLE_CATEGORIES.find(c => c.id === article.category)?.label || article.category;
-      
-      // Get 3 latest articles
-      const latest = ARTICLES.filter(a => a.id !== article.id).slice(0, 3);
-      let sidebarLatestHtml = '';
-      latest.forEach(art => {
-        sidebarLatestHtml += `
+      function renderArticle() {
+        if (!article) {
+          mainContainer.innerHTML = `
+            <section class="container" style="padding: 150px 0; text-align: center;">
+              <h2 data-i18n="adet.notFound.title">Artikel Tidak Ditemukan</h2>
+              <p data-i18n="adet.notFound.desc">Artikel yang Anda cari tidak tersedia atau telah dihapus.</p>
+              <a href="articles.html" class="btn btn--primary" style="margin-top:20px;" data-i18n="adet.back">Kembali ke Artikel</a>
+            </section>`;
+          if (window.TBM_LANG) window.TBM_LANG.applyLang(getLang());
+          return;
+        }
+
+        const catObj = ARTICLE_CATEGORIES.find(c => c.id === article.category);
+        const catLabel = catObj ? pick(catObj.label) : article.category;
+        const title = pick(article.title);
+        const date = pick(article.date);
+        const readTime = pick(article.readTime);
+        const content = pick(article.content);
+
+        const latest = ARTICLES.filter(a => a.id !== article.id).slice(0, 3);
+        const sidebarLatestHtml = latest.map(art => `
           <a href="article-detail.html?id=${art.id}" class="latest-item">
-            <div class="latest-item__img">
-              <img src="${art.image}" alt="${art.title}">
-            </div>
+            <div class="latest-item__img"><img src="${art.image}" alt="${pick(art.title)}"></div>
             <div class="latest-item__info">
-              <h4>${art.title}</h4>
+              <h4>${pick(art.title)}</h4>
               <div class="latest-item__meta">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                ${art.date}
+                ${pick(art.date)}
               </div>
             </div>
-          </a>
-        `;
-      });
+          </a>`).join("");
 
-      document.title = `${article.title} — Trifusion Bionova Medika`;
+        document.title = `${title} — Trifusion Bionova Medika`;
 
-      mainContainer.innerHTML = `
-        <section class="article-hero">
-          <div class="article-hero__bg">
-            <img src="${article.image}" alt="Background">
-            <svg class="article-hero__wave" viewBox="0 0 200 1080" preserveAspectRatio="none" aria-hidden="true"><path d="M0,0 C150,300 0,700 100,1080 L0,1080 L0,0 Z" fill="rgba(244, 248, 252, 0.6)"/><path d="M0,0 C100,350 -50,650 50,1080 L0,1080 L0,0 Z" fill="#f4f8fc"/></svg>
-          </div>
-          <div class="container">
-            <div class="breadcrumb-ui">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-              <a href="index.html">Home</a> &gt; <a href="articles.html">News & Articles</a> &gt; <span>${catLabel}</span>
+        mainContainer.innerHTML = `
+          <section class="article-hero">
+            <div class="article-hero__bg">
+              <img src="${article.image}" alt="${title}">
+              <svg class="article-hero__wave" viewBox="0 0 200 1080" preserveAspectRatio="none" aria-hidden="true"><path d="M0,0 C150,300 0,700 100,1080 L0,1080 L0,0 Z" fill="rgba(244, 248, 252, 0.6)"/><path d="M0,0 C100,350 -50,650 50,1080 L0,1080 L0,0 Z" fill="#f4f8fc"/></svg>
             </div>
-            <h1>${article.title}</h1>
-            <div class="article-hero__meta">
-              <span class="article-hero__cat">${catLabel}</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> ${article.date}</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> ${article.readTime}</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="container">
-          <div class="article-layout">
-            <div class="article-content">
-              ${article.content}
-              <div class="share-widget">
-                <span>Share this article:</span>
-                <a href="#" class="share-btn"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+            <div class="container">
+              <div class="breadcrumb-ui">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                <a href="index.html" data-i18n="nav.home">Beranda</a> &gt; <a href="articles.html" data-i18n="nav.articles">Berita &amp; Artikel</a> &gt; <span>${catLabel}</span>
+              </div>
+              <h1>${title}</h1>
+              <div class="article-hero__meta">
+                <span class="article-hero__cat">${catLabel}</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> ${date}</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> ${readTime}</span>
               </div>
             </div>
+          </section>
 
-            <aside>
-              <div class="sidebar-widget">
-                <h3>Latest Articles</h3>
-                <div class="latest-list">
-                  ${sidebarLatestHtml}
+          <section class="container">
+            <div class="article-layout">
+              <div class="article-content">
+                ${content}
+                <div class="share-widget">
+                  <span data-i18n="adet.share">Bagikan artikel ini:</span>
+                  <a href="#" class="share-btn" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
                 </div>
               </div>
-              
-              <div class="sidebar-widget" style="background: var(--color-primary); color: white;">
-                <h3 style="color: white; border-color: rgba(255,255,255,0.2);">Need Consultation?</h3>
-                <p style="font-size: 0.9rem; margin-bottom: 20px; opacity: 0.9;">Contact our team for professional medical equipment solutions.</p>
-                <a href="contact.html" style="display: block; text-align: center; background: white; color: var(--color-primary); padding: 12px; border-radius: 6px; font-weight: 600; text-decoration: none;">Contact Us</a>
-              </div>
-            </aside>
-          </div>
-        </section>
-      `;
+
+              <aside>
+                <div class="sidebar-widget">
+                  <h3 data-i18n="art.side.latest">Artikel Terbaru</h3>
+                  <div class="latest-list">${sidebarLatestHtml}</div>
+                </div>
+                
+                <div class="sidebar-widget" style="background: var(--color-primary); color: white;">
+                  <h3 style="color: white; border-color: rgba(255,255,255,0.2);" data-i18n="adet.side.consultTitle">Butuh Konsultasi?</h3>
+                  <p style="font-size: 0.9rem; margin-bottom: 20px; opacity: 0.9;" data-i18n="adet.side.consultDesc">Hubungi tim kami untuk solusi pengadaan dan pemeliharaan alat kesehatan profesional.</p>
+                  <a href="contact.html" style="display: block; text-align: center; background: white; color: var(--color-primary); padding: 12px; border-radius: 6px; font-weight: 600; text-decoration: none;" data-i18n="art.cta.btn">Hubungi Kami</a>
+                </div>
+              </aside>
+            </div>
+          </section>`;
+
+        if (window.TBM_LANG) window.TBM_LANG.applyLang(getLang());
+      }
+
+      window.addEventListener("tbm:langchange", renderArticle);
+      renderArticle();
     });
   </script>
 </body>

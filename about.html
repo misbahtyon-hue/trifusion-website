@@ -15,542 +15,81 @@
   <link rel="stylesheet" href="css/responsive.css">
   
   <style>
-    /* ===== PAGE HERO DENGAN GAMBAR (Approved) ===== */
-    .page-hero--image { 
-      position: relative;
-      min-height: 400px;
-      display: flex;
-      align-items: center;
-      background: #f4f8fc; 
-      padding-top: var(--header-h);
-      padding-bottom: 0;
-      overflow: hidden;
-      border-bottom: none;
-    }
-    
-    .page-hero__image-side {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 60%; 
-      height: 100%;
-      z-index: 1;
-    }
-    .page-hero__image-side img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-    
-    .page-hero__wave {
-      position: absolute;
-      top: 0;
-      left: -2px;
-      height: 100%;
-      width: 250px;
-      z-index: 2;
-    }
-
-    .page-hero__container {
-      position: relative;
-      z-index: 3;
-      width: 100%;
-      max-width: var(--container);
-      margin: 0 auto;
-      padding-left: 32px;
-      display: flex;
-      justify-content: flex-start;
-    }
-    
-    .page-hero__content {
-      max-width: 450px; 
-      padding: 60px 0;
-      margin-left: -12px;
-    }
-    
-    .breadcrumb {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--color-primary-600);
-      margin-bottom: 24px;
-      text-transform: capitalize;
-      letter-spacing: 0;
-    }
+    /* ===== PAGE HERO DENGAN GAMBAR ===== */
+    .page-hero--image { position: relative; min-height: 400px; display: flex; align-items: center; background: #f4f8fc; padding-top: var(--header-h); padding-bottom: 0; overflow: hidden; border-bottom: none; }
+    .page-hero__image-side { position: absolute; top: 0; right: 0; width: 60%; height: 100%; z-index: 1; }
+    .page-hero__image-side img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .page-hero__wave { position: absolute; top: 0; left: -2px; height: 100%; width: 250px; z-index: 2; }
+    .page-hero__container { position: relative; z-index: 3; width: 100%; max-width: var(--container); margin: 0 auto; padding-left: 32px; display: flex; justify-content: flex-start; }
+    .page-hero__content { max-width: 450px; padding: 60px 0; margin-left: -12px; }
+    .breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; color: var(--color-primary-600); margin-bottom: 24px; text-transform: capitalize; letter-spacing: 0; }
     .breadcrumb a { color: var(--color-primary-600); }
     .breadcrumb .sep { color: var(--color-text-light); font-weight: normal; margin: 0 4px; }
     .breadcrumb .current { color: var(--color-text-light); }
-    
-    .page-hero__content h1 { 
-      font-size: 3.2rem; 
-      color: var(--color-primary); 
-      margin-bottom: 12px;
-      letter-spacing: -0.03em;
-    }
-    .page-hero__content p { 
-      font-size: 1.4rem; 
-      font-weight: 500; 
-      color: var(--color-primary); 
-      line-height: 1.3;
-      margin-bottom: 24px;
-    }
-    
-    .line-accent {
-      width: 60px;
-      height: 4px;
-      background: var(--color-accent-600);
-      border-radius: 2px;
-    }
-    
+    .page-hero__content h1 { font-size: 3.2rem; color: var(--color-primary); margin-bottom: 12px; letter-spacing: -0.03em; }
+    .page-hero__content p { font-size: 1.4rem; font-weight: 500; color: var(--color-primary); line-height: 1.3; margin-bottom: 24px; }
+    .line-accent { width: 60px; height: 4px; background: var(--color-accent-600); border-radius: 2px; }
     @media (max-width: 900px) {
       .page-hero__image-side { width: 100%; opacity: 0.2; }
       .page-hero__wave { display: none; }
       .page-hero__content { max-width: 100%; padding: 40px 0; margin-left: 0; }
     }
 
-    /* ===== ADDITIONAL SECTIONS (Elaborated from Company Profile) ===== */
-    .tbm-sec {
-      padding: 90px 0;
-    }
-    .tbm-sec--soft {
-      background: #f4f8fc;
-    }
-    .tbm-sec-head {
-      text-align: center;
-      max-width: 740px;
-      margin: 0 auto 52px;
-    }
-    .tbm-sec-head .eyebrow {
-      color: var(--color-primary);
-      letter-spacing: 0.1em;
-      background: none;
-    }
-    .tbm-sec-head h2 {
-      color: var(--color-primary);
-      font-size: clamp(1.85rem, 3vw, 2.35rem);
-      margin: -6px 0 16px;
-      letter-spacing: -0.02em;
-    }
-    .tbm-sec-head p {
-      font-size: 1.02rem;
-      color: var(--color-text);
-      line-height: 1.65;
-      margin: 0;
-    }
+    /* ===== ADDITIONAL SECTIONS ===== */
+    .tbm-sec { padding: 90px 0; }
+    .tbm-sec--soft { background: #f4f8fc; }
+    .tbm-sec-head { text-align: center; max-width: 740px; margin: 0 auto 52px; }
+    .tbm-sec-head .eyebrow { color: var(--color-primary); letter-spacing: 0.1em; background: none; }
+    .tbm-sec-head h2 { color: var(--color-primary); font-size: clamp(1.85rem, 3vw, 2.35rem); margin: -6px 0 16px; letter-spacing: -0.02em; }
+    .tbm-sec-head p { font-size: 1.02rem; color: var(--color-text); line-height: 1.65; margin: 0; }
 
-    /* Why Choose Us */
-    .tbm-why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-    }
-    .tbm-why-card {
-      background: #ffffff;
-      border: 1px solid var(--color-border);
-      border-radius: 16px;
-      padding: 30px 28px;
-      display: flex;
-      gap: 18px;
-      align-items: flex-start;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    }
-    .tbm-why-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--color-accent-600);
-      box-shadow: 0 12px 28px rgba(27, 47, 99, 0.06);
-    }
-    .tbm-why-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: #eaf3fa;
-      color: var(--color-primary);
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-    }
-    .tbm-why-icon svg {
-      width: 24px;
-      height: 24px;
-    }
-    .tbm-why-card h3 {
-      font-size: 1.08rem;
-      color: var(--color-primary);
-      margin: 0 0 8px;
-    }
-    .tbm-why-card p {
-      font-size: 0.92rem;
-      color: var(--color-text);
-      line-height: 1.6;
-      margin: 0;
-    }
+    .tbm-why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .tbm-why-card { background: #ffffff; border: 1px solid var(--color-border); border-radius: 16px; padding: 30px 28px; display: flex; gap: 18px; align-items: flex-start; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+    .tbm-why-card:hover { transform: translateY(-5px); border-color: var(--color-accent-600); box-shadow: 0 12px 28px rgba(27, 47, 99, 0.06); }
+    .tbm-why-icon { width: 48px; height: 48px; border-radius: 12px; background: #eaf3fa; color: var(--color-primary); display: grid; place-items: center; flex-shrink: 0; }
+    .tbm-why-icon svg { width: 24px; height: 24px; }
+    .tbm-why-card h3 { font-size: 1.08rem; color: var(--color-primary); margin: 0 0 8px; }
+    .tbm-why-card p { font-size: 0.92rem; color: var(--color-text); line-height: 1.6; margin: 0; }
 
-    /* 3 Pillars of Solutions (KSO, Maintenance, Hospital Systems) */
-    .tbm-pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-      gap: 28px;
-    }
-    .tbm-pillar-card {
-      background: #ffffff;
-      border: 1px solid var(--color-border);
-      border-radius: 18px;
-      padding: 36px 30px;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .tbm-pillar-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 32px rgba(27, 47, 99, 0.07);
-    }
-    .tbm-pillar-num {
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--color-accent-600);
-      background: #eaf3fa;
-      display: inline-flex;
-      align-items: center;
-      padding: 5px 12px;
-      border-radius: 20px;
-      width: fit-content;
-      margin-bottom: 18px;
-    }
-    .tbm-pillar-card h3 {
-      font-size: 1.3rem;
-      color: var(--color-primary);
-      margin: 0 0 12px;
-      line-height: 1.3;
-    }
-    .tbm-pillar-card > p {
-      font-size: 0.94rem;
-      color: var(--color-text);
-      line-height: 1.6;
-      margin: 0 0 22px;
-    }
-    .tbm-checklist {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 11px;
-    }
-    .tbm-checklist li {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      font-size: 0.9rem;
-      color: var(--color-text);
-      line-height: 1.45;
-    }
-    .tbm-checklist svg {
-      width: 17px;
-      height: 17px;
-      color: var(--color-accent-600);
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
+    .tbm-pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 28px; }
+    .tbm-pillar-card { background: #ffffff; border: 1px solid var(--color-border); border-radius: 18px; padding: 36px 30px; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .tbm-pillar-card:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(27, 47, 99, 0.07); }
+    .tbm-pillar-num { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; color: var(--color-accent-600); background: #eaf3fa; display: inline-flex; align-items: center; padding: 5px 12px; border-radius: 20px; width: fit-content; margin-bottom: 18px; }
+    .tbm-pillar-card h3 { font-size: 1.3rem; color: var(--color-primary); margin: 0 0 12px; line-height: 1.3; }
+    .tbm-pillar-card > p { font-size: 0.94rem; color: var(--color-text); line-height: 1.6; margin: 0 0 22px; }
+    .tbm-checklist { list-style: none; padding: 0; margin: 0; display: grid; gap: 11px; }
+    .tbm-checklist li { display: flex; gap: 10px; align-items: flex-start; font-size: 0.9rem; color: var(--color-text); line-height: 1.45; }
+    .tbm-checklist svg { width: 17px; height: 17px; color: var(--color-accent-600); flex-shrink: 0; margin-top: 2px; }
 
-    /* Maintenance Focus Split Box */
-    .tbm-maint-box {
-      margin-top: 40px;
-      background: #ffffff;
-      border: 1px solid var(--color-border);
-      border-radius: 18px;
-      padding: 36px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-      align-items: start;
-    }
-    .tbm-maint-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--color-primary);
-      background: #eaf3fa;
-      padding: 6px 12px;
-      border-radius: 6px;
-      margin-bottom: 14px;
-    }
-    .tbm-maint-col h4 {
-      font-size: 1.15rem;
-      color: var(--color-primary);
-      margin: 0 0 10px;
-    }
-    .tbm-maint-col p {
-      font-size: 0.92rem;
-      color: var(--color-text);
-      line-height: 1.6;
-      margin: 0 0 14px;
-    }
+    .tbm-maint-box { margin-top: 40px; background: #ffffff; border: 1px solid var(--color-border); border-radius: 18px; padding: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: start; }
+    .tbm-maint-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-primary); background: #eaf3fa; padding: 6px 12px; border-radius: 6px; margin-bottom: 14px; }
+    .tbm-maint-col h4 { font-size: 1.15rem; color: var(--color-primary); margin: 0 0 10px; }
+    .tbm-maint-col p { font-size: 0.92rem; color: var(--color-text); line-height: 1.6; margin: 0 0 14px; }
 
-    /* KSO Stats & Table */
-    .tbm-stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-bottom: 44px;
-    }
-    .tbm-stat-card {
-      background: #ffffff;
-      border: 1px solid var(--color-border);
-      border-radius: 16px;
-      padding: 28px 24px;
-      text-align: center;
-    }
-    .tbm-stat-num {
-      font-family: var(--font-display);
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--color-primary);
-      line-height: 1.1;
-      margin-bottom: 8px;
-    }
-    .tbm-stat-label {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--color-accent-600);
-      margin-bottom: 4px;
-    }
-    .tbm-stat-sub {
-      font-size: 0.8rem;
-      color: var(--color-text-light);
-    }
+    .tbm-legal-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+    @media (min-width: 900px) { .tbm-legal-grid { grid-template-columns: 1.05fr 1.25fr; align-items: start; } }
+    .tbm-legal-box { background: #ffffff; border: 1px solid var(--color-border); border-radius: 16px; padding: 32px; }
+    .tbm-legal-id { display: grid; gap: 16px; margin-top: 20px; }
+    .tbm-legal-row { background: #f4f8fc; border-radius: 10px; padding: 16px 18px; border-left: 4px solid var(--color-accent-600); }
+    .tbm-legal-row span { display: block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-light); margin-bottom: 4px; }
+    .tbm-legal-row strong { font-family: var(--font-mono); font-size: 1rem; color: var(--color-primary); }
+    .tbm-kbli-list { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 14px; }
+    .tbm-kbli-item { display: flex; gap: 14px; align-items: flex-start; padding-bottom: 14px; border-bottom: 1px solid #f1f5f9; }
+    .tbm-kbli-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .tbm-kbli-code { font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700; background: var(--color-primary); color: #ffffff; padding: 4px 10px; border-radius: 6px; flex-shrink: 0; }
+    .tbm-kbli-desc { font-size: 0.92rem; color: var(--color-text); line-height: 1.45; }
 
-    .tbm-table-wrap {
-      background: #ffffff;
-      border: 1px solid var(--color-border);
-      border-radius: 16px;
-      overflow-x: auto;
-      box-shadow: 0 6px 24px rgba(27, 47, 99, 0.04);
-      margin-bottom: 36px;
-    }
-    .tbm-table-head {
-      padding: 20px 26px;
-      border-bottom: 1px solid var(--color-border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .tbm-table-head h3 {
-      font-size: 1.15rem;
-      color: var(--color-primary);
-      margin: 0;
-    }
-    .tbm-table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 600px;
-    }
-    .tbm-table th,
-    .tbm-table td {
-      padding: 15px 24px;
-      text-align: left;
-      border-bottom: 1px solid #f1f5f9;
-      font-size: 0.92rem;
-    }
-    .tbm-table th {
-      background: #f8fafc;
-      color: var(--color-primary);
-      font-weight: 700;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-    .tbm-table tbody tr:last-child td {
-      border-bottom: none;
-    }
-    .tbm-table tbody tr:hover {
-      background: #f9fbfd;
-    }
-    .tbm-pill {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      background: #eaf3fa;
-      color: var(--color-primary);
-    }
-
-    /* Reference Cards (Site Prep, RF Shielding, Procurement) */
-    .tbm-ref-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 24px;
-    }
-    .tbm-ref-card {
-      background: #ffffff;
-      border: 1px solid var(--color-border);
-      border-radius: 16px;
-      padding: 28px;
-    }
-    .tbm-ref-card h4 {
-      font-size: 1.05rem;
-      color: var(--color-primary);
-      margin: 0 0 14px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #f1f5f9;
-    }
-    .tbm-ref-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 9px;
-      font-size: 0.9rem;
-      color: var(--color-text);
-    }
-    .tbm-ref-list li::before {
-      content: "•";
-      color: var(--color-accent-600);
-      font-weight: 700;
-      margin-right: 8px;
-    }
-
-    /* Legal & Licensing */
-    .tbm-legal-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 28px;
-    }
-    @media (min-width: 900px) {
-      .tbm-legal-grid {
-        grid-template-columns: 1.05fr 1.25fr;
-        align-items: start;
-      }
-    }
-    .tbm-legal-box {
-      background: #ffffff;
-      border: 1px solid var(--color-border);
-      border-radius: 16px;
-      padding: 32px;
-    }
-    .tbm-legal-id {
-      display: grid;
-      gap: 16px;
-      margin-top: 20px;
-    }
-    .tbm-legal-row {
-      background: #f4f8fc;
-      border-radius: 10px;
-      padding: 16px 18px;
-      border-left: 4px solid var(--color-accent-600);
-    }
-    .tbm-legal-row span {
-      display: block;
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--color-text-light);
-      margin-bottom: 4px;
-    }
-    .tbm-legal-row strong {
-      font-family: var(--font-mono);
-      font-size: 1rem;
-      color: var(--color-primary);
-    }
-    .tbm-kbli-list {
-      list-style: none;
-      padding: 0;
-      margin: 18px 0 0;
-      display: grid;
-      gap: 14px;
-    }
-    .tbm-kbli-item {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      padding-bottom: 14px;
-      border-bottom: 1px solid #f1f5f9;
-    }
-    .tbm-kbli-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-    .tbm-kbli-code {
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
-      font-weight: 700;
-      background: var(--color-primary);
-      color: #ffffff;
-      padding: 4px 10px;
-      border-radius: 6px;
-      flex-shrink: 0;
-    }
-    .tbm-kbli-desc {
-      font-size: 0.92rem;
-      color: var(--color-text);
-      line-height: 1.45;
-    }
-
-    /* Bottom CTA */
-    .tbm-about-cta {
-      background: linear-gradient(135deg, #1B2F63 0%, #2E6CA6 100%);
-      border-radius: 20px;
-      padding: 44px 48px;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      box-shadow: 0 14px 32px rgba(27, 47, 99, 0.16);
-    }
-    @media (min-width: 820px) {
-      .tbm-about-cta {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-    }
-    .tbm-about-cta h2 {
-      color: #ffffff;
-      font-size: clamp(1.5rem, 2.6vw, 2rem);
-      margin: 0 0 8px;
-      letter-spacing: -0.02em;
-    }
-    .tbm-about-cta p {
-      color: rgba(255, 255, 255, 0.9);
-      margin: 0;
-      max-width: 580px;
-      line-height: 1.6;
-    }
-    .tbm-cta-btn {
-      background: #ffffff;
-      color: var(--color-primary);
-      padding: 14px 28px;
-      border-radius: 30px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      white-space: nowrap;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .tbm-cta-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-    }
+    .tbm-about-cta { background: linear-gradient(135deg, #1B2F63 0%, #2E6CA6 100%); border-radius: 20px; padding: 44px 48px; color: #ffffff; display: flex; flex-direction: column; gap: 24px; box-shadow: 0 14px 32px rgba(27, 47, 99, 0.16); }
+    @media (min-width: 820px) { .tbm-about-cta { flex-direction: row; align-items: center; justify-content: space-between; } }
+    .tbm-about-cta h2 { color: #ffffff; font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 0 0 8px; letter-spacing: -0.02em; }
+    .tbm-about-cta p { color: rgba(255, 255, 255, 0.9); margin: 0; max-width: 580px; line-height: 1.6; }
+    .tbm-cta-btn { background: #ffffff; color: var(--color-primary); padding: 14px 28px; border-radius: 30px; font-weight: 700; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .tbm-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18); }
   </style>
 </head>
 <body>
 
-  <!-- ===== Header (Approved) ===== -->
+  <!-- ===== Header ===== -->
   <header class="header">
     <div class="container">
       <a class="logo" href="index.html" aria-label="Trifusion Bionova Medika — beranda">
@@ -563,11 +102,11 @@
 
       <nav class="nav" aria-label="Navigasi utama">
         <ul class="nav__list">
-          <li><a class="nav__link active" href="about.html" aria-current="page">Tentang Kami</a></li>
-          <li><a class="nav__link" href="products.html">Produk</a></li>
-          <li><a class="nav__link" href="articles.html">Berita &amp; Artikel</a></li>
+          <li><a class="nav__link active" href="about.html" aria-current="page" data-i18n="nav.about">Tentang Kami</a></li>
+          <li><a class="nav__link" href="products.html"><span data-i18n="nav.products">Produk</span></a></li>
+          <li><a class="nav__link" href="articles.html" data-i18n="nav.articles">Berita &amp; Artikel</a></li>
         </ul>
-        <a class="btn btn--konsultasi" href="contact.html">Konsultasi Sekarang &rarr;</a>
+        <a class="btn btn--konsultasi" href="contact.html" data-i18n="nav.cta">Konsultasi Sekarang &rarr;</a>
       </nav>
 
       <button class="burger" aria-label="Buka menu" aria-expanded="false">
@@ -578,7 +117,7 @@
   <div class="nav-backdrop"></div>
 
   <main>
-    <!-- ===== Page Hero (Approved) ===== -->
+    <!-- ===== Page Hero ===== -->
     <section class="page-hero page-hero--image">
       <div class="page-hero__image-side">
         <img src="assets/img/OLA.png" alt="Gedung Trifusion Bionova Medika">
@@ -594,48 +133,45 @@
             <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0" style="width: 14px; margin-right: 4px; margin-top:-2px;">
               <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
             </svg>
-            <a href="index.html">Home</a><span class="sep">&gt;</span><span class="current">About Us</span>
+            <a href="index.html" data-i18n="nav.home">Beranda</a><span class="sep">&gt;</span><span class="current" data-i18n="nav.about">Tentang Kami</span>
           </div>
-          <h1>About Us</h1>
-          <p>Your Trusted Partner in<br>Healthcare Technology</p>
+          <h1 data-i18n="abt.hero.title">Tentang Kami</h1>
+          <p data-i18n="abt.hero.sub">Mitra Terpercaya Anda dalam<br>Teknologi Kesehatan</p>
           <div class="line-accent"></div>
         </div>
       </div>
     </section>
 
-    <!-- ===== Company Overview (Approved) ===== -->
+    <!-- ===== Company Overview ===== -->
     <section class="section overview">
       <div class="container overview__grid">
         <div class="overview__media" data-reveal="left">
           <img src="assets/img/Radiologi.jpg" alt="Trifusion Bionova Medika facility">
         </div>
         <div class="overview__content" data-reveal="right">
-          <span class="eyebrow" style="color: var(--color-primary); letter-spacing: 0.1em; background: none;">COMPANY PROFILE</span>
+          <span class="eyebrow" style="color: var(--color-primary); letter-spacing: 0.1em; background: none;" data-i18n="abt.ov.eyebrow">PROFIL PERUSAHAAN</span>
           <h2 style="color: var(--color-primary); font-size: 2.2rem; line-height: 1.1; margin-bottom: 20px;">TRIFUSION<br>BIONOVA MEDIKA</h2>
-          <p>
-            PT Trifusion Bionova Medika hadir sebagai mitra terpercaya bagi fasilitas pelayanan kesehatan dalam menyediakan solusi teknologi medis yang inovatif dan berkelanjutan. 
-            Berfokus pada penyediaan alat kesehatan, kami menghadirkan berbagai produk berkualitas melalui skema pengadaan yang fleksibel, mulai dari pembelian langsung, Kerja Sama Operasional (KSO), hingga pelaksanaan proyek yang disesuaikan dengan kebutuhan setiap institusi kesehatan.
+          <p data-i18n="abt.ov.p1">
+            PT Trifusion Bionova Medika hadir sebagai mitra terpercaya bagi fasilitas pelayanan kesehatan dalam menyediakan solusi teknologi medis yang inovatif dan berkelanjutan. Berfokus pada penyediaan alat kesehatan, kami menghadirkan berbagai produk berkualitas melalui skema pengadaan yang fleksibel, mulai dari pembelian langsung, Kerja Sama Operasional (KSO), hingga pelaksanaan proyek yang disesuaikan dengan kebutuhan setiap institusi kesehatan.
           </p>
-          <p>
+          <p data-i18n="abt.ov.p2">
             Seiring dengan perkembangan transformasi digital di sektor kesehatan, kami juga menghadirkan solusi berbasis teknologi seperti Hospital Emergency Command Center Platform (ECCP), Central Patient Monitoring System, serta Virtual Reality (VR) untuk pelatihan, simulasi klinis, dan pengembangan kompetensi tenaga kesehatan guna mendukung standar klinis dan operasional terbaik.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- ===== Vision & Mission (Approved) ===== -->
+    <!-- ===== Vision & Mission ===== -->
     <section class="section section--soft">
       <div class="container">
         <div class="vm__grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; border: none;">
-          
-          <!-- Vision -->
           <div data-reveal="left" style="background: #fff; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
             <div style="margin-bottom: 24px;">
               <span class="eyebrow" style="color: var(--color-primary); letter-spacing: 0.1em; background: none;">OUR VISION</span>
-              <h2 style="color: var(--color-primary); font-size: 2rem; margin-top: -10px;">Visi Kami</h2>
+              <h2 style="color: var(--color-primary); font-size: 2rem; margin-top: -10px;" data-i18n="abt.vm.vTitle">Visi Kami</h2>
             </div>
             <div style="display: flex; gap: 20px; align-items: flex-start; flex: 1;">
-              <p style="font-size: 1.05rem; line-height: 1.6; margin: 0; color: var(--color-text);">
+              <p style="font-size: 1.05rem; line-height: 1.6; margin: 0; color: var(--color-text);" data-i18n="idx.vm.vDesc">
                 “Menjadi penyedia solusi alat kesehatan terdepan di Indonesia yang menghadirkan inovasi transformatif, guna mendukung layanan kesehatan yang berkualitas, berkelanjutan, dan dapat diakses oleh seluruh masyarakat.”
               </p>
             </div>
@@ -644,50 +180,46 @@
             </div>
           </div>
 
-          <!-- Mission -->
           <div data-reveal="right" style="background: #fff; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
             <div style="margin-bottom: 24px;">
               <span class="eyebrow" style="color: var(--color-primary); letter-spacing: 0.1em; background: none;">OUR MISSION</span>
-              <h2 style="color: var(--color-primary); font-size: 2rem; margin-top: -10px;">Misi Kami</h2>
+              <h2 style="color: var(--color-primary); font-size: 2rem; margin-top: -10px;" data-i18n="abt.vm.mTitle">Misi Kami</h2>
             </div>
             <ol style="list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; flex: 1;">
               <li style="display: flex; gap: 16px; align-items: flex-start;">
                 <span style="width: 28px; height: 28px; background: var(--color-primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; flex-shrink: 0; margin-top: 2px;">1</span>
-                <span style="font-size: 1rem; color: var(--color-text); line-height: 1.5;">Menyediakan solusi alat kesehatan yang berkualitas dan inovatif.</span>
+                <span style="font-size: 1rem; color: var(--color-text); line-height: 1.5;" data-i18n="idx.vm.m1">Menyediakan solusi alat kesehatan yang <strong>berkualitas dan inovatif</strong>.</span>
               </li>
               <li style="display: flex; gap: 16px; align-items: flex-start;">
                 <span style="width: 28px; height: 28px; background: var(--color-primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; flex-shrink: 0; margin-top: 2px;">2</span>
-                <span style="font-size: 1rem; color: var(--color-text); line-height: 1.5;">Memberikan layanan yang profesional dan terpercaya.</span>
+                <span style="font-size: 1rem; color: var(--color-text); line-height: 1.5;" data-i18n="idx.vm.m2">Memberikan layanan yang profesional dan terpercaya.</span>
               </li>
               <li style="display: flex; gap: 16px; align-items: flex-start;">
                 <span style="width: 28px; height: 28px; background: var(--color-primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; flex-shrink: 0; margin-top: 2px;">3</span>
-                <span style="font-size: 1rem; color: var(--color-text); line-height: 1.5;">Mendukung peningkatan serta pemerataan layanan kesehatan di Indonesia.</span>
+                <span style="font-size: 1rem; color: var(--color-text); line-height: 1.5;" data-i18n="idx.vm.m3">Mendukung peningkatan serta pemerataan layanan kesehatan di Indonesia.</span>
               </li>
             </ol>
           </div>
-          
         </div>
       </div>
     </section>
 
-    <!-- ===== Core Values / Komitmen (Approved) ===== -->
+    <!-- ===== Core Values / Komitmen ===== -->
     <section class="section" style="padding: 100px 0;">
       <div class="container">
-        
         <div style="text-align: center; max-width: 700px; margin: 0 auto 50px;" data-reveal="up">
-          <span class="eyebrow" style="color: var(--color-primary); letter-spacing: 0.1em; background: none;">OUR COMMITMENT</span>
-          <h2 style="color: var(--color-primary); font-size: 2.4rem; margin: -10px 0 20px;">Komitmen Kami</h2>
-          <p style="font-size: 1.05rem; color: var(--color-text);">Di Trifusion Bionova Medika, kami berkomitmen untuk selalu menghadirkan solusi terbaik melalui nilai-nilai utama yang kami pegang teguh.</p>
+          <span class="eyebrow" style="color: var(--color-primary); letter-spacing: 0.1em; background: none;" data-i18n="val.eyebrow">KOMITMEN KAMI</span>
+          <h2 style="color: var(--color-primary); font-size: 2.4rem; margin: -10px 0 20px;" data-i18n="val.title">Komitmen Kami</h2>
+          <p style="font-size: 1.05rem; color: var(--color-text);" data-i18n="val.sub">Di Trifusion Bionova Medika, kami berkomitmen untuk selalu menghadirkan solusi terbaik melalui nilai-nilai utama yang kami pegang teguh.</p>
         </div>
         
         <div class="commitment-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;" data-reveal="up" data-reveal-delay="1">
-          
           <div style="background: #fff; text-align: center; padding: 40px 24px; border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.02); transition: transform 0.3s ease;">
             <div style="width: 64px; height: 64px; margin: 0 auto 20px; background: #f4f8fc; border-radius: 50%; display: grid; place-items: center;">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 32px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
             </div>
             <h3 style="font-size: 1.15rem; color: var(--color-primary); margin-bottom: 12px;">Quality</h3>
-            <p style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5; margin: 0;">Produk dan layanan berstandar tinggi guna memastikan keandalan dan keamanan.</p>
+            <p style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5; margin: 0;" data-i18n="val.q.desc">Produk dan layanan berstandar tinggi guna memastikan keandalan dan keamanan.</p>
           </div>
           
           <div style="background: #fff; text-align: center; padding: 40px 24px; border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.02); transition: transform 0.3s ease;">
@@ -695,7 +227,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 32px;"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
             </div>
             <h3 style="font-size: 1.15rem; color: var(--color-primary); margin-bottom: 12px;">Customer</h3>
-            <p style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5; margin: 0;">Pelayanan profesional, responsif, dan berorientasi pada kebutuhan mitra.</p>
+            <p style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5; margin: 0;" data-i18n="val.c.desc">Pelayanan profesional, responsif, dan berorientasi pada kebutuhan mitra.</p>
           </div>
           
           <div style="background: #fff; text-align: center; padding: 40px 24px; border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.02); transition: transform 0.3s ease;">
@@ -703,7 +235,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 32px; color: var(--color-accent-600);"><path d="M9 18h6M10 22h4M21 11a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
             </div>
             <h3 style="font-size: 1.15rem; color: var(--color-primary); margin-bottom: 12px;">Innovation</h3>
-            <p style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5; margin: 0;">Solusi adaptif dan teknologi terkini untuk masa depan layanan kesehatan.</p>
+            <p style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5; margin: 0;" data-i18n="val.i.desc">Solusi adaptif dan teknologi terkini untuk masa depan layanan kesehatan.</p>
           </div>
           
           <div style="background: #fff; text-align: center; padding: 40px 24px; border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.02); transition: transform 0.3s ease;">
@@ -711,182 +243,134 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 32px; color: var(--color-accent-600);"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
             </div>
             <h3 style="font-size: 1.15rem; color: var(--color-primary); margin-bottom: 12px;">Efficiency</h3>
-            <p style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5; margin: 0;">Proses kerja efektif untuk mempercepat pelayanan dan memberi nilai tambah.</p>
+            <p style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5; margin: 0;" data-i18n="val.e.desc">Proses kerja efektif untuk mempercepat pelayanan dan memberi nilai tambah.</p>
           </div>
-          
         </div>
         
         <div style="text-align: center; margin-top: 50px;" data-reveal="up" data-reveal-delay="2">
-          <a class="btn btn--konsultasi" href="#clients" style="display: inline-flex;">Mengapa Memilih Kami? &rarr;</a>
+          <a class="btn btn--konsultasi" href="#clients" style="display: inline-flex;" data-i18n="abt.btnWhy">Mengapa Memilih Kami? &rarr;</a>
         </div>
-
       </div>
-      
       <style>
-        .commitment-grid > div:hover {
-          transform: translateY(-8px) !important;
-          border-color: var(--color-accent) !important;
-          box-shadow: 0 12px 30px rgba(0,0,0,0.06) !important;
-        }
+        .commitment-grid > div:hover { transform: translateY(-8px) !important; border-color: var(--color-accent) !important; box-shadow: 0 12px 30px rgba(0,0,0,0.06) !important; }
       </style>
     </section>
 
-    <!-- =============================================================
-         BARU 1: WHY CHOOSE US (Target tombol "Mengapa Memilih Kami?")
-         ============================================================= -->
+    <!-- ===== WHY CHOOSE US ===== -->
     <section class="tbm-sec tbm-sec--soft" id="clients">
       <div class="container">
         <div class="tbm-sec-head" data-reveal="up">
-          <span class="eyebrow">WHY CHOOSE US</span>
-          <h2>Mengapa Memilih Trifusion Bionova Medika?</h2>
-          <p>Kami memadukan legalitas distribusi resmi, pengalaman teknis mendalam, dan standar mutu internasional untuk memastikan keberlanjutan operasional fasilitas kesehatan Anda.</p>
+          <span class="eyebrow" data-i18n="abt.why.eyebrow">MENGAPA MEMILIH KAMI</span>
+          <h2 data-i18n="abt.why.title">Mengapa Memilih Trifusion Bionova Medika?</h2>
+          <p data-i18n="abt.why.sub">Kami memadukan legalitas distribusi resmi, pengalaman teknis mendalam, dan standar mutu internasional untuk memastikan keberlanjutan operasional fasilitas kesehatan Anda.</p>
         </div>
 
         <div class="tbm-why-grid" data-reveal="up">
           <div class="tbm-why-card">
-            <div class="tbm-why-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div>
-              <h3>Pengalaman Teknis &gt;15 Tahun</h3>
-              <p>Didukung tenaga teknis profesional terlatih dengan pengalaman lebih dari 15 tahun dalam pemeliharaan, perbaikan, dan dukungan alat medis (khususnya radiologi, X-Ray, dan endoskopi).</p>
-            </div>
+            <div class="tbm-why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div><h3 data-i18n="abt.why.1.t">Pengalaman Teknis &gt;15 Tahun</h3><p data-i18n="abt.why.1.d">Didukung tenaga teknis profesional terlatih dengan pengalaman lebih dari 15 tahun dalam pemeliharaan, perbaikan, dan dukungan alat medis (khususnya radiologi, X-Ray, dan endoskopi).</p></div>
           </div>
 
           <div class="tbm-why-card">
-            <div class="tbm-why-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-            </div>
-            <div>
-              <h3>Standar ECRI &amp; ISO 13485:2016</h3>
-              <p>Pelaksanaan pemeliharaan mengacu pada pedoman global ECRI, serta menggunakan suku cadang berkualitas yang dikelola sesuai standar manajemen mutu ISO 13485:2016.</p>
-            </div>
+            <div class="tbm-why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <div><h3 data-i18n="abt.why.2.t">Standar ECRI &amp; ISO 13485:2016</h3><p data-i18n="abt.why.2.d">Pelaksanaan pemeliharaan mengacu pada pedoman global ECRI, serta menggunakan suku cadang berkualitas yang dikelola sesuai standar manajemen mutu ISO 13485:2016.</p></div>
           </div>
 
           <div class="tbm-why-card">
-            <div class="tbm-why-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-            </div>
-            <div>
-              <h3>Garansi Layanan 3–6 Bulan</h3>
-              <p>Setiap pekerjaan perbaikan dan pemeliharaan didukung jaminan garansi selama 3 hingga 6 bulan sebagai bukti komitmen terhadap keandalan dan kepuasan pelanggan.</p>
-            </div>
+            <div class="tbm-why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
+            <div><h3 data-i18n="abt.why.3.t">Garansi Layanan 3–6 Bulan</h3><p data-i18n="abt.why.3.d">Setiap pekerjaan perbaikan dan pemeliharaan didukung jaminan garansi selama 3 hingga 6 bulan sebagai bukti komitmen terhadap keandalan dan kepuasan pelanggan.</p></div>
           </div>
 
           <div class="tbm-why-card">
-            <div class="tbm-why-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div>
-              <h3>Biaya Kompetitif &amp; Tepat Waktu</h3>
-              <p>Layanan teknis berkualitas dengan skema biaya kompetitif serta waktu pengerjaan yang efektif sesuai kompleksitas peralatan untuk meminimalkan <em>downtime</em>.</p>
-            </div>
+            <div class="tbm-why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><h3 data-i18n="abt.why.4.t">Biaya Kompetitif &amp; Tepat Waktu</h3><p data-i18n="abt.why.4.d">Layanan teknis berkualitas dengan skema biaya kompetitif serta waktu pengerjaan yang efektif sesuai kompleksitas peralatan untuk meminimalkan <em>downtime</em>.</p></div>
           </div>
 
           <div class="tbm-why-card">
-            <div class="tbm-why-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            </div>
-            <div>
-              <h3>Skema Pengadaan Fleksibel</h3>
-              <p>Menyediakan opsi pembelian langsung, Kerja Sama Operasional (KSO), skema cicilan, hingga proyek <em>turnkey</em> termasuk persiapan ruang (RF Shielding &amp; Proteksi Radiasi).</p>
-            </div>
+            <div class="tbm-why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+            <div><h3 data-i18n="abt.why.5.t">Skema Pengadaan Fleksibel</h3><p data-i18n="abt.why.5.d">Menyediakan opsi pembelian langsung, Kerja Sama Operasional (KSO), skema cicilan, hingga proyek <em>turnkey</em> termasuk persiapan ruang (RF Shielding &amp; Proteksi Radiasi).</p></div>
           </div>
 
           <div class="tbm-why-card">
-            <div class="tbm-why-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            </div>
-            <div>
-              <h3>Legalitas Resmi IDAK &amp; CDAKB</h3>
-              <p>Berizin resmi Kementerian Kesehatan RI untuk distribusi alat kesehatan, suku cadang, dan aksesori di seluruh Indonesia serta terdaftar pada Katalog Elektronik INAPROC.</p>
-            </div>
+            <div class="tbm-why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <div><h3 data-i18n="abt.why.6.t">Legalitas Resmi IDAK &amp; CDAKB</h3><p data-i18n="abt.why.6.d">Berizin resmi Kementerian Kesehatan RI untuk distribusi alat kesehatan, suku cadang, dan aksesori di seluruh Indonesia serta terdaftar pada Katalog Elektronik INAPROC.</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =============================================================
-         BARU 2: 3 PILAR LAYANAN (PENGADAAN/KSO, MAINTENANCE, SYSTEMS)
-         ============================================================= -->
+    <!-- ===== 3 PILAR LAYANAN ===== -->
     <section class="tbm-sec" id="solutions">
       <div class="container">
         <div class="tbm-sec-head" data-reveal="up">
-          <span class="eyebrow">PRODUCTS &amp; SERVICES</span>
-          <h2>Solusi Terintegrasi untuk Fasilitas Kesehatan</h2>
-          <p>Dari pengadaan alat medis, layanan purna jual dan pemeliharaan berkala, hingga ekosistem digital rumah sakit berbasis <em>real-time</em> dan Virtual Reality.</p>
+          <span class="eyebrow" data-i18n="abt.sol.eyebrow">PRODUK &amp; LAYANAN</span>
+          <h2 data-i18n="abt.sol.title">Solusi Terintegrasi untuk Fasilitas Kesehatan</h2>
+          <p data-i18n="abt.sol.sub">Dari pengadaan alat medis, layanan purna jual dan pemeliharaan berkala, hingga ekosistem digital rumah sakit berbasis <em>real-time</em> dan Virtual Reality.</p>
         </div>
 
         <div class="tbm-pillars-grid" data-reveal="up">
-          <!-- Pilar 01 -->
           <div class="tbm-pillar-card">
-            <span class="tbm-pillar-num">01 / PENGADAAN &amp; KSO</span>
+            <span class="tbm-pillar-num" data-i18n="idx.pil.1.num">01 / PENGADAAN</span>
             <h3>Medical Device Sales &amp; Distribution</h3>
-            <p>Distribusi peralatan medis berkualitas (Radiologi, CT Scan, MRI, Cathlab, USG, Ventilator, Anestesi, Patient Monitor, ECG, dll.) dengan skema yang adaptif.</p>
+            <p data-i18n="idx.pil.1.desc">Distribusi peralatan medis berkualitas (Radiologi, CT Scan, MRI, Cathlab, USG, Ventilator, Anestesi, Patient Monitor, ECG, dll.) dengan skema yang adaptif.</p>
             <ul class="tbm-checklist">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Direct Purchase:</strong> Pengadaan langsung dengan jaminan legalitas &amp; garansi resmi.</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Joint Operation Schemes (KSO):</strong> Skema kerja sama operasional tanpa beban CAPEX tinggi.</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Installment Payment Scheme:</strong> Skema pembayaran bertahap sesuai kemampuan institusi.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.sol.p1.l1"><strong>Direct Purchase:</strong> Pengadaan langsung dengan jaminan legalitas &amp; garansi resmi.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.sol.p1.l2"><strong>Joint Operation Schemes (KSO):</strong> Skema kerja sama operasional tanpa beban CAPEX tinggi.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.sol.p1.l3"><strong>Installment Payment Scheme:</strong> Skema pembayaran bertahap sesuai kemampuan institusi.</span></li>
             </ul>
           </div>
 
-          <!-- Pilar 02 -->
           <div class="tbm-pillar-card">
-            <span class="tbm-pillar-num">02 / MAINTENANCE</span>
+            <span class="tbm-pillar-num" data-i18n="idx.pil.2.num">02 / MAINTENANCE</span>
             <h3>After-Sales Service Solutions</h3>
-            <p>Pemeliharaan preventif dan korektif mengacu pada pedoman ECRI untuk memastikan performa optimal, keamanan operasional, dan keselamatan pasien.</p>
+            <p data-i18n="idx.pil.2.desc">Pemeliharaan preventif dan korektif mengacu pada pedoman ECRI untuk memastikan performa optimal, keamanan operasional, dan keselamatan pasien.</p>
             <ul class="tbm-checklist">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Installation &amp; Commissioning di lokasi</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Preventive Maintenance (IPM) terjadwal</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Corrective Maintenance / Troubleshooting &amp; Repair</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Technical Support &amp; User Training</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Accessories &amp; Sparepart Supply (ISO 13485:2016)</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.sol.p2.l1">Installation &amp; Commissioning di lokasi</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.sol.p2.l2">Preventive Maintenance (IPM) terjadwal</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.sol.p2.l3">Corrective Maintenance / Troubleshooting &amp; Repair</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.sol.p2.l4">Technical Support &amp; User Training</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.sol.p2.l5">Accessories &amp; Sparepart Supply (ISO 13485:2016)</span></li>
             </ul>
           </div>
 
-          <!-- Pilar 03 -->
           <div class="tbm-pillar-card">
-            <span class="tbm-pillar-num">03 / DIGITAL &amp; VR</span>
+            <span class="tbm-pillar-num" data-i18n="idx.pil.3.num">03 / DIGITAL &amp; VR</span>
             <h3>Hospital Systems &amp; VR Technology</h3>
-            <p>Transformasi digital layanan klinis untuk mempercepat respons kegawatdaruratan, pemantauan pasien, serta simulasi pelatihan tenaga medis.</p>
+            <p data-i18n="idx.pil.3.desc">Transformasi digital layanan klinis untuk mempercepat respons kegawatdaruratan, pemantauan pasien, serta simulasi pelatihan tenaga medis.</p>
             <ul class="tbm-checklist">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Emergency Command Center (ECCP):</strong> Pusat kendali 24/7, dispatch ambulans, GPS, &amp; integrasi kapasitas IGD.</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Central Monitoring System (CMS):</strong> Pemantauan terpusat data bedside monitor secara <em>real-time</em>.</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><strong>VR Medical Training:</strong> Simulasi kegawatdaruratan ruang MRI, prosedur operasi, &amp; edukasi klinis.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.sol.p3.l1"><strong>Emergency Command Center (ECCP):</strong> Pusat kendali 24/7, dispatch ambulans, GPS, &amp; integrasi kapasitas IGD.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.sol.p3.l2"><strong>Central Monitoring System (CMS):</strong> Pemantauan terpusat data bedside monitor secara <em>real-time</em>.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.sol.p3.l3"><strong>VR Medical Training:</strong> Simulasi kegawatdaruratan ruang MRI, prosedur operasi, &amp; edukasi klinis.</span></li>
             </ul>
           </div>
         </div>
 
-        <!-- Fokus Utama Maintenance (Radiology & Endoscopy) -->
         <div class="tbm-maint-box" data-reveal="up">
           <div class="tbm-maint-col">
-            <span class="tbm-maint-badge">Fokus Maintenance 01</span>
+            <span class="tbm-maint-badge" data-i18n="abt.maint.1.badge">Fokus Maintenance 01</span>
             <h4>Radiology Equipment Maintenance</h4>
-            <p>Menjaga kesiapan dan akurasi alat pencitraan medis (X-Ray, CT Scan, Cathlab, MRI) melalui dukungan teknis lapangan dan koordinasi operasional regional.</p>
+            <p data-i18n="abt.maint.1.d">Menjaga kesiapan dan akurasi alat pencitraan medis (X-Ray, CT Scan, Cathlab, MRI) melalui dukungan teknis lapangan dan koordinasi operasional regional.</p>
             <ul class="tbm-checklist">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Penugasan teknisi di lokasi &amp; dukungan regional</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Instalasi, <em>commissioning</em>, &amp; pelatihan pengguna</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Dukungan ketersediaan <em>spare parts</em> dan komponen</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.maint.1.l1">Penugasan teknisi di lokasi &amp; dukungan regional</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.maint.1.l2">Instalasi, <em>commissioning</em>, &amp; pelatihan pengguna</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.maint.1.l3">Dukungan ketersediaan <em>spare parts</em> dan komponen</span></li>
             </ul>
           </div>
 
           <div class="tbm-maint-col">
-            <span class="tbm-maint-badge">Fokus Maintenance 02</span>
+            <span class="tbm-maint-badge" data-i18n="abt.maint.2.badge">Fokus Maintenance 02</span>
             <h4>Endoscopy (Flexible &amp; Rigid Scope)</h4>
-            <p>Pemeliharaan dan perbaikan khusus instrumen endoskopi oleh teknisi berpengalaman guna menjaga kualitas visual, keselamatan pasien, dan keandalan tindakan.</p>
+            <p data-i18n="abt.maint.2.d">Pemeliharaan dan perbaikan khusus instrumen endoskopi oleh teknisi berpengalaman guna menjaga kualitas visual, keselamatan pasien, dan keandalan tindakan.</p>
             <ul class="tbm-checklist">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Suku cadang sesuai standar mutu ISO 13485:2016</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Waktu perbaikan efektif dengan biaya kompetitif</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Jaminan garansi perbaikan selama 3–6 bulan</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.maint.2.l1">Suku cadang sesuai standar mutu ISO 13485:2016</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.maint.2.l2">Waktu perbaikan efektif dengan biaya kompetitif</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="abt.maint.2.l3">Jaminan garansi perbaikan selama 3–6 bulan</span></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- =============================================================
-         BARU 3: PORTOFOLIO KSO / PPP & REFERENSI PROYEK
-         ============================================================= -->
+<!-- ===== PORTOFOLIO KSO (Disembunyikan sementara) ===== -->
     <section class="tbm-sec tbm-sec--soft" id="kso-portfolio" style="display: none;">
       <div class="container">
         <div class="tbm-sec-head" data-reveal="up">
@@ -895,7 +379,6 @@
           <p>Jangkauan kemitraan Kerja Sama Operasional (KSO) dan pengerjaan infrastruktur medis kami tersebar di berbagai rumah sakit di Sumatera, Jawa, Kalimantan, hingga Bali.</p>
         </div>
 
-        <!-- Angka Portofolio KSO/PPP -->
         <div class="tbm-stats-grid" data-reveal="up">
           <div class="tbm-stat-card">
             <div class="tbm-stat-num" data-count="17">17</div>
@@ -919,7 +402,6 @@
           </div>
         </div>
 
-        <!-- Tabel Proyek KSO Berjalan -->
         <div class="tbm-table-wrap" data-reveal="up">
           <div class="tbm-table-head">
             <h3>Daftar Proyek KSO Berjalan (Current KSO Projects)</h3>
@@ -935,177 +417,79 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td><strong>RST Soepraoen Malang</strong></td>
-                <td><span class="tbm-pill">Cathlab</span></td>
-                <td>GE Innova 2100</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td><strong>RSUD Dr. H. Moh. Anwar Sumenep</strong></td>
-                <td><span class="tbm-pill">CT Scan</span></td>
-                <td>GE Brivo 385</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td><strong>RS Bhayangkara Kediri</strong></td>
-                <td><span class="tbm-pill">CT Scan</span></td>
-                <td>Siemens Emotion 16 Slice</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td><strong>RS Kaliwates (PTPN)</strong></td>
-                <td><span class="tbm-pill">CT Scan</span></td>
-                <td>GE HiSpeed Dual</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td><strong>RS Mawadah</strong></td>
-                <td><span class="tbm-pill">CT Scan</span></td>
-                <td>GE HiSpeed Dual</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td><strong>RS Pusri Palembang</strong></td>
-                <td><span class="tbm-pill">CT Scan</span></td>
-                <td>GE Xi Series</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td><strong>RS Bunda Jakabaring Palembang</strong></td>
-                <td><span class="tbm-pill">CT Scan</span></td>
-                <td>CT BrightSpeed 8 Slice</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td><strong>RS Bunda Demang Palembang</strong></td>
-                <td><span class="tbm-pill">CT Scan</span></td>
-                <td>GE Brivo 325</td>
-              </tr>
+              <tr><td>1</td><td><strong>RST Soepraoen Malang</strong></td><td><span class="tbm-pill">Cathlab</span></td><td>GE Innova 2100</td></tr>
+              <tr><td>2</td><td><strong>RSUD Dr. H. Moh. Anwar Sumenep</strong></td><td><span class="tbm-pill">CT Scan</span></td><td>GE Brivo 385</td></tr>
+              <tr><td>3</td><td><strong>RS Bhayangkara Kediri</strong></td><td><span class="tbm-pill">CT Scan</span></td><td>Siemens Emotion 16 Slice</td></tr>
+              <tr><td>4</td><td><strong>RS Kaliwates (PTPN)</strong></td><td><span class="tbm-pill">CT Scan</span></td><td>GE HiSpeed Dual</td></tr>
+              <tr><td>5</td><td><strong>RS Mawadah</strong></td><td><span class="tbm-pill">CT Scan</span></td><td>GE HiSpeed Dual</td></tr>
+              <tr><td>6</td><td><strong>RS Pusri Palembang</strong></td><td><span class="tbm-pill">CT Scan</span></td><td>GE Xi Series</td></tr>
+              <tr><td>7</td><td><strong>RS Bunda Jakabaring Palembang</strong></td><td><span class="tbm-pill">CT Scan</span></td><td>CT BrightSpeed 8 Slice</td></tr>
+              <tr><td>8</td><td><strong>RS Bunda Demang Palembang</strong></td><td><span class="tbm-pill">CT Scan</span></td><td>GE Brivo 325</td></tr>
             </tbody>
           </table>
         </div>
-
-        <!-- Referensi Pengadaan & Infrastruktur -->
-        <div class="tbm-ref-grid" data-reveal="up">
-          <div class="tbm-ref-card">
-            <h4>Referensi Pengadaan Alat Medis</h4>
-            <ul class="tbm-ref-list">
-              <li><strong>RS Adhyaksa Banten</strong> — MRI, Cathlab, Pendant, Ventilator, USG, PACS, VR, Injector, IVUS, Chiller, UPS</li>
-              <li><strong>RS Bhakti Husada Krikilan</strong> — Ultrasonography (USG)</li>
-              <li><strong>RSI Surabaya</strong> — X-Ray Machine + Digital Radiography (DR)</li>
-              <li><strong>RSI Darus Syifa Benowo</strong> — Digital Radiography (DR)</li>
-              <li><strong>RS Muhammadiyah Gresik</strong> — Digital Radiography (DR)</li>
-            </ul>
-          </div>
-
-          <div class="tbm-ref-card">
-            <h4>MRI RF Shielding</h4>
-            <ul class="tbm-ref-list">
-              <li>RS Atmajaya Jakarta</li>
-              <li>RS Ciputra Citra Garden Jakarta</li>
-              <li>RSUD Koja Jakarta</li>
-              <li>RS Katolik St. Vincentius A. Paulo Surabaya</li>
-              <li>RSUD Embung Fatimah Batam</li>
-              <li>RSUD Dr. H. Moch. Ansari Saleh</li>
-            </ul>
-          </div>
-
-          <div class="tbm-ref-card">
-            <h4>Site Preparation &amp; Radiation Protection</h4>
-            <ul class="tbm-ref-list">
-              <li>PT Freeport Indonesia</li>
-              <li>RS Bhayangkara Kediri</li>
-              <li>Semen Padang Hospital</li>
-              <li>Jogjakarta International Hospital (JIH)</li>
-              <li>RSUD Ciawi</li>
-              <li>RS Islam Ibnu Sina Padang</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
-
-    <!-- =============================================================
-         BARU 4: PERIZINAN & LEGALITAS
-         ============================================================= -->
-    <section class="tbm-sec" id="legality">
+    <!-- ===== PERIZINAN & LEGALITAS ===== -->
+    <section class="tbm-sec tbm-sec--soft" id="legality">
       <div class="container">
         <div class="tbm-sec-head" data-reveal="up">
-          <span class="eyebrow">COMPLIANCE &amp; LEGALITY</span>
-          <h2>Perizinan &amp; Legalitas Perusahaan</h2>
-          <p>Seluruh produk dan layanan PT Trifusion Bionova Medika beroperasi sesuai regulasi Kementerian Kesehatan RI dan persyaratan legal yang berlaku.</p>
+          <span class="eyebrow" data-i18n="abt.leg.eyebrow">KEPATUHAN &amp; LEGALITAS</span>
+          <h2 data-i18n="abt.leg.title">Perizinan &amp; Legalitas Perusahaan</h2>
+          <p data-i18n="abt.leg.sub">Seluruh produk dan layanan PT Trifusion Bionova Medika beroperasi sesuai regulasi Kementerian Kesehatan RI dan persyaratan legal yang berlaku.</p>
         </div>
 
         <div class="tbm-legal-grid" data-reveal="up">
           <div class="tbm-legal-box">
-            <h3 style="font-size: 1.2rem; color: var(--color-primary); margin: 0 0 10px;">Sertifikasi &amp; Izin Resmi</h3>
-            <p style="font-size: 0.92rem; color: var(--color-text); line-height: 1.6; margin: 0;">
+            <h3 style="font-size: 1.2rem; color: var(--color-primary); margin: 0 0 10px;" data-i18n="abt.leg.box1.t">Sertifikasi &amp; Izin Resmi</h3>
+            <p style="font-size: 0.92rem; color: var(--color-text); line-height: 1.6; margin: 0;" data-i18n="abt.leg.box1.d">
               Kepemilikan izin distribusi dan sertifikasi CDAKB menegaskan legalitas perusahaan dalam mendistribusikan alat kesehatan, suku cadang (<em>spare parts</em>), dan aksesori ke seluruh wilayah Indonesia.
             </p>
             <div class="tbm-legal-id">
               <div class="tbm-legal-row">
-                <span>Nomor Induk Berusaha (NIB)</span>
+                <span data-i18n="idx.legal.nib">Nomor Induk Berusaha (NIB)</span>
                 <strong>2611240041097</strong>
               </div>
               <div class="tbm-legal-row">
-                <span>Izin Distribusi Alat Kesehatan (IDAK)</span>
+                <span data-i18n="idx.legal.idak">Izin Distribusi Alat Kesehatan (IDAK)</span>
                 <strong>26112400410970009</strong>
               </div>
               <div class="tbm-legal-row">
-                <span>Sertifikasi &amp; Katalog</span>
+                <span data-i18n="abt.leg.cert">Sertifikasi &amp; Katalog</span>
                 <strong>CDAKB Kemenkes RI &amp; INAPROC</strong>
               </div>
             </div>
           </div>
 
           <div class="tbm-legal-box">
-            <h3 style="font-size: 1.2rem; color: var(--color-primary); margin: 0 0 10px;">Ruang Lingkup Usaha (KBLI Utama)</h3>
-            <p style="font-size: 0.92rem; color: var(--color-text); line-height: 1.6; margin: 0;">
+            <h3 style="font-size: 1.2rem; color: var(--color-primary); margin: 0 0 10px;" data-i18n="abt.leg.box2.t">Ruang Lingkup Usaha (KBLI Utama)</h3>
+            <p style="font-size: 0.92rem; color: var(--color-text); line-height: 1.6; margin: 0;" data-i18n="abt.leg.box2.d">
               Klasifikasi Baku Lapangan Usaha Indonesia (KBLI) yang tercatat pada perizinan berusaha berbasis risiko PT Trifusion Bionova Medika:
             </p>
             <ul class="tbm-kbli-list">
-              <li class="tbm-kbli-item">
-                <span class="tbm-kbli-code">46691</span>
-                <span class="tbm-kbli-desc">Perdagangan Besar Alat Laboratorium, Alat Farmasi, dan Alat Kedokteran untuk Manusia</span>
-              </li>
-              <li class="tbm-kbli-item">
-                <span class="tbm-kbli-code">33132</span>
-                <span class="tbm-kbli-desc">Reparasi dan Pemeliharaan Peralatan Iradiasi, Elektromedik, dan Elektroterapi</span>
-              </li>
-              <li class="tbm-kbli-item">
-                <span class="tbm-kbli-code">46512</span>
-                <span class="tbm-kbli-desc">Perdagangan Besar Piranti Lunak</span>
-              </li>
-              <li class="tbm-kbli-item">
-                <span class="tbm-kbli-code">29200</span>
-                <span class="tbm-kbli-desc">Industri Karoseri Kendaraan Bermotor Roda Empat atau Lebih (Ambulans &amp; Unit Khusus)</span>
-              </li>
+              <li class="tbm-kbli-item"><span class="tbm-kbli-code">46691</span><span class="tbm-kbli-desc" data-i18n="abt.leg.kbli1">Perdagangan Besar Alat Laboratorium, Alat Farmasi, dan Alat Kedokteran untuk Manusia</span></li>
+              <li class="tbm-kbli-item"><span class="tbm-kbli-code">33132</span><span class="tbm-kbli-desc" data-i18n="abt.leg.kbli2">Reparasi dan Pemeliharaan Peralatan Iradiasi, Elektromedik, dan Elektroterapi</span></li>
+              <li class="tbm-kbli-item"><span class="tbm-kbli-code">46512</span><span class="tbm-kbli-desc" data-i18n="abt.leg.kbli3">Perdagangan Besar Piranti Lunak</span></li>
+              <li class="tbm-kbli-item"><span class="tbm-kbli-code">29200</span><span class="tbm-kbli-desc" data-i18n="abt.leg.kbli4">Industri Karoseri Kendaraan Bermotor Roda Empat atau Lebih (Ambulans &amp; Unit Khusus)</span></li>
             </ul>
           </div>
         </div>
 
-        <!-- CTA Penutup -->
         <div class="tbm-about-cta" style="margin-top: 64px;" data-reveal="up">
           <div>
-            <h2>Siap Mengembangkan Layanan Rumah Sakit Anda?</h2>
-            <p>Diskusikan kebutuhan pengadaan alat kesehatan, skema Kerja Sama Operasional (KSO), atau kontrak pemeliharaan (maintenance) bersama tim ahli kami.</p>
+            <h2 data-i18n="abt.cta.title">Siap Mengembangkan Layanan Rumah Sakit Anda?</h2>
+            <p data-i18n="abt.cta.desc">Diskusikan kebutuhan pengadaan alat kesehatan, skema Kerja Sama Operasional (KSO), atau kontrak pemeliharaan (maintenance) bersama tim ahli kami.</p>
           </div>
-          <a href="contact.html" class="tbm-cta-btn">Konsultasi Kemitraan &rarr;</a>
+          <a href="contact.html" class="tbm-cta-btn" data-i18n="abt.cta.btn">Konsultasi Kemitraan &rarr;</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===== Footer (Approved) ===== -->
+  <!-- ===== Footer ===== -->
   <footer class="footer" style="padding: 70px 0 30px; background: #ffffff; border-top: 1px solid var(--color-border); position: relative; z-index: 10;">
     <div class="container">
-      
-      <!-- Grid Utama Footer -->
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 50px;">
-        
-        <!-- Kolom 1: Logo & Deskripsi -->
         <div style="grid-column: 1 / -1; max-width: 400px;">
           <a class="logo" href="index.html" style="margin-bottom: 20px; display: inline-flex;">
             <span class="logo__mark"><img src="assets/img/trifusion-icon.png" alt="Trifusion Bionova Medika logo"></span>
@@ -1114,7 +498,7 @@
               <span class="logo__sub" style="color: var(--color-accent-600); font-size: 0.55rem; font-weight: 600; letter-spacing: 2px;">BIONOVA<br>MEDIKA</span>
             </span>
           </a>
-          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text); margin-bottom: 24px;">
+          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text); margin-bottom: 24px;" data-i18n="footer.desc">
             Mitra terpercaya dalam menyediakan solusi teknologi medis inovatif. Berfokus pada pengadaan alat kesehatan dan Kerja Sama Operasional (KSO) untuk fasilitas layanan kesehatan di seluruh Indonesia.
           </p>
           <div style="display: flex; gap: 10px;">
@@ -1124,21 +508,19 @@
           </div>
         </div>
 
-        <!-- Kolom 2: Perusahaan -->
         <div>
-          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Perusahaan</h4>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;" data-i18n="footer.company">Perusahaan</h4>
           <ul style="display: grid; gap: 14px; padding: 0; margin: 0; list-style: none;">
-            <li><a href="index.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Beranda</a></li>
-            <li><a href="about.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Tentang Kami</a></li>
-            <li><a href="products.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Solusi Kami</a></li>
-            <li><a href="articles.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Berita &amp; Artikel</a></li>
-            <li><a href="contact.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;">Hubungi Kami</a></li>
+            <li><a href="index.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.home">Beranda</a></li>
+            <li><a href="about.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.about">Tentang Kami</a></li>
+            <li><a href="products.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="footer.solutions">Solusi Kami</a></li>
+            <li><a href="articles.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.articles">Berita &amp; Artikel</a></li>
+            <li><a href="contact.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="footer.contact">Hubungi Kami</a></li>
           </ul>
         </div>
 
-        <!-- Kolom 3: Kontak Info -->
         <div>
-          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">Kantor Pusat</h4>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;" data-i18n="footer.hq">Kantor Pusat</h4>
           <ul style="display: grid; gap: 18px; padding: 0; margin: 0; list-style: none;">
             <li style="display: flex; gap: 12px; align-items: flex-start;">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; margin-top: 2px; flex-shrink: 0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1154,39 +536,30 @@
             </li>
           </ul>
         </div>
-        
       </div>
 
-      <!-- Copyright Bar -->
       <div style="border-top: 1px solid var(--color-border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
         <span style="font-size: 0.8rem; color: var(--color-text-light);">&copy; 2026 PT Trifusion Bionova Medika. All rights reserved.</span>
         <span style="display: flex; gap: 20px; font-size: 0.8rem;">
-          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Kebijakan Privasi</a>
-          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Syarat &amp; Ketentuan</a>
-          <a href="#" style="color: var(--color-text-light); text-decoration: none;">Sitemap</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.privacy">Kebijakan Privasi</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.terms">Syarat &amp; Ketentuan</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.sitemap">Sitemap</a>
         </span>
       </div>
-      
     </div>
-    
     <style>
       .footer a:hover { color: var(--color-primary) !important; }
       .footer .logo:hover .logo__name { color: var(--color-primary) !important; }
-      .footer .footer__social a:hover { background: var(--color-primary) !important; color: #fff !important; }
-      
       @media (min-width: 900px) {
-        .footer > .container > div:first-child {
-          grid-template-columns: 2fr 1fr 1fr !important;
-        }
-        .footer > .container > div:first-child > div:first-child {
-          grid-column: 1 !important;
-        }
+        .footer > .container > div:first-child { grid-template-columns: 2fr 1fr 1fr !important; }
+        .footer > .container > div:first-child > div:first-child { grid-column: 1 !important; }
       }
     </style>
   </footer>
 
-  <!-- Urutan penting: products.js sebelum main.js agar Mega Menu dropdown otomatis ter-render -->
+  <!-- Scripts -->
   <script src="js/products.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/lang.js"></script>
 </body>
 </html>

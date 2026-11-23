@@ -1733,3 +1733,17 @@ textarea.form-control { resize: vertical; min-height: 140px; }
     font-size: 1.6rem;
   }
 }
+
+.header-logo-img {
+  width: 175px;
+  height: auto;
+  display: block;
+  margin: -18px 0 -18px -14px;
+}
+
+@media (max-width: 600px) {
+  .header-logo-img {
+    width: 145px;
+    margin: -14px 0 -14px -10px;
+  }
+}

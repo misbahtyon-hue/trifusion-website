@@ -1,9 +1,8 @@
 /* =============================================================
    Trifusion Bionova Medika — Product Data
-   Source: official product catalog (Kategory product - Trifusion.xls)
+   Source: official product catalog (Updated: Opsi 2 — Kategori Medis / SEO & B2B)
    Categories mirror the catalog sheets.
    Extra fields: brand, akl (regulatory status / izin edar alkes).
-   Replace `image` paths with real product photos later.
    ============================================================= */
 
 const CATEGORIES = [
@@ -27,7 +26,7 @@ const PRODUCTS = [
   /* ===================== Ultrasound (USG) — Acclarix ===================== */
   {
     id: "acclarix-ax3",
-    name: "Acclarix AX3 Ultrasound System",
+    name: "Diagnostic Ultrasound AX3 (Portable)",
     category: "ultrasound",
     brand: "Acclarix",
     akl: "AKL",
@@ -52,7 +51,7 @@ const PRODUCTS = [
   },
   {
     id: "acclarix-ax9",
-    name: "Acclarix AX9 Ultrasound System",
+    name: "Diagnostic Ultrasound AX9 (Compact)",
     category: "ultrasound",
     brand: "Acclarix",
     akl: "AKL",
@@ -77,7 +76,7 @@ const PRODUCTS = [
   },
   {
     id: "acclarix-lx3",
-    name: "Acclarix Lx3 Ultrasound System",
+    name: "Diagnostic Ultrasound LX3 (Trolley)",
     category: "ultrasound",
     brand: "Acclarix",
     akl: "AKL",
@@ -102,7 +101,7 @@ const PRODUCTS = [
   },
   {
     id: "acclarix-lx9",
-    name: "Acclarix Lx9 Ultrasound System",
+    name: "Diagnostic Ultrasound LX9 (Premium)",
     category: "ultrasound",
     brand: "Acclarix",
     akl: "AKL",
@@ -129,7 +128,7 @@ const PRODUCTS = [
   /* ===================== Ventilator — Crius ===================== */
   {
     id: "crius-v3",
-    name: "Crius V3 ICU Ventilator",
+    name: "ICU Mechanical Ventilator V3",
     category: "ventilator",
     brand: "Crius",
     akl: "AKL",
@@ -154,7 +153,7 @@ const PRODUCTS = [
   },
   {
     id: "crius-v4",
-    name: "Crius V4 Transport Ventilator",
+    name: "Emergency & Transport Ventilator V4",
     category: "ventilator",
     brand: "Crius",
     akl: "AKL",
@@ -178,7 +177,7 @@ const PRODUCTS = [
   },
   {
     id: "crius-v5",
-    name: "Crius V5 Neonatal Ventilator",
+    name: "NICU Neonatal Ventilator V5",
     category: "ventilator",
     brand: "Crius",
     akl: "AKL",
@@ -203,7 +202,7 @@ const PRODUCTS = [
   },
   {
     id: "crius-v6",
-    name: "Crius V6 ICU Ventilator",
+    name: "Advanced ICU Ventilator V6",
     category: "ventilator",
     brand: "Crius",
     akl: "AKL",
@@ -228,7 +227,7 @@ const PRODUCTS = [
   },
   {
     id: "crius-v7",
-    name: "Crius V7 Neonatal HFOV Ventilator",
+    name: "Neonatal HFOV Ventilator V7",
     category: "ventilator",
     brand: "Crius",
     akl: "AKL",
@@ -255,7 +254,7 @@ const PRODUCTS = [
   /* ===================== Anesthesia Machine — Atlas ===================== */
   {
     id: "atlas-n7",
-    name: "Atlas N7 Anesthesia Machine",
+    name: "Anesthesia Workstation N7 (High-End)",
     category: "anesthesia",
     brand: "Atlas",
     akl: "AKL",
@@ -280,7 +279,7 @@ const PRODUCTS = [
   },
   {
     id: "atlas-n5",
-    name: "Atlas N5 Anesthesia Machine",
+    name: "Anesthesia Workstation N5 (Standard)",
     category: "anesthesia",
     brand: "Atlas",
     akl: "AKL",
@@ -305,7 +304,7 @@ const PRODUCTS = [
   },
   {
     id: "atlas-n3",
-    name: "Atlas N3 Anesthesia Machine",
+    name: "Anesthesia Machine N3 (Compact)",
     category: "anesthesia",
     brand: "Atlas",
     akl: "AKL",
@@ -330,7 +329,7 @@ const PRODUCTS = [
   },
   {
     id: "atlas-n3-2gas",
-    name: "Atlas N3 Anesthesia Machine (2 Gas Source)",
+    name: "Anesthesia Machine N3 (2-Gas)",
     category: "anesthesia",
     brand: "Atlas",
     akl: "AKL",
@@ -357,7 +356,7 @@ const PRODUCTS = [
   /* ===================== Patient Monitoring & ECG — EDAN / NMI ===================== */
   {
     id: "edan-se-301",
-    name: "EDAN SE-301 Resting ECG",
+    name: "Resting ECG 3-Channel SE-301",
     category: "monitoring",
     brand: "EDAN",
     akl: "AKL",
@@ -380,7 +379,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-se-1200-express",
-    name: "EDAN SE-1200 Express Resting ECG",
+    name: "Resting ECG 12-Channel SE-1200",
     category: "monitoring",
     brand: "EDAN",
     akl: "AKL",
@@ -403,7 +402,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-se-1201-pro",
-    name: "EDAN SE-1201 Pro Resting ECG",
+    name: "Resting ECG Pro SE-1201",
     category: "monitoring",
     brand: "EDAN",
     akl: "AKL",
@@ -427,7 +426,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-ise-1201-pro",
-    name: "EDAN iSE-1201 Pro PAD ECG",
+    name: "Portable PAD ECG iSE-1201 Pro",
     category: "monitoring",
     brand: "EDAN",
     akl: "On Process",
@@ -451,7 +450,7 @@ const PRODUCTS = [
   },
   {
     id: "nmi-se-1515n-stress",
-    name: "NMI SE-1515N Stress-Test ECG System",
+    name: "Cardiac Stress-Test System SE-1515N",
     category: "monitoring",
     brand: "NMI",
     akl: "AKD",
@@ -475,7 +474,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-se-2003a-holter",
-    name: "EDAN SE-2003A Holter System",
+    name: "Ambulatory Holter ECG SE-2003A",
     category: "monitoring",
     brand: "EDAN",
     akl: "AKL",
@@ -499,7 +498,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-sa-10",
-    name: "EDAN SA-10 ABP Monitor",
+    name: "Ambulatory Blood Pressure Monitor SA-10",
     category: "monitoring",
     brand: "EDAN",
     akl: "On Process",
@@ -521,7 +520,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-sa-20",
-    name: "EDAN SA-20 Holter & ABP Monitor",
+    name: "2-in-1 Holter & ABP Monitor SA-20",
     category: "monitoring",
     brand: "EDAN",
     akl: "On Process",
@@ -542,7 +541,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-x12",
-    name: "EDAN X12 Patient Monitor",
+    name: "Patient Monitor X12 (12-Inch)",
     category: "monitoring",
     brand: "EDAN",
     akl: "AKL",
@@ -567,7 +566,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-x10",
-    name: "EDAN X10 Patient Monitor",
+    name: "Patient Monitor X10 (10-Inch)",
     category: "monitoring",
     brand: "EDAN",
     akl: "AKL",
@@ -592,7 +591,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-im3-basic",
-    name: "EDAN iM3 Basic Vital Sign Monitor",
+    name: "Vital Sign Monitor iM3 (Basic)",
     category: "monitoring",
     brand: "EDAN",
     akl: "AKL",
@@ -616,7 +615,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-im3-advance",
-    name: "EDAN iM3 Advance Vital Sign Monitor",
+    name: "Vital Sign Monitor iM3 (Advance)",
     category: "monitoring",
     brand: "EDAN",
     akl: "AKL",
@@ -640,7 +639,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-h100b",
-    name: "EDAN H100B Hand-held Pulse Oximeter",
+    name: "Handheld Pulse Oximeter H100B",
     category: "monitoring",
     brand: "EDAN",
     akl: "On Process",
@@ -665,7 +664,7 @@ const PRODUCTS = [
   /* ===================== Gynecology & Obstetrics — EDAN / NMI ===================== */
   {
     id: "edan-c6a-basic",
-    name: "EDAN C6A Basic Video Colposcope",
+    name: "Digital Video Colposcope C6A (Basic)",
     category: "gynob",
     brand: "EDAN",
     akl: "AKL",
@@ -687,7 +686,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-c6a-advance",
-    name: "EDAN C6A Advance Video Colposcope",
+    name: "Digital Video Colposcope C6A (Advance)",
     category: "gynob",
     brand: "EDAN",
     akl: "AKL",
@@ -709,7 +708,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-sd3",
-    name: "EDAN SD3 Pocket Doppler",
+    name: "Pocket Fetal Doppler SD3",
     category: "gynob",
     brand: "EDAN",
     akl: "AKL",
@@ -731,7 +730,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-sd6",
-    name: "EDAN SD6 Table Doppler",
+    name: "Table-Top Fetal Doppler SD6",
     category: "gynob",
     brand: "EDAN",
     akl: "On Process",
@@ -753,7 +752,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-f12-twin",
-    name: "EDAN F12 Twin Fetal Monitor",
+    name: "Twin Fetal Monitor (CTG) F12",
     category: "gynob",
     brand: "EDAN / NMI",
     akl: "AKL",
@@ -777,7 +776,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-f15-twin",
-    name: "EDAN F15 Twin Fetal Monitor",
+    name: "Advanced Twin Fetal Monitor (CTG) F15",
     category: "gynob",
     brand: "EDAN / NMI",
     akl: "AKL",
@@ -801,7 +800,7 @@ const PRODUCTS = [
   },
   {
     id: "edan-f15-air",
-    name: "EDAN F15 Air Twin Fetal & Maternal Monitor",
+    name: "Wireless Fetal & Maternal Monitor F15 Air",
     category: "gynob",
     brand: "EDAN / NMI",
     akl: "AKL",

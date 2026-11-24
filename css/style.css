@@ -1743,7 +1743,74 @@ textarea.form-control { resize: vertical; min-height: 140px; }
 
 @media (max-width: 600px) {
   .header-logo-img {
-    width: 145px;
-    margin: -18px 0 -18px -12px;
+    width: 205px;
+    margin: -22px 0 -22px -16px;
+  }
+}
+
+@media (max-width: 960px) {
+  .nav {
+    padding: 90px 28px 36px !important;
+    gap: 0 !important;
+  }
+  .nav__list {
+    gap: 4px !important;
+    margin-bottom: 24px !important;
+  }
+  .nav__list .nav__link {
+    padding: 16px 0 !important;
+    font-size: 1.05rem;
+  }
+  .nav .btn--konsultasi {
+    margin-top: 8px !important;
+    margin-bottom: 24px !important;
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px !important;
+  }
+  .nav .lang-switch,
+  .nav [data-lang-switch] {
+    margin-top: 8px !important;
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 960px) {
+  /* Reset lebar & posisi mega menu agar pas di dalam drawer */
+  .mega-menu,
+  .nav__mega {
+    position: static !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    transform: none !important;
+    box-shadow: none !important;
+    padding: 8px 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Paksa grid/flex di dalamnya jadi 1 kolom */
+  .mega-menu__inner,
+  .mega-menu__grid,
+  .nav__mega > div {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+  }
+
+  /* Sembunyikan panel preview produk di kanan agar tidak sempit & terpotong */
+  .mega-menu__panel,
+  .mega-menu__right,
+  .mega-menu__products {
+    display: none !important;
+  }
+
+  /* Lebarkan tombol kategori jadi 100% */
+  .mega-menu__cats,
+  .mega-menu__left {
+    width: 100% !important;
+    border-right: none !important;
+    padding: 0 !important;
   }
 }

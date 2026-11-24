@@ -190,3 +190,107 @@
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   .footer-bottom > span:last-child { flex-wrap: wrap; gap: 8px 20px !important; }
 }
+
+@media (max-width: 960px) {
+  .nav {
+    padding: 90px 28px 36px !important;
+    gap: 0 !important;
+  }
+  .nav__list {
+    gap: 4px !important;
+    margin-bottom: 24px !important;
+  }
+  .nav__list .nav__link {
+    padding: 16px 0 !important;
+    font-size: 1.05rem;
+  }
+  .nav .btn--konsultasi {
+    margin-top: 8px !important;
+    margin-bottom: 24px !important;
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px !important;
+  }
+  .nav .lang-switch,
+  .nav [data-lang-switch] {
+    margin-top: 8px !important;
+    align-self: flex-start;
+  }
+}
+
+/* =============================================================
+   FINAL FIX: Mobile Logo, Drawer Spacing & Mega Menu (≤ 900px)
+   ============================================================= */
+@media (max-width: 900px) {
+  /* 1. Perbaiki jarak & scroll drawer menu mobile */
+  .nav {
+    padding: calc(var(--header-h) + 20px) 28px 36px !important;
+    gap: 0 !important;
+    overflow-y: auto !important;
+  }
+  .nav__list {
+    gap: 4px !important;
+    margin-bottom: 24px !important;
+  }
+  .nav__list .nav__link {
+    padding: 16px 0 !important;
+    font-size: 1rem !important;
+    height: auto !important; /* Mencegah kotak menu aktif melar ke bawah */
+  }
+  .nav .btn--konsultasi,
+  .nav__cta {
+    margin-top: 8px !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 14px 20px !important;
+  }
+  .nav .lang-switch,
+  .nav [data-lang-switch] {
+    margin-top: 4px !important;
+    align-self: flex-start !important;
+  }
+
+  /* 2. Rapikan Mega Menu (.mega) jadi 1 kolom kategori saja */
+  .mega {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    display: block !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+  }
+  .mega__cats {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    padding: 10px !important;
+    gap: 4px !important;
+  }
+  .mega__cat {
+    padding: 11px 14px !important;
+    font-size: 0.85rem !important;
+  }
+  /* Sembunyikan panel preview produk kanan agar tidak terpotong */
+  .mega__panel {
+    display: none !important;
+  }
+  /* Tampilkan tombol "View Full Catalog" di bawah daftar kategori */
+  .mega__footer {
+    margin-top: 0 !important;
+    padding: 12px 16px !important;
+    background: var(--color-bg-soft);
+  }
+}
+
+@media (max-width: 600px) {
+  /* 3. Samakan ukuran logo header mobile mendekati footer */
+  .header-logo-img {
+    width: 205px !important;
+    margin: -22px 0 -22px -16px !important;
+  }
+}

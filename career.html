@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karir — Trifusion Bionova Medika</title>
+  <meta name="description" content="Saatnya mengembangkan karir dan mengambil peluang baru di industri teknologi dan alat kesehatan bersama PT Trifusion Bionova Medika.">
+  <link rel="icon" type="image/png" href="assets/img/trifusion-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    body { background-color: #f4f8fc; }
+
+    /* ===== PAGE HERO SPLIT WAVE (Sama dengan About & Contact) ===== */
+    .page-hero--image {
+      position: relative;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      background: #f4f8fc;
+      padding-top: var(--header-h);
+      padding-bottom: 0;
+      overflow: hidden;
+      border-bottom: none;
+    }
+    .page-hero__image-side { position: absolute; top: 0; right: 0; width: 58%; height: 100%; z-index: 1; }
+    .page-hero__image-side img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .page-hero__wave { position: absolute; top: 0; left: -2px; height: 100%; width: 250px; z-index: 2; }
+    .page-hero__container {
+      position: relative; z-index: 3; width: 100%;
+      max-width: var(--container); margin: 0 auto; padding: 0 32px;
+      display: flex; justify-content: flex-start;
+    }
+    .page-hero__content { max-width: 520px; padding: 60px 0; }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.8rem; font-weight: 600; color: var(--color-primary-600);
+      margin-bottom: 24px;
+    }
+    .breadcrumb a { color: var(--color-primary-600); text-decoration: none; }
+    .breadcrumb .sep { color: var(--color-text-light); font-weight: normal; margin: 0 4px; }
+    .breadcrumb .current { color: var(--color-text-light); }
+    .page-hero__content h1 {
+      font-size: clamp(2.2rem, 3.8vw, 3.1rem); color: var(--color-primary);
+      margin-bottom: 14px; letter-spacing: -0.03em; line-height: 1.15;
+    }
+    .page-hero__content p {
+      font-size: 1.05rem; color: var(--color-text); line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .line-accent { width: 60px; height: 4px; background: var(--color-accent-600); border-radius: 2px; }
+    @media (max-width: 900px) {
+      .page-hero__image-side { width: 100%; opacity: 0.2; }
+      .page-hero__wave { display: none; }
+      .page-hero__content { max-width: 100%; padding: 40px 0; }
+    }
+
+    /* ===== SECTION COMMON ===== */
+    .tbm-sec { padding: 84px 0; }
+    .tbm-sec--white { background: #ffffff; }
+    .tbm-sec-head { max-width: 740px; margin-bottom: 44px; }
+    .tbm-sec-head--center { text-align: center; margin: 0 auto 50px; }
+    .tbm-sec-head .eyebrow { color: var(--color-primary); letter-spacing: 0.1em; background: none; display: inline-block; margin-bottom: 8px; }
+    .tbm-sec-head h2 { color: var(--color-primary); font-size: clamp(1.85rem, 3vw, 2.35rem); margin: 0 0 14px; letter-spacing: -0.02em; }
+    .tbm-sec-head p { font-size: 1rem; color: var(--color-text); line-height: 1.65; margin: 0; }
+
+    /* ===== EMPLOYER BRANDING CARDS ===== */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .benefit-card {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 36px 28px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .benefit-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--color-accent-600);
+      box-shadow: 0 14px 30px rgba(27, 47, 99, 0.06);
+    }
+    .benefit-card__icon {
+      width: 56px; height: 56px;
+      border-radius: 14px;
+      background: #eaf3fa;
+      color: var(--color-primary);
+      display: grid; place-items: center;
+      margin-bottom: 20px;
+    }
+    .benefit-card__icon svg { width: 26px; height: 26px; }
+    .benefit-card h3 { font-size: 1.18rem; color: var(--color-primary); margin: 0 0 10px; }
+    .benefit-card p { font-size: 0.93rem; color: var(--color-text); line-height: 1.6; margin: 0; }
+
+    /* ===== JOB LIST & ACCORDION ===== */
+    .job-list { display: grid; gap: 20px; }
+    .job-item {
+      display: flex; flex-direction: column;
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 32px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .job-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(27, 47, 99, 0.06);
+      border-color: var(--color-accent-600);
+    }
+    .job-header {
+      display: flex; flex-wrap: wrap; align-items: flex-start;
+      justify-content: space-between; gap: 24px; width: 100%;
+    }
+    .job-info h3 {
+      font-size: 1.32rem; margin: 0 0 14px;
+      color: var(--color-primary); transition: color 0.25s ease;
+    }
+    .job-item:hover .job-info h3 { color: var(--color-accent-600); }
+    .job-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .job-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.82rem; font-weight: 500;
+      color: var(--color-text); background: #f4f8fc;
+      padding: 6px 14px; border-radius: 20px;
+    }
+    .job-tag--accent {
+      background: #eaf3fa;
+      color: var(--color-primary-600);
+      font-weight: 600;
+    }
+    .job-tag svg { width: 14px; height: 14px; color: inherit; }
+
+    .btn-apply {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--color-primary-600); color: #ffffff;
+      padding: 12px 24px; border-radius: 30px;
+      font-size: 0.9rem; font-weight: 600; text-decoration: none;
+      transition: all 0.25s ease; white-space: nowrap;
+    }
+    .btn-apply:hover {
+      background: var(--color-primary); color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(27, 47, 99, 0.18);
+    }
+    .btn-apply svg { width: 16px; height: 16px; }
+
+    /* Accordion */
+    .job-details-accordion {
+      margin-top: 24px;
+      border-top: 1px solid var(--color-border);
+      padding-top: 16px;
+    }
+    .job-details-summary {
+      display: flex; align-items: center; justify-content: space-between;
+      font-family: var(--font-display); font-weight: 600; font-size: 0.95rem;
+      color: var(--color-primary); cursor: pointer;
+      list-style: none; padding: 6px 0; user-select: none;
+      transition: color 0.25s ease;
+    }
+    .job-details-summary::-webkit-details-marker { display: none; }
+    .job-details-summary:hover { color: var(--color-accent-600); }
+    .job-details-summary svg {
+      width: 20px; height: 20px; color: var(--color-accent-600);
+      transition: transform 0.3s ease;
+    }
+    .job-details-accordion[open] .job-details-summary svg { transform: rotate(180deg); }
+
+    .job-details-content { margin-top: 16px; animation: fadeInDown 0.25s ease-out; }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .job-details-content ul { list-style: none; padding: 0; margin: 0 0 20px; }
+    .job-details-content ul li {
+      position: relative; padding-left: 20px;
+      color: var(--color-text); font-size: 0.92rem; line-height: 1.65;
+      margin-bottom: 8px;
+    }
+    .job-details-content ul li::before {
+      content: "•"; position: absolute; left: 0; top: -1px;
+      color: var(--color-accent-600); font-weight: 700; font-size: 1.15rem;
+    }
+    .job-location-box {
+      background: #f4f8fc;
+      padding: 16px 20px;
+      border-radius: 10px;
+      border-left: 4px solid var(--color-accent-600);
+    }
+    .job-location-box h5 {
+      font-size: 0.8rem; color: var(--color-primary);
+      margin: 0 0 6px; text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .job-location-box p { color: var(--color-text); font-size: 0.92rem; margin: 0; }
+
+    @media (max-width: 640px) {
+      .job-item { padding: 24px; }
+      .job-header { flex-direction: column; }
+      .job-action, .btn-apply { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" aria-label="Trifusion Bionova Medika — beranda" style="display: inline-flex; align-items: center;">
+        <img src="assets/img/trifusion_new_logo.png" alt="Trifusion Bionova Medika" class="header-logo-img" style="width: 220px; height: auto; display: block; margin: -24px 0 -24px -18px;">
+      </a>
+
+      <nav class="nav" aria-label="Navigasi utama">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="about.html" data-i18n="nav.about">Tentang Kami</a></li>
+          <li><a class="nav__link" href="products.html"><span data-i18n="nav.products">Produk</span></a></li>
+          <li><a class="nav__link" href="articles.html" data-i18n="nav.articles">Berita &amp; Artikel</a></li>
+        </ul>
+        <a class="btn btn--konsultasi" href="contact.html" data-i18n="nav.cta">Konsultasi Sekarang &rarr;</a>
+      </nav>
+
+      <button class="burger" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-backdrop"></div>
+
+  <main>
+    <!-- ===== Page Hero ===== -->
+    <section class="page-hero page-hero--image">
+      <div class="page-hero__image-side">
+        <img src="assets/img/OLA.png" alt="Karir di Trifusion Bionova Medika">
+        <svg class="page-hero__wave" viewBox="0 0 200 1080" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,0 C150,300 0,700 100,1080 L0,1080 L0,0 Z" fill="rgba(244, 248, 252, 0.6)" />
+          <path d="M0,0 C100,350 -50,650 50,1080 L0,1080 L0,0 Z" fill="#f4f8fc" />
+        </svg>
+      </div>
+
+      <div class="page-hero__container">
+        <div class="page-hero__content" data-reveal>
+          <div class="breadcrumb">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke-width="0" style="width: 14px; margin-right: 4px; margin-top:-2px;"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <a href="index.html" data-i18n="nav.home">Beranda</a><span class="sep">&gt;</span><span class="current" data-i18n="nav.career">Karir</span>
+          </div>
+          <h1 data-i18n="car.hero.title">Bangun Karir yang Berdampak</h1>
+          <p data-i18n="car.hero.sub">Bergabunglah bersama tim kami untuk mengembangkan pasar di sektor kesehatan, menghadirkan inovasi medis, dan meningkatkan kualitas layanan kesehatan di Indonesia.</p>
+          <div class="line-accent"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Employer Branding (Why Join Us) ===== -->
+    <section class="tbm-sec tbm-sec--white">
+      <div class="container">
+        <div class="tbm-sec-head tbm-sec-head--center" data-reveal>
+          <span class="eyebrow" data-i18n="car.why.eyebrow">MENGAPA BERGABUNG</span>
+          <h2 data-i18n="car.why.title">Tumbuh Bersama Trifusion Bionova Medika</h2>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card" data-reveal data-reveal-delay="1">
+            <div class="benefit-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 data-i18n="car.why.1.t">Inovasi Berkelanjutan</h3>
+            <p data-i18n="car.why.1.d">Bekerja dengan teknologi medis masa depan, mulai dari perangkat diagnostik modern, sistem digital rumah sakit, hingga solusi pelatihan berbasis VR.</p>
+          </div>
+
+          <div class="benefit-card" data-reveal data-reveal-delay="2">
+            <div class="benefit-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 data-i18n="car.why.2.t">Pekerjaan yang Berdampak</h3>
+            <p data-i18n="car.why.2.d">Setiap peran berkontribusi langsung pada peningkatan layanan dan fasilitas perawatan kesehatan di rumah sakit seluruh Indonesia.</p>
+          </div>
+
+          <div class="benefit-card" data-reveal data-reveal-delay="3">
+            <div class="benefit-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 data-i18n="car.why.3.t">Pengembangan Profesional</h3>
+            <p data-i18n="car.why.3.d">Lingkungan kerja kolaboratif yang senantiasa mendukung peningkatan kompetensi teknis, kepemimpinan, dan spesialisasi karir Anda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Open Vacancies ===== -->
+    <section class="tbm-sec">
+      <div class="container">
+        <div class="tbm-sec-head" data-reveal>
+          <span class="eyebrow" data-i18n="car.vac.eyebrow">LOWONGAN TERBUKA</span>
+          <h2 data-i18n="car.vac.title">Jelajahi Peluang Karir</h2>
+          <p data-i18n="car.vac.sub">Temukan peran yang sesuai dengan keahlian dan minat Anda. Kami selalu mencari individu berbakat, inovatif, dan berorientasi pada hasil untuk mengambil bagian dalam memajukan industri kesehatan di Indonesia.</p>
+        </div>
+
+        <div class="job-item" style="text-align: center; align-items: center; padding: 56px 32px;" data-reveal>
+  <div style="width: 64px; height: 64px; border-radius: 50%; background: #eaf3fa; color: var(--color-primary); display: grid; place-items: center; margin-bottom: 20px;">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width: 30px; height: 30px;">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+      <circle cx="8.5" cy="7" r="4"/>
+      <line x1="20" y1="8" x2="20" y2="14"/>
+      <line x1="23" y1="11" x2="17" y2="11"/>
+    </svg>
+  </div>
+
+  <h3 style="font-size: 1.45rem; color: var(--color-primary); margin: 0 0 12px;" data-i18n="car.empty.title">
+    Belum Ada Lowongan Terbuka Saat Ini
+  </h3>
+  <p style="max-width: 580px; color: var(--color-text); line-height: 1.65; margin: 0 0 24px;" data-i18n="car.empty.desc">
+    Saat ini seluruh posisi sedang terisi. Namun, kami selalu antusias mengenal talenta terbaik di industri alat kesehatan. Kirimkan CV terbaru Anda untuk masuk ke dalam <em>Talent Pool</em> kami.
+  </p>
+
+  <div class="job-tags" style="justify-content: center; margin-bottom: 28px;">
+    <span class="job-tag job-tag--accent">Medical Sales &amp; KSO</span>
+    <span class="job-tag job-tag--accent">Biomedical / Field Engineer</span>
+    <span class="job-tag job-tag--accent">Clinical Specialist</span>
+    <span class="job-tag job-tag--accent">Hospital Digital Systems</span>
+  </div>
+
+  <a href="mailto:kontak@trifusion.co.id?subject=Talent%20Pool%20-%20Lamaran%20Umum" class="btn-apply">
+    <span data-i18n="car.empty.btn">Kirim CV ke Talent Pool</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  </a>
+</div>
+          
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" style="padding: 70px 0 30px; background: #ffffff; border-top: 1px solid var(--color-border); position: relative; z-index: 10;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 50px;">
+        <div style="grid-column: 1 / -1; max-width: 400px;">
+          <a href="index.html" style="display: inline-block; margin-top: -24px; margin-bottom: -12px; margin-left: -20px;">
+            <img src="assets/img/trifusion_new_logo.png" alt="Trifusion Bionova Medika" style="width: 220px; height: auto; display: block;">
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text); margin-bottom: 24px;" data-i18n="footer.desc">
+            Mitra terpercaya dalam menyediakan solusi teknologi medis inovatif. Berfokus pada pengadaan alat kesehatan dan Kerja Sama Operasional (KSO) untuk fasilitas layanan kesehatan di seluruh Indonesia.
+          </p>
+          <div style="display: flex; gap: 10px;">
+            <a href="#" aria-label="LinkedIn" style="width: 36px; height: 36px; border-radius: 50%; background: #f4f8fc; display: flex; align-items: center; justify-content: center; color: var(--color-primary); transition: 0.3s;"><svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+            <a href="#" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background: #f4f8fc; display: flex; align-items: center; justify-content: center; color: var(--color-primary); transition: 0.3s;"><svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px;"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.94C18.88 4 12 4 12 4s-6.88 0-8.6.48a2.78 2.78 0 0 0-1.94 1.94C1 8.14 1 12 1 12s0 3.86.48 5.58a2.78 2.78 0 0 0 1.94 1.94C5.12 20 12 20 12 20s6.88 0 8.6-.48a2.78 2.78 0 0 0 1.94-1.94C23 15.86 23 12 23 12s0-3.86-.46-5.58zM9.54 15.54V8.46L15.82 12l-6.28 3.54z"/></svg></a>
+            <a href="#" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: #f4f8fc; display: flex; align-items: center; justify-content: center; color: var(--color-primary); transition: 0.3s;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;" data-i18n="footer.company">Perusahaan</h4>
+          <ul style="display: grid; gap: 14px; padding: 0; margin: 0; list-style: none;">
+            <li><a href="index.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.home">Beranda</a></li>
+            <li><a href="about.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.about">Tentang Kami</a></li>
+            <li><a href="products.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="footer.solutions">Solusi Kami</a></li>
+            <li><a href="articles.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.articles">Berita &amp; Artikel</a></li>
+            <li><a href="career.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="nav.career">Karir</a></li>
+            <li><a href="contact.html" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none; transition: color 0.2s;" data-i18n="footer.contact">Hubungi Kami</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-display); font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;" data-i18n="footer.hq">Kantor Pusat</h4>
+          <ul style="display: grid; gap: 18px; padding: 0; margin: 0; list-style: none;">
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; margin-top: 2px; flex-shrink: 0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span style="font-size: 0.9rem; color: var(--color-text); line-height: 1.5;">Jl. Tebet Barat Dalam Raya No. 39 L, RT.6/RW.4, Tebet, Jakarta Selatan 12810</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span style="font-size: 0.9rem; color: var(--color-text);">(021) 38825214</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-600)" stroke-width="2" style="width: 18px; flex-shrink: 0;"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:kontak@trifusion.co.id" style="font-size: 0.9rem; color: var(--color-text); text-decoration: none;">kontak@trifusion.co.id</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid var(--color-border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <span style="font-size: 0.8rem; color: var(--color-text-light);">&copy; 2026 PT Trifusion Bionova Medika. All rights reserved.</span>
+        <span style="display: flex; gap: 20px; font-size: 0.8rem;">
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.privacy">Kebijakan Privasi</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.terms">Syarat &amp; Ketentuan</a>
+          <a href="#" style="color: var(--color-text-light); text-decoration: none;" data-i18n="footer.sitemap">Sitemap</a>
+        </span>
+      </div>
+    </div>
+    <style>
+      .footer a:hover { color: var(--color-primary) !important; }
+      @media (min-width: 900px) {
+        .footer > .container > div:first-child { grid-template-columns: 2fr 1fr 1fr !important; }
+        .footer > .container > div:first-child > div:first-child { grid-column: 1 !important; }
+      }
+    </style>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/lang.js"></script>
+</body>
+</html>

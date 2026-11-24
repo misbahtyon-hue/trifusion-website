@@ -307,6 +307,10 @@
       "car.j3.q2": "Berorientasi kuat pada target dan pantang menyerah.",
       "car.j3.q3": "Cakap dalam melakukan komunikasi, negosiasi, dan menjaga hubungan profesional dengan pemangku kepentingan.",
       "car.j3.q4": "Aktif mengidentifikasi tren kebutuhan klien dan mengembangkan peluang bisnis unit medis.",
+
+      "car.empty.title": "Belum Ada Lowongan Terbuka Saat Ini",
+      "car.empty.desc": "Saat ini seluruh posisi sedang terisi. Namun, kami selalu antusias mengenal talenta terbaik di industri alat kesehatan. Kirimkan CV terbaru Anda untuk masuk ke dalam <em>Talent Pool</em> kami.",
+      "car.empty.btn": "Kirim CV ke Talent Pool"
     },
 
     en: {
@@ -610,6 +614,9 @@
       "car.j3.q2": "Highly target-driven and resilient.",
       "car.j3.q3": "Proficient in communication, negotiation, and maintaining professional relationships with key stakeholders.",
       "car.j3.q4": "Proactive in identifying client needs and expanding medical unit business opportunities.",
+      "car.empty.title": "No Open Vacancies at the Moment",
+      "car.empty.desc": "All positions are currently filled. However, we are always eager to connect with top talent in the medical technology industry. Send us your latest CV to join our Talent Pool.",
+      "car.empty.btn": "Submit CV to Talent Pool"
     }
   };
 
